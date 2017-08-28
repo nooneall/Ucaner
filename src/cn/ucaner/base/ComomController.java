@@ -1,3 +1,13 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 2014 JasonInternational Ucanx</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 20170828</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.base;
 
 import org.springframework.stereotype.Controller;
