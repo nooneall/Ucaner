@@ -1,3 +1,13 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 2014 JasonInternational Ucanx</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 20170828</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.base;
 
 import org.springframework.stereotype.Controller;
@@ -6,6 +16,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+/**
+*    
+* @Package：cn.ucaner.base   
+* @ClassName：IndexController   
+* @Description：   <p> index 控制层</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年8月28日 下午5:45:50   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 @Controller
 @RequestMapping("/")
 public class IndexController {
