@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
-*    
 * @Package：cn.ucaner.base   
 * @ClassName：ComomController   
 * @Description：   <p> ---通用跳转控制器 ---</p>
