@@ -16,13 +16,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-/**
-*    
-* @Package：cn.ucaner.base   
+/* @Package：cn.ucaner.base   
 * @ClassName：IndexController   
-* @Description：   <p> index 控制层</p>
+* @Description：   <p> base 控制器</p>
 * @Author： - DaoDou 
-* @CreatTime：2017年8月28日 下午5:45:50   
+* @CreatTime：2017年8月28日 下午5:47:52   
 * @Modify By：   
 * @ModifyTime：  
 * @Modify marker：   
