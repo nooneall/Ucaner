@@ -1,0 +1,92 @@
+<web-app version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+	<display-name>Ucaner</display-name>
+	<description>You are what you want to be.</description>
+	<!--icon-->
+	<icon>
+	   <small-icon>favicon.ico</small-icon>
+	   <large-icon>favicon.ico</large-icon>
+	</icon>
+	
+	<!-- context-param >> listener  >> fileter  >> servlet  -->
+	<!--  容器的参数初始化    param参数作用于Context  init-->
+	<context-param>
+	    <param-name>contextConfigLocation</param-name>
+	    <param-value>classpath:spring-framework.xml</param-value>
+  	</context-param>
+  	
+  	<!-- Spring 容器的监听加载 -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    
+	<!-- 容器启动时监听日志文件数据的加载 log4j -->
+  	<listener>
+    	<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
+    
+    <!-- 编码过滤器 -->
+	<filter>
+	  <filter-name>encodingFilter</filter-name>
+	  <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+	  <init-param>
+	    <param-name>encoding</param-name>
+	    <param-value>UTF-8</param-value>
+	  </init-param>
+	  <init-param>
+	    <param-name>forceEncoding</param-name>
+	    <param-value>true</param-value>
+	  </init-param>
+	</filter>
+	<filter-mapping>
+	  <filter-name>encodingFilter</filter-name>
+	  <url-pattern>/*</url-pattern>
+	</filter-mapping>
+    
+	<!-- dispatcher servlet -->
+    <servlet>
+		<servlet-name>mvc-views</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!-- param作用于 servlet之中  init方法才可取得  作用于springMVC  -->
+		<init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring-mvc.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>mvc-views</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+	
+	<!--容器的session有效时间的配置 单位：分钟  -->
+	<session-config>  
+	   <session-timeout>20</session-timeout>  
+	</session-config> 
+	
+	<!-- erroPage -->
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/common/500.ftl</location>
+	</error-page>
+	<error-page>
+	  <error-code>500</error-code>
+	  <location>/common/500.ftl</location>
+	</error-page>
+	<error-page>
+	  <error-code>404</error-code>
+	  <location>/common/404.ftl</location>
+	</error-page>
+	<error-page>
+	  <error-code>403</error-code>
+	  <location>/common/403.ftl</location>
+	</error-page>
+	<welcome-file-list>
+	  <welcome-file>/</welcome-file>
+	  <welcome-file>index.ftl</welcome-file>
+	</welcome-file-list>
+</web-app>
