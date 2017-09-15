@@ -14,19 +14,16 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * @Project: easy_health 
- * @Package: com.sunshine.platform.ordermanager
- * @ClassName: DictonaryBean
- * @Description: <p>字典项配置</p>
- * @JDK version used: 
- * @Author: 钟乳石
- * @Create Date: 2017年6月12日
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 1.0
+* @Package：cn.ucaner.common.dictonary   
+* @ClassName：DictonaryBean   
+* @Description：   <p> 字典匹配</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年9月15日 下午2:35:36   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
-
 public class DictonaryBean {
     private  static Map<String,String> platformCodeDic=new LinkedHashMap<String,String>();
     private  static Map<Integer,String> orderStatusDic=new LinkedHashMap<Integer,String>();
