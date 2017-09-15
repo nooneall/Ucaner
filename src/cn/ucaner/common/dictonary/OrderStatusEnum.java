@@ -10,22 +10,6 @@
  */
 package cn.ucaner.common.dictonary;
 
-/**
- * @Project: easy_health 
- * @Package: com.sunshine.platform.ordermanager
- * @ClassName: OrderStatusEnum
- * @Description: <p>订单状态</p>
- * @JDK version used: 
- * @Author: 钟乳石
- * @Create Date: 2017年6月12日
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 1.0
- */
-
-
-
 public enum OrderStatusEnum {
 	/* 管理后台，医生状态，病人状态*/
    UNRECEIVE(1,"待接诊","待接诊","待接诊"),
