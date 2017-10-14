@@ -26,12 +26,16 @@ public class SendMailTest {
         mailInfo.setPassword("163mail");// 您的邮箱密码
         mailInfo.setFromAddress("jason2andy@163.com"); // 设置发送人邮箱地址
         mailInfo.setToAddress("603043194@qq.com"); // 设置接受者邮箱地址
-        mailInfo.setSubject("这是主题");
-        mailInfo.setContent("这是内容");
+        mailInfo.setSubject("【JasonInternation】");
+        mailInfo.setContent("http://www.ucaner.cn");
         // 这个类主要来发送邮件
         SimpleMailSender sms = new SimpleMailSender();
-        sms.sendTextMail(mailInfo); // 发送文体格式
         //sms.sendHtmlMail(mailInfo); // 发送html格式
+        if (sms.sendTextMail(mailInfo)) { //发送文体格式
+			System.out.println("发送成功！");
+		}else{
+			System.out.println("发送失败！");
+		}
 	}
 
 }

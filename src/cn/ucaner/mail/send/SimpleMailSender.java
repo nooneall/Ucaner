@@ -33,20 +33,18 @@ import cn.ucaner.mail.entity.MyAuthenticator;
  */
 public class SimpleMailSender {
 	
-	 /**
-     * 以文本格式发送邮件
-     * 
-     * @param mailInfo
-     *            待发送的邮件的信息
-     */
+	/**
+	 * 以文本格式发送邮件
+	 * @param mailInfo 待发送的邮箱信息
+	 * @return
+	 */
     public boolean sendTextMail(MailSenderInfo mailInfo) {
         // 判断是否需要身份认证
         MyAuthenticator authenticator = null;
         Properties pro = mailInfo.getProperties();
         if (mailInfo.isValidate()) {
             // 如果需要身份认证，则创建一个密码验证器
-            authenticator = new MyAuthenticator(mailInfo.getUserName(),
-                    mailInfo.getPassword());
+            authenticator = new MyAuthenticator(mailInfo.getUserName(),mailInfo.getPassword());
         }
         // 根据邮件会话属性和密码验证器构造一个发送邮件的session
         Session sendMailSession = Session.getDefaultInstance(pro, authenticator);
@@ -78,9 +76,8 @@ public class SimpleMailSender {
 
     /**
      * 以HTML格式发送邮件
-     * 
-     * @param mailInfo
-     *            待发送的邮件信息
+     * @param mailInfo 待发送的邮件对象
+     * @return
      */
     public boolean sendHtmlMail(MailSenderInfo mailInfo) {
         // 判断是否需要身份认证
@@ -88,12 +85,10 @@ public class SimpleMailSender {
         Properties pro = mailInfo.getProperties();
         // 如果需要身份认证，则创建一个密码验证器
         if (mailInfo.isValidate()) {
-            authenticator = new MyAuthenticator(mailInfo.getUserName(),
-                    mailInfo.getPassword());
+            authenticator = new MyAuthenticator(mailInfo.getUserName(), mailInfo.getPassword());
         }
         // 根据邮件会话属性和密码验证器构造一个发送邮件的session
-        Session sendMailSession = Session
-                .getDefaultInstance(pro, authenticator);
+        Session sendMailSession = Session.getDefaultInstance(pro, authenticator);
         try {
             // 根据session创建一个邮件消息
             Message mailMessage = new MimeMessage(sendMailSession);
@@ -109,7 +104,6 @@ public class SimpleMailSender {
             mailMessage.setSubject(mailInfo.getSubject());
             // 设置邮件消息发送的时间
             mailMessage.setSentDate(new Date());
-
             // MiniMultipart类是一个容器类，包含MimeBodyPart类型的对象
             Multipart mainPart = new MimeMultipart();
             // 创建一个包含HTML内容的MimeBodyPart
@@ -117,19 +111,16 @@ public class SimpleMailSender {
             // 设置HTML内容
             html.setContent(mailInfo.getContent(), "text/html; charset=utf-8");
             mainPart.addBodyPart(html);
-
             // 设置信件的附件(用本地上的文件作为附件)
             html = new MimeBodyPart();
-            FileDataSource fds = new FileDataSource("D:\\zrz24培训与开发.rar");
+            FileDataSource fds = new FileDataSource("");
             DataHandler dh = new DataHandler(fds);
-            html.setFileName("javamail.doc");
+            html.setFileName("JasonInternational");
             html.setDataHandler(dh);
             mainPart.addBodyPart(html);
-
             // 将MiniMultipart对象设置为邮件内容
             mailMessage.setContent(mainPart);
             mailMessage.saveChanges();
-
             // 发送邮件
             Transport.send(mailMessage);
             return true;
@@ -138,7 +129,4 @@ public class SimpleMailSender {
         }
         return false;
     }
-	
-	
-
 }

@@ -15,15 +15,17 @@ import java.util.Properties;
  */
 public class MailSenderInfo {
 	
-	// 发送邮件的服务器的IP和端口
+	//发送邮件的服务器的IP  
     private String mailServerHost;
+    //发送邮件的服务器端口
     private String mailServerPort = "25";
     // 邮件发送者的地址
     private String fromAddress;
     // 邮件接收者的地址
     private String toAddress;
-    // 登陆邮件发送服务器的用户名和密码
+    //登陆邮件发送服务器的用户名和密码
     private String userName;
+    //163的密码为授权密码
     private String password;
     // 是否需要身份验证
     private boolean validate = false;
@@ -41,10 +43,17 @@ public class MailSenderInfo {
         Properties p = new Properties();
         p.put("mail.smtp.host", this.mailServerHost);
         p.put("mail.smtp.port", this.mailServerPort);
+        //validate --boolean true -->"true"   false --> "false"
         p.put("mail.smtp.auth", validate ? "true" : "false");
         return p;
     }
 
+    /**
+     * 邮箱服务器的地址 
+     * 新浪:smtp.sina.com.cn
+     * 网易:smtp.163.com
+     * 腾讯:smtp.qq.com
+     */
     public String getMailServerHost() {
         return mailServerHost;
     }
@@ -53,6 +62,11 @@ public class MailSenderInfo {
         this.mailServerHost = mailServerHost;
     }
 
+    /**
+     * 邮箱服务器的端口
+     * 25
+     * @return
+     */
     public String getMailServerPort() {
         return mailServerPort;
     }
@@ -61,6 +75,10 @@ public class MailSenderInfo {
         this.mailServerPort = mailServerPort;
     }
 
+    /**
+     * 授权是否有效
+     * @return
+     */
     public boolean isValidate() {
         return validate;
     }
@@ -69,6 +87,10 @@ public class MailSenderInfo {
         this.validate = validate;
     }
 
+    /**
+     * 附件的名字
+     * @return
+     */
     public String[] getAttachFileNames() {
         return attachFileNames;
     }
