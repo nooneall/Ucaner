@@ -93,6 +93,13 @@
             <artifactId>mail</artifactId>
             <version>1.5.0-b01</version>
         </dependency>
+        
+        <!-- 爬虫工具 -->
+        <dependency>
+	        <groupId>edu.uci.ics</groupId>
+	        <artifactId>crawler4j</artifactId>
+	        <version>4.3</version>
+	    </dependency>
 		
 		<dependency>
 		    <groupId>commons-codec</groupId>
