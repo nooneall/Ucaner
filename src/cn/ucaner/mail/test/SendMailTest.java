@@ -26,8 +26,8 @@ public class SendMailTest {
         mailInfo.setPassword("163mail");// 您的邮箱密码
         mailInfo.setFromAddress("jason2andy@163.com"); // 设置发送人邮箱地址
         mailInfo.setToAddress("603043194@qq.com"); // 设置接受者邮箱地址
-        mailInfo.setSubject("【JasonInternation】");
-        mailInfo.setContent("http://www.ucaner.cn");
+        mailInfo.setSubject("测试邮件");
+        mailInfo.setContent("测试邮件");
         // 这个类主要来发送邮件
         SimpleMailSender sms = new SimpleMailSender();
         //sms.sendHtmlMail(mailInfo); // 发送html格式
