@@ -254,7 +254,7 @@ public class BaseDaoImpl<T extends BaseEntity, PK extends Serializable> implemen
 	}
 
 	@Override
-	public void deleteByIds(List<PK> ids) {
+	public Long deleteByIds(List<PK> ids) {
 		try {
 			Assert.notNull(ids);
 			sqlSession.delete(getSqlName(SQLNAME_DELETE_BY_IDS), ids);
@@ -262,7 +262,7 @@ public class BaseDaoImpl<T extends BaseEntity, PK extends Serializable> implemen
 			logger.error(String.format("根据ID集合删除对象出错！语句：%s", getSqlName(SQLNAME_DELETE_BY_IDS)), e);
 			throw new SystemException(String.format("根据ID集合删除对象出错！语句：%s", getSqlName(SQLNAME_DELETE_BY_IDS)), e);
 		}
-
+		return null;
 	}
 
 	@Override

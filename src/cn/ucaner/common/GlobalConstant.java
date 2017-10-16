@@ -64,6 +64,7 @@ public class GlobalConstant {
 	 * HHmm
 	 */
 	public static DateFormat hhmm = new SimpleDateFormat("HHmm");
+	public static Integer STATUS_VALID;
 
 	/************************ 日期转换常量定义 end **************************/
 
@@ -292,5 +293,7 @@ public class GlobalConstant {
 	public static final int SERVICE_TYPE_PHONE_CALL = 2;
 	/** 视频咨询  **/
 	public static final int SERVICE_TYPE_VEDIO_CALL = 3;
+	public static final String STRING_SPLIT_CHAR = null;
+	public static final Object SESSION_PLATFORM_USER_ACCOUNT_KEY = null;
 
 }

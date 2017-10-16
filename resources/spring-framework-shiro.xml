@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+       xmlns:aop="http://www.springframework.org/schema/aop"  
+       xmlns:tx="http://www.springframework.org/schema/tx"  
+       xmlns:context="http://www.springframework.org/schema/context"  
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+						   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd  
+						   http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd  
+						   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">  
+    <bean id="sunshineShiro" class="cn.ucaner.security.SunshineRealm"/>  
+    <!-- <bean id="sunshineLogoutFilter" class="com.sunshine.framework.shiro.CamboLogoutFilter" /> -->
+      
+    <!-- 配置shiro的过滤器工厂类，id- shiroFilter要和我们在web.xml中配置的过滤器一致 -->  
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">   
+        <!-- 调用配置的权限管理器 -->   
+        <property name="securityManager" ref="securityManager"/>   
+        <!-- 配置登录请求地址 -->   
+        <property name="loginUrl" value="/pf_toLogin"/>    
+        <!-- 登录成功后要跳转的连接(此属性用不到,因为登录成功后的处理逻辑在LoginController里  
+        <property name="successUrl" value="/platform/index"/> 
+        -->   
+        <!-- 如果您请求的资源不再您的权限范围，则跳转到/403请求地址 -->  
+        <property name="unauthorizedUrl" value="/403"/>   
+        
+        <property name="filters">
+            <map>
+                <!--退出过滤器-->
+                <entry key="logout" value-ref="sunshineLogoutFilter" />
+            </map>
+        </property>
+         
+        <!-- 权限配置 -->  
+        <!-- anon：  对应无需权限验证的请求地址 -->  
+        <!-- authc：该过滤器下的页面必须验证后才能访问,它是Shiro内置的一个拦截器org.apache.shiro.web.filter.authc.FormAuthenticationFilter -->  
+        <property name="filterChainDefinitions">    
+            <value>  
+				/pf_toLogin = anon
+				/pf_doLogin = anon
+				/pf_building=anon
+				/pf_logout = logout
+				/platform/js/** = anon
+				/platform/css/** = anon
+				/platform/images/** = anon
+				/platform/**=authc
+            </value>    
+        </property>    
+    </bean>  
+
+    <bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
+        <!-- 设置session过期时间为1小时(单位：毫秒)，默认为30分钟 -->
+        <property name="globalSessionTimeout" value="3600000"></property>
+        <!-- 删除失效的session -->
+        <property name="deleteInvalidSessions" value="true"/>
+        <property name="sessionValidationSchedulerEnabled" value="true"></property>
+        <property name="sessionIdCookie" ref="simpleCookie"></property>
+    </bean>
+    
+    <bean id="simpleCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+        <constructor-arg name="name" value="meta.session.id"/>
+        <property name="path" value="/"/>
+    </bean>
+    <!-- 单机环境 
+    <bean id="cacheManager" class="org.apache.shiro.cache.MemoryConstrainedCacheManager" /> 
+    --> 
+    <!-- 集群环境 -->
+   <!--  <bean id="shiroRedisCacheManager" class="com.sunshine.framework.shiro.cache.redis.RedisCacheManager">
+    </bean>      -->
+    
+    <!-- Shiro默认会使用Servlet容器的Session,可通过sessionMode属性来指定使用Shiro原生Session -->  
+    <!-- 即<property name="sessionMode" value="native"/>,详细说明见官方文档 -->  
+    <!-- 这里主要是设置自定义的单Realm应用,若有多个Realm,可使用'realms'属性代替 -->  
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">  
+        <property name="realm" ref="sunshineShiro"/>
+        <!-- 使用配置的缓存管理器 --> 
+     	<property name="cacheManager" ref="shiroRedisCacheManager"></property> 
+     	<!-- 会话管理 -->
+     	<property name="sessionManager" ref="sessionManager" />
+    </bean>
+    
+    <!-- 保证实现了Shiro内部lifecycle函数的bean执行 --> 
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />   
+</beans> 

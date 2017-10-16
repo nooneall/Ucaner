@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+    xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd 
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd 
+    http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.1.xsd 
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd 
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd"
+    default-lazy-init="true">
+    <!-- kafka 消费者端配置 -->
+    <bean id="kafkaConsumerConfig" class="com.sunshine.framework.kafka.config.KafkaConsumerConfig">
+        <property name="bootstrapServers" value="${kafka.bootstrap.servers}"></property>
+        <property name="groupId" value="${kafka.consumer.group.id}"></property>
+        <property name="topics" value="${kafka.topics}"></property>
+        <property name="enableAutoCommit" value="${kafka.enable.auto.commit}"></property>
+        <property name="autoCommitIntervalMS" value="${kafka.auto.commit.interval.ms}"></property>
+        <property name="sessionTimeoutMS" value="${kafka.session.timeout.ms}"></property>
+        <property name="keyDeserializer" value="${kafka.key.deserializer}"></property>
+        <property name="valueDeserializer" value="${kafka.value.deserializer}"></property>
+        <property name="pollNum" value="${kafka.consumer.poll.num}"></property>
+        <property name="partitionNum" value="${kafka.consumer.partition.num}"></property>
+    </bean>
+    
+    <!-- 日志分析规则 -->
+    <bean id="logAnalysisRule" class="com.sunshine.framework.kafka.appender.rule.LogAnalysisRule">
+    	<property name="analysisRules">
+    		<map>
+    		</map>
+    	</property>
+    </bean>
+    
+    <!-- 日志采集  使用InitializingBean方式启动 -->
+    <bean id="logDataCollector" class="com.sunshine.framework.kafka.collector.LogDataCollector" lazy-init="false"/>
+    
+    <!-- elasticsearch client 连接池配置 -->
+    <bean id="esPoolConfig" class="com.sunshine.framework.elasticsearch.pool.ESClientPoolConfig">
+    	<!-- 链接池中最大连接数,默认为50 -->
+    	<property name="maxTotal" value="${es.client.pool.maxTotal}"></property>
+    	<!-- 链接池中最大空闲的连接数,默认为10 -->
+    	<property name="maxIdle" value="${es.client.pool.maxIdle}"></property>
+    	<!-- 连接池中最少空闲的连接数,默认为5 -->
+    	<property name="minIdle" value="${es.client.pool.minIdle}"></property>
+    	<!-- 当连接池资源耗尽时，调用者最大阻塞的时间，超时将跑出异常。单位，毫秒数;-1.表示永不超时,默认60000 -->
+    	<property name="maxWaitMillis" value="${es.client.pool.maxWaitMillis}"></property>
+    	<!-- 连接空闲的最小时间，达到此值后空闲连接将可能会被移除。负值(-1)表示不移除 ,默认60000-->
+    	<property name="minEvictableIdleTimeMillis" value="${es.client.pool.minEvictableIdleTimeMillis}"></property>
+    	<!-- 对于空闲链接检测线程而言,每次检测的链接资源的个数。默认为3 -->
+    	<property name="numTestsPerEvictionRun" value="${es.client.pool.numTestsPerEvictionRun}"></property>
+    	<!-- 向调用者输出链接资源时，是否检测是有有效，如果无效则从连接池中移除，并尝试获取继续获取。默认为false.建议保持默认值 -->
+    	<property name="testOnBorrow" value="${es.client.pool.testOnBorrow}"></property>
+    	<!-- 向连接池归还链接时，是否检测链接对象的有效性。默认为false。建议保持默认值 -->
+    	<property name="testOnReturn" value="${es.client.pool.testOnReturn}"></property>
+    	<!-- 向调用者输出“链接”对象时，是否检测它的空闲超时；默认为true。如果链接空闲超时，将会被移除 -->
+    	<property name="testWhileIdle" value="${es.client.pool.testWhileIdle}"></property>
+    	<!-- 空闲链接检测线程,检测的周期,毫秒数.如果为负值,表示不运行检测线程。默认为30000 -->
+    	<property name="timeBetweenEvictionRunsMillis" value="${es.client.pool.timeBetweenEvictionRunsMillis}"></property>
+    </bean>
+    
+	<!-- elasticsearch的连接池pool，不是必选项：timeout/password -->
+	<bean id="esClientPool" class="com.sunshine.framework.elasticsearch.pool.ESClientPool">
+		<constructor-arg index="0" ref="esPoolConfig" ></constructor-arg>
+		<!-- ES实例的名称  --> 
+    	<constructor-arg index="1" value="${es.server.clusterName}"></constructor-arg>
+    	<!--  是否自动嗅探整个集群的状态，把集群中其他ES节点的ip添加到本地的客户端列表中 默认值true -->
+    	<constructor-arg index="2" value="${es.server.transport.sniff}"></constructor-arg>
+    	<!-- 实例的地址(集群使用逗号隔开) 如： 192.168.200.224:9200,192.168.200.225:9200 -->
+    	<constructor-arg index="3" value="${es.server.clusterAddresses}"></constructor-arg>
+	</bean>
+	<bean id="elasticsearchHandler" class="com.sunshine.framework.elasticsearch.handler.impl.ElasticSearchHandler">
+		<property name="esClientPool" ref="esClientPool"></property>
+	</bean>
+</beans>

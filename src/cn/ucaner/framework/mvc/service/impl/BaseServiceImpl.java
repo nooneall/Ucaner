@@ -101,10 +101,6 @@ public abstract class BaseServiceImpl<T extends BaseEntity, PK extends Serializa
 		getDao().deleteById(id);
 	}
 
-	@Override
-	public void deleteByIds(List<PK> ids) {
-		getDao().deleteByIds(ids);
-	}
 
 	@Override
 	public void deleteAll() {

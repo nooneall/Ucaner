@@ -1,0 +1,1 @@
+loginInterceptor=com.sunshine.framework.cache.dubbo.Interceptor.LoginInterceptor

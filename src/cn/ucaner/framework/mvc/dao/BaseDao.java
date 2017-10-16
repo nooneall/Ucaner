@@ -127,8 +127,9 @@ public interface BaseDao<T extends BaseEntity, PK extends Serializable> {
 	 * 根据ID集合删除
 	 * 
 	 * @param ids
+	 * @return 
 	 */
-	public void deleteByIds(List<PK> ids);
+	public Long deleteByIds(List<PK> ids);
 
 	/**
 	 * 删除所有记录
