@@ -20,7 +20,7 @@ import org.apache.commons.codec.binary.Base64;
 /**
 * @Package：cn.ucaner.framework.utils   
 * @ClassName：CryptAES   
-* @Description：   <p> TODO</p>
+* @Description：   <p> CryptAES</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午2:14:47   
 * @Modify By：   

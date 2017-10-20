@@ -1,3 +1,13 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.security.dao;
 
 import java.util.List;
@@ -5,10 +15,6 @@ import java.util.Map;
 
 import cn.ucaner.framework.mvc.dao.BaseDao;
 import cn.ucaner.security.entity.Role;
-
-//import com.sunshine.framework.mvc.mysql.dao.BaseDao;
-//import com.sunshine.platform.security.entity.Role;
-
 public interface RoleDao extends BaseDao<Role, String> {
 
 	/**

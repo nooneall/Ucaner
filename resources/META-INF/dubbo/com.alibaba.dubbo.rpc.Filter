@@ -1,1 +1,1 @@
-loginInterceptor=com.sunshine.framework.cache.dubbo.Interceptor.LoginInterceptor
+loginInterceptor=com.ucaner.framework.cache.dubbo.Interceptor.LoginInterceptor

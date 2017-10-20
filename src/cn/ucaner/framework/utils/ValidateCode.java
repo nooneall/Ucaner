@@ -24,18 +24,16 @@ import java.util.Random;
 import javax.imageio.ImageIO;
 
 /**
- * 验证码工具类
- * @Package: com.sunshine.framework.utils
- * @ClassName: ValidateCode
- * @Statement: <p>验证码生成器类，可生成数字、大写、小写字母及三者混合类型的验证码。 支持自定义验证码字符数量； 支持自定义验证码图片的大小； 支持自定义需排除的特殊字符；
+* @Package：cn.ucaner.framework.utils   
+* @ClassName：ValidateCode   
+* @Description：   <p> 验证码生成器类，可生成数字、大写、小写字母及三者混合类型的验证码。 支持自定义验证码字符数量； 支持自定义验证码图片的大小； 支持自定义需排除的特殊字符；
  * 支持自定义干扰线的数量； 支持自定义验证码图文颜色</p>
- * @JDK version used: 1.6
- * @Author: 申姜
- * @Create Date: 2015-6-22
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 1.0
+* @Author： - DaoDou 
+* @CreatTime：2017年10月20日 下午4:04:15   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ValidateCode {
 	//add by tianzz-2017-02-28 begin .

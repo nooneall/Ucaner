@@ -1,9 +1,30 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.security.vo;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+* @Package：cn.ucaner.security.vo   
+* @ClassName：UserVo   
+* @Description：   <p> TODO</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月20日 下午4:10:05   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class UserVo {
 
 	private Integer id;

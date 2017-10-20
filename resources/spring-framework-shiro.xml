@@ -8,8 +8,8 @@
 						   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd  
 						   http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd  
 						   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">  
-    <bean id="sunshineShiro" class="cn.ucaner.security.SunshineRealm"/>  
-    <!-- <bean id="sunshineLogoutFilter" class="com.sunshine.framework.shiro.CamboLogoutFilter" /> -->
+    <bean id="ucanerShiro" class="cn.ucaner.security.SunshineRealm"/>  
+    <!-- <bean id="ucanerLogoutFilter" class="com.ucaner.framework.shiro.CamboLogoutFilter" /> -->
       
     <!-- 配置shiro的过滤器工厂类，id- shiroFilter要和我们在web.xml中配置的过滤器一致 -->  
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">   
@@ -26,7 +26,7 @@
         <property name="filters">
             <map>
                 <!--退出过滤器-->
-                <entry key="logout" value-ref="sunshineLogoutFilter" />
+                <entry key="logout" value-ref="ucanerLogoutFilter" />
             </map>
         </property>
          
@@ -64,14 +64,14 @@
     <bean id="cacheManager" class="org.apache.shiro.cache.MemoryConstrainedCacheManager" /> 
     --> 
     <!-- 集群环境 -->
-   <!--  <bean id="shiroRedisCacheManager" class="com.sunshine.framework.shiro.cache.redis.RedisCacheManager">
+   <!--  <bean id="shiroRedisCacheManager" class="com.ucaner.framework.shiro.cache.redis.RedisCacheManager">
     </bean>      -->
     
     <!-- Shiro默认会使用Servlet容器的Session,可通过sessionMode属性来指定使用Shiro原生Session -->  
     <!-- 即<property name="sessionMode" value="native"/>,详细说明见官方文档 -->  
     <!-- 这里主要是设置自定义的单Realm应用,若有多个Realm,可使用'realms'属性代替 -->  
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">  
-        <property name="realm" ref="sunshineShiro"/>
+        <property name="realm" ref="ucanerShiro"/>
         <!-- 使用配置的缓存管理器 --> 
      	<property name="cacheManager" ref="shiroRedisCacheManager"></property> 
      	<!-- 会话管理 -->

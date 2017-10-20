@@ -42,7 +42,7 @@
 	</appender>
 
     <!-- logback日志输出到kafka扩展 
-    <appender name="sunshine_kafka" class="KafkaLogbackAppender">
+    <appender name="ucaner_kafka" class="KafkaLogbackAppender">
         <brokerList>${kafka.broker.list}</brokerList>
         <topic>${kafka.topic}</topic>
         <retries>${kafka.retries}</retries>
@@ -51,7 +51,7 @@
     </appender>
     -->
     
-    <appender name="sunshine_all"
+    <appender name="ucaner_all"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>${logback.home}/${logback.all}/${logback.allFileName}.log</file>
 		<!-- TimeBasedRollingPolicy 有两个属性:必需的fileNamePattern和可选的maxHistory fileNamePattern 
@@ -74,7 +74,7 @@
 		</encoder>
 	</appender>
 	
-	<appender name="sunshine_err"
+	<appender name="ucaner_err"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>${logback.home}/${logback.err}/${logback.errFileName}.log</file>
 		<filter class="ch.qos.logback.classic.filter.LevelFilter">
@@ -102,7 +102,7 @@
 		</encoder>
 	</appender>
 	
-   <appender name="sunshine_trade"
+   <appender name="ucaner_trade"
         class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${logback.home}/${logback.trade}/${logback.tradeFileName}.log</file>
         <!-- TimeBasedRollingPolicy 有两个属性:必需的fileNamePattern和可选的maxHistory fileNamePattern 
@@ -127,10 +127,10 @@
   
   <root level="DEBUG"> 
   	<appender-ref ref="CONSOLE" /> 
-  	<appender-ref ref="sunshine_all" />
-  	<appender-ref ref="sunshine_err" />
+  	<appender-ref ref="ucaner_all" />
+  	<appender-ref ref="ucaner_err" />
   	<!--  
-  	<appender-ref ref="sunshine_kafka" />
+  	<appender-ref ref="ucaner_kafka" />
   	-->
   </root>
   
@@ -150,6 +150,6 @@
   -->
   <logger name="org.mybatis" level="DEBUG" />
  
-  <logger name="com.sunshine" level="DEBUG" ></logger> 
-  <logger name="com.sunshine.framework.common.freemarker" level="ERROR" ></logger> 
+  <logger name="com.ucaner" level="DEBUG" ></logger> 
+  <logger name="com.ucaner.framework.common.freemarker" level="ERROR" ></logger> 
 </configuration>

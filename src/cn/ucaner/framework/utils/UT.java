@@ -25,7 +25,7 @@ import java.util.Vector;
  * UT
 * @Package：cn.ucaner.framework.utils   
 * @ClassName：UT   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 时间工具</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午2:06:05   
 * @Modify By：   

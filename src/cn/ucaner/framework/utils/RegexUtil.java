@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
 /**
 * @Package：cn.ucaner.framework.utils   
 * @ClassName：RegexUtil   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 正则工具</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午2:08:11   
 * @Modify By：   

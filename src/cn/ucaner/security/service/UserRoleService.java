@@ -1,10 +1,10 @@
 /**
  * <html>
  * <body>
- *  <P> Copyright 2017 阳光康众</p>
+ *  <P> Copyright 1994 JsonInternational</p>
  *  <p> All rights reserved.</p>
- *  <p> Created on 2016年4月8日</p>
- *  <p> Created by x-lan</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
  *  </body>
  * </html>
  */
@@ -15,7 +15,17 @@ import java.util.List;
 import cn.ucaner.framework.mvc.service.BaseService;
 import cn.ucaner.security.entity.UserRole;
 
-
+/**
+* @Package：cn.ucaner.security.service   
+* @ClassName：UserRoleService   
+* @Description：   <p> TODO</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月20日 下午4:09:12   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public interface UserRoleService extends BaseService<UserRole, String> {
 
 	/**

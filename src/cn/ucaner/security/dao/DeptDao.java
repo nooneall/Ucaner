@@ -1,13 +1,13 @@
 /**
-* <html>
-*  <body>
-*   <P> Copyright 2017 阳光康众 </p>
-*   <p> All rights reserved.</p>
-*   <p> Created on 2017年7月9日</p>
-*   <p> Created by Yuce</p>
-*  </body>
-* </html>
-*/
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.security.dao;
 
 import java.util.List;

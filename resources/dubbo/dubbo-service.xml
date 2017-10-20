@@ -36,8 +36,8 @@
 	
 	<!-- rest 协议、tomcat 传输 -->
 	<dubbo:protocol name="rest" port="9091" contextpath="services" server="tomcat" accepts="500" 
-		extension="com.sunshine.framework.filter.auth.AuthRequestFilter,com.alibaba.dubbo.rpc.protocol.rest.support.LoggingFilter" />
-	<dubbo:annotation package="com.sunshine" />
+		extension="com.ucaner.framework.filter.auth.AuthRequestFilter,com.alibaba.dubbo.rpc.protocol.rest.support.LoggingFilter" />
+	<dubbo:annotation package="com.ucaner" />
     
     <!--引入供外部调用 service   webService服务必须放在rest服务的后面 -->
     <import resource="classpath:/dubbo/provider/service_dubbo.xml" /> 

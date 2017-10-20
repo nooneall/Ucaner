@@ -8,10 +8,10 @@
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd"
     default-lazy-init="false">
     <!-- 注入spring助手类,以便直接在代码中获取bean对象
-    <bean class="com.sunshine.framework.common.spring.ext.SpringContextHolder"/>
+    <bean class="com.ucaner.framework.common.spring.ext.SpringContextHolder"/>
  	-->
     <!-- 使用annotation 自动注册bean,并检查@Required,@Autowired的属性已被注入 -->
-    <context:component-scan base-package="com.sunshine">
+    <context:component-scan base-package="com.ucaner">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
         <context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" />
     </context:component-scan>
@@ -102,7 +102,7 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 
-        <property name="typeAliasesPackage" value="com.sunshine"/>
+        <property name="typeAliasesPackage" value="com.ucaner"/>
         -->
         <property name="configLocation" value="classpath:/mybatis/mybatis-config.xml"/>
         <!-- 自动扫描mapping.xml文件 -->

@@ -1,9 +1,29 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.security.service;
 
 import cn.ucaner.framework.mvc.service.BaseService;
 import cn.ucaner.security.entity.User;
 
-
+/**
+* @Package：cn.ucaner.security.service   
+* @ClassName：UserService   
+* @Description：   <p> TODO</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月20日 下午4:09:25   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public interface UserService extends BaseService<User, String> {
 
 	/**

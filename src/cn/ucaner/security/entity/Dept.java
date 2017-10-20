@@ -1,31 +1,27 @@
 /**
-* <html>
-*  <body>
-*   <P> Copyright 2017 阳光康众 </p>
-*   <p> All rights reserved.</p>
-*   <p> Created on 2017年7月9日</p>
-*   <p> Created by Yuce</p>
-*  </body>
-* </html>
-*/
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.security.entity;
 
 import cn.ucaner.framework.mvc.entity.BaseEntity;
 
-
 /**
- * @Project ChuFangLiuZhuan_PlatForm_Platorm
- * @Package com.sunshine.platform.security.entity
- * @ClassName com.sunshine.platform.security.entity.Dept
- * @TableName SYS_DEPT
- * @Description
- * @JDK version used 1.8.0_111-b14
- * @Author Yuce
- * @Create Date 2017年7月9日
- * @modify By
- * @modify Date
- * @Why&What is modify
- * @Version 1.0
+* @Package：cn.ucaner.security.entity   
+* @ClassName：Dept   
+* @Description：   <p> 部门</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月20日 下午4:07:25   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class Dept extends BaseEntity {
 	/**

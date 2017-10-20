@@ -11,78 +11,78 @@
                         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
                         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 	
-	<bean id="registerRestService" class="com.sunshine.mobileapp.api.register.service.impl.RegisterPatientRestServiceImpl" />
+	<bean id="registerRestService" class="com.ucaner.mobileapp.api.register.service.impl.RegisterPatientRestServiceImpl" />
     
-    <bean id="orderRestService" class="com.sunshine.mobileapp.api.order.service.impl.OrderRestServiceImpl" />
+    <bean id="orderRestService" class="com.ucaner.mobileapp.api.order.service.impl.OrderRestServiceImpl" />
      
-    <bean id="patientUserRestService" class="com.sunshine.mobileapp.api.patient.service.impl.PatientUserRestServiceImpl" />
+    <bean id="patientUserRestService" class="com.ucaner.mobileapp.api.patient.service.impl.PatientUserRestServiceImpl" />
     
-    <bean id="areaRestService" class="com.sunshine.mobileapp.api.area.service.impl.AreaRestServiceImpl" />
+    <bean id="areaRestService" class="com.ucaner.mobileapp.api.area.service.impl.AreaRestServiceImpl" />
     
-    <bean id="sendMsgValicodeRestService" class="com.sunshine.mobileapp.api.msg.service.impl.SendMsgValicodeRestServiceImpl"></bean>
+    <bean id="sendMsgValicodeRestService" class="com.ucaner.mobileapp.api.msg.service.impl.SendMsgValicodeRestServiceImpl"></bean>
      
-    <bean id="qiniuRestService" class="com.sunshine.mobileapp.api.qiniu.service.impl.QiniuRestServiceImpl" />
+    <bean id="qiniuRestService" class="com.ucaner.mobileapp.api.qiniu.service.impl.QiniuRestServiceImpl" />
 
     <!-- 医生相关业务接口 -->
-    <bean id="doctorsRestService" class="com.sunshine.mobileapp.api.index.doctorscollect.service.impl.DoctorsRestServiceImpl" />
+    <bean id="doctorsRestService" class="com.ucaner.mobileapp.api.index.doctorscollect.service.impl.DoctorsRestServiceImpl" />
     
     <!-- 部门相关业务接口 -->
-    <bean id="deptRestService" class="com.sunshine.mobileapp.api.dept.service.impl.DeptRestServiceImpl" />
+    <bean id="deptRestService" class="com.ucaner.mobileapp.api.dept.service.impl.DeptRestServiceImpl" />
 
 	<!--  服务业务相关接口 -->
-	<bean id="doctorServiceInfoRestService" class="com.sunshine.mobileapp.api.serviceinfo.service.impl.DoctorServiceInfoRestServiceImpl" />
+	<bean id="doctorServiceInfoRestService" class="com.ucaner.mobileapp.api.serviceinfo.service.impl.DoctorServiceInfoRestServiceImpl" />
 	
 	<!-- 下单业务相关接口 -->
-	<bean id="patientOrderRestService" class="com.sunshine.mobileapp.api.patient.service.impl.PatientOrderRestServiceImpl" />
+	<bean id="patientOrderRestService" class="com.ucaner.mobileapp.api.patient.service.impl.PatientOrderRestServiceImpl" />
 	
-	<bean id="msgCenterRestService" class="com.sunshine.mobileapp.api.msgcenter.service.impl.MsgCenterRecordRestServiceImpl" />
+	<bean id="msgCenterRestService" class="com.ucaner.mobileapp.api.msgcenter.service.impl.MsgCenterRecordRestServiceImpl" />
     
     <!-- 执业点操作相关接口-->
-    <bean id="hospitalRestService" class="com.sunshine.mobileapp.api.hospital.service.impl.HospitalRestServiceImpl" />
+    <bean id="hospitalRestService" class="com.ucaner.mobileapp.api.hospital.service.impl.HospitalRestServiceImpl" />
     
     <!--网易云信图文服务相关接口-->
-    <bean id="neteaseRestService" class="com.sunshine.mobileapp.api.netease.service.impl.NeteaseRestServiceImpl" />
+    <bean id="neteaseRestService" class="com.ucaner.mobileapp.api.netease.service.impl.NeteaseRestServiceImpl" />
     
     <!--支付服务相关接口-->
-    <bean id="payRestService" class="com.sunshine.mobileapp.api.pay.service.impl.PayRestServiceImpl" />
+    <bean id="payRestService" class="com.ucaner.mobileapp.api.pay.service.impl.PayRestServiceImpl" />
    	 
-    <dubbo:service interface="com.sunshine.mobileapp.api.register.service.RegisterPatientRestService" ref="registerRestService"  protocol="rest" validation="true"/>
+    <dubbo:service interface="com.ucaner.mobileapp.api.register.service.RegisterPatientRestService" ref="registerRestService"  protocol="rest" validation="true"/>
 
 	<!-- 订单查询，取消接口 -->
-    <dubbo:service interface="com.sunshine.mobileapp.api.order.service.OrderRestService" ref="orderRestService"  protocol="rest" validation="true"/>
+    <dubbo:service interface="com.ucaner.mobileapp.api.order.service.OrderRestService" ref="orderRestService"  protocol="rest" validation="true"/>
     
     <!-- 用户信息查询，更新接口 -->
-    <dubbo:service interface="com.sunshine.mobileapp.api.patient.service.PatientUserRestService" ref="patientUserRestService"  protocol="rest" validation="true"/>
+    <dubbo:service interface="com.ucaner.mobileapp.api.patient.service.PatientUserRestService" ref="patientUserRestService"  protocol="rest" validation="true"/>
 
   	<!-- 地区查询接口 -->
-    <dubbo:service interface="com.sunshine.mobileapp.api.area.service.AreaRestService" ref="areaRestService"  protocol="rest" validation="true"/>
+    <dubbo:service interface="com.ucaner.mobileapp.api.area.service.AreaRestService" ref="areaRestService"  protocol="rest" validation="true"/>
     
   	<!-- 发送短信验证码接口 -->
-    <dubbo:service interface="com.sunshine.mobileapp.api.msg.service.SendMsgValicodeRestService" ref="sendMsgValicodeRestService"  protocol="rest" validation="true"/>
+    <dubbo:service interface="com.ucaner.mobileapp.api.msg.service.SendMsgValicodeRestService" ref="sendMsgValicodeRestService"  protocol="rest" validation="true"/>
     
-    <dubbo:service interface="com.sunshine.mobileapp.api.msgcenter.service.MsgCenterRecordRestService" ref="msgCenterRestService"  protocol="rest" validation="true"/>
+    <dubbo:service interface="com.ucaner.mobileapp.api.msgcenter.service.MsgCenterRecordRestService" ref="msgCenterRestService"  protocol="rest" validation="true"/>
    
     <!-- 医生业务相关接口 -->
-    <dubbo:service interface="com.sunshine.mobileapp.api.index.doctorscollect.service.DoctorsRestService" ref="doctorsRestService"  protocol="rest" validation="true"/>
+    <dubbo:service interface="com.ucaner.mobileapp.api.index.doctorscollect.service.DoctorsRestService" ref="doctorsRestService"  protocol="rest" validation="true"/>
     
     <!-- 部门业务相关接口 -->
-    <dubbo:service interface="com.sunshine.mobileapp.api.dept.service.DeptRestService" ref="deptRestService"  protocol="rest" validation="true"/> 
+    <dubbo:service interface="com.ucaner.mobileapp.api.dept.service.DeptRestService" ref="deptRestService"  protocol="rest" validation="true"/> 
     
     <!-- 服务业务相关接口 -->
-    <dubbo:service interface="com.sunshine.mobileapp.api.serviceinfo.service.DoctorServiceInfoRestService" ref="doctorServiceInfoRestService"  protocol="rest" validation="true"/> 
+    <dubbo:service interface="com.ucaner.mobileapp.api.serviceinfo.service.DoctorServiceInfoRestService" ref="doctorServiceInfoRestService"  protocol="rest" validation="true"/> 
     
     <!-- 下单业务相关接口 -->
-    <dubbo:service interface="com.sunshine.mobileapp.api.patient.service.PatientOrderRestService" ref="patientOrderRestService"  protocol="rest" validation="true"/> 
+    <dubbo:service interface="com.ucaner.mobileapp.api.patient.service.PatientOrderRestService" ref="patientOrderRestService"  protocol="rest" validation="true"/> 
     
     <!-- 七牛图片服务-->
-    <dubbo:service interface="com.sunshine.mobileapp.api.qiniu.service.QiniuRestService" ref="qiniuRestService"  protocol="rest" validation="true"/> 
+    <dubbo:service interface="com.ucaner.mobileapp.api.qiniu.service.QiniuRestService" ref="qiniuRestService"  protocol="rest" validation="true"/> 
     
     <!--执业点操作相关接口-->
-    <dubbo:service interface="com.sunshine.mobileapp.api.hospital.service.HospitalRestService" ref="hospitalRestService"  protocol="rest" validation="true"/> 
+    <dubbo:service interface="com.ucaner.mobileapp.api.hospital.service.HospitalRestService" ref="hospitalRestService"  protocol="rest" validation="true"/> 
     
     <!--网易云信图文服务相关接口-->
-    <dubbo:service interface="com.sunshine.mobileapp.api.netease.service.NeteaseRestService" ref="neteaseRestService"  protocol="rest" validation="true"/> 
+    <dubbo:service interface="com.ucaner.mobileapp.api.netease.service.NeteaseRestService" ref="neteaseRestService"  protocol="rest" validation="true"/> 
     
     <!--支付服务相关接口-->
-    <dubbo:service interface="com.sunshine.mobileapp.api.pay.service.PayRestService" ref="payRestService"  protocol="rest" validation="true"/> 
+    <dubbo:service interface="com.ucaner.mobileapp.api.pay.service.PayRestService" ref="payRestService"  protocol="rest" validation="true"/> 
 </beans>	

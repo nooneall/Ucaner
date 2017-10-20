@@ -10,7 +10,7 @@
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd"
     default-lazy-init="true">
     <!-- kafka 消费者端配置 -->
-    <bean id="kafkaConsumerConfig" class="com.sunshine.framework.kafka.config.KafkaConsumerConfig">
+    <bean id="kafkaConsumerConfig" class="com.ucaner.framework.kafka.config.KafkaConsumerConfig">
         <property name="bootstrapServers" value="${kafka.bootstrap.servers}"></property>
         <property name="groupId" value="${kafka.consumer.group.id}"></property>
         <property name="topics" value="${kafka.topics}"></property>
@@ -24,7 +24,7 @@
     </bean>
     
     <!-- 日志分析规则 -->
-    <bean id="logAnalysisRule" class="com.sunshine.framework.kafka.appender.rule.LogAnalysisRule">
+    <bean id="logAnalysisRule" class="com.ucaner.framework.kafka.appender.rule.LogAnalysisRule">
     	<property name="analysisRules">
     		<map>
     		</map>
@@ -32,10 +32,10 @@
     </bean>
     
     <!-- 日志采集  使用InitializingBean方式启动 -->
-    <bean id="logDataCollector" class="com.sunshine.framework.kafka.collector.LogDataCollector" lazy-init="false"/>
+    <bean id="logDataCollector" class="com.ucaner.framework.kafka.collector.LogDataCollector" lazy-init="false"/>
     
     <!-- elasticsearch client 连接池配置 -->
-    <bean id="esPoolConfig" class="com.sunshine.framework.elasticsearch.pool.ESClientPoolConfig">
+    <bean id="esPoolConfig" class="com.ucaner.framework.elasticsearch.pool.ESClientPoolConfig">
     	<!-- 链接池中最大连接数,默认为50 -->
     	<property name="maxTotal" value="${es.client.pool.maxTotal}"></property>
     	<!-- 链接池中最大空闲的连接数,默认为10 -->
@@ -59,7 +59,7 @@
     </bean>
     
 	<!-- elasticsearch的连接池pool，不是必选项：timeout/password -->
-	<bean id="esClientPool" class="com.sunshine.framework.elasticsearch.pool.ESClientPool">
+	<bean id="esClientPool" class="com.ucaner.framework.elasticsearch.pool.ESClientPool">
 		<constructor-arg index="0" ref="esPoolConfig" ></constructor-arg>
 		<!-- ES实例的名称  --> 
     	<constructor-arg index="1" value="${es.server.clusterName}"></constructor-arg>
@@ -68,7 +68,7 @@
     	<!-- 实例的地址(集群使用逗号隔开) 如： 192.168.200.224:9200,192.168.200.225:9200 -->
     	<constructor-arg index="3" value="${es.server.clusterAddresses}"></constructor-arg>
 	</bean>
-	<bean id="elasticsearchHandler" class="com.sunshine.framework.elasticsearch.handler.impl.ElasticSearchHandler">
+	<bean id="elasticsearchHandler" class="com.ucaner.framework.elasticsearch.handler.impl.ElasticSearchHandler">
 		<property name="esClientPool" ref="esClientPool"></property>
 	</bean>
 </beans>
