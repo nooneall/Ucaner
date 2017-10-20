@@ -1,10 +1,10 @@
 /**
  * <html>
  * <body>
- *  <P> Copyright 2014 广东天泽阳光康众医疗投资管理有限公司. 粤ICP备09007530号-15</p>
+ *  <P> Copyright 1994 JsonInternational</p>
  *  <p> All rights reserved.</p>
- *  <p> Created on 2017-6-17</p>
- *  <p> Created by sun001</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
  *  </body>
  * </html>
  */
@@ -22,19 +22,16 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 
-
 /**
- * @Project: easy_health 
- * @Package: com.sunshine.framework.mvc.exception
- * @ClassName: GlobalExceptionHanlder
- * @Description: <p>全局的handler异常处理器。前后端系统合一，SimpleMappingExceptionResolver不能满足需求，需自定义异常处理器</p>
- * @JDK version used: 
- * @Author: 甘松
- * @Create Date: 2017-6-17
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 1.0
+* @Package：cn.ucaner.framework.mvc.exception   
+* @ClassName：GlobalExceptionHanlder   
+* @Description：   <p> 全局的handler异常处理器。前后端系统合一，SimpleMappingExceptionResolver不能满足需求，需自定义异常处理器</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月20日 下午4:01:09   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 @Component
 public class GlobalExceptionHanlder implements HandlerExceptionResolver {

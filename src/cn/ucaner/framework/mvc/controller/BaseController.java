@@ -24,7 +24,7 @@ import cn.ucaner.framework.mvc.service.BaseService;
 /**
 * @Package：cn.ucaner.framework.mvc.controller   
 * @ClassName：BaseController   
-* @Description：   <p> TODO</p>
+* @Description：   <p> BaseController</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:53:13   
 * @Modify By：   

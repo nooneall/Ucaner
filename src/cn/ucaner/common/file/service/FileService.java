@@ -16,7 +16,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import cn.ucaner.common.file.vo.FileInfo;
 
-
 /**
 * @Package：cn.ucaner.common.file.service   
 * @ClassName：FileService   

@@ -18,7 +18,6 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import cn.ucaner.common.GlobalConstant;
@@ -30,12 +29,10 @@ import cn.ucaner.framework.config.SystemConfig;
 import cn.ucaner.framework.config.SystemConstants;
 import cn.ucaner.framework.mvc.controller.RespBody.Status;
 
-
-
 /**
 * @Package：cn.ucaner.common.file.service.impl   
 * @ClassName：FileServiceImpl   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 文件上传实现类</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午2:20:36   
 * @Modify By：   

@@ -24,7 +24,7 @@ import cn.ucaner.framework.exception.SystemException;
 /**
 * @Package：cn.ucaner.framework.cache.redis   
 * @ClassName：RedisService   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 单机redis接口</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:48:16   
 * @Modify By：   

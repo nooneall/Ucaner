@@ -16,21 +16,17 @@ import java.io.IOException;
 import javax.servlet.ServletOutputStream;
 
 /**
- * GZIP压缩传输.
- * @Package: com.sunshine.framework.filter.gzip
- * @ClassName: GzipFilter
- * @Statement: <p>
- * GZipServletOutputStream继承自ServletOutputStream
+* @Package：cn.ucaner.framework.filter.gzip   
+* @ClassName：GzipServletOutputStream   
+* @Description：   <p> GZipServletOutputStream继承自ServletOutputStream
  * 该类的对象用于替换HttpServletResponse.getOutputStream()方法返回的ServletOutputStream对象 其内部使用GZipServletOutputStream的write(int
- * b)方法实现ServletOutputStream类的write(int b)方法 以达到压缩数据的目的
- *             </p>
- * @JDK version used:
- * @Author: 申姜
- * @Create Date: 2016-4-2
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 1.0
+ * b)方法实现ServletOutputStream类的write(int b)方法 以达到压缩数据的目的</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月20日 下午3:40:49   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class GzipServletOutputStream extends ServletOutputStream {
 	private ByteArrayOutputStream buffer;

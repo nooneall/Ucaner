@@ -37,7 +37,7 @@ import com.alibaba.fastjson.JSON;
 /**
 * @Package：cn.ucaner.framework.cache.redis.impl   
 * @ClassName：ShardedRedisServiceImpl   
-* @Description：   <p> TODO</p>
+* @Description：   <p> redis缓存切片 </p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:46:38   
 * @Modify By：   

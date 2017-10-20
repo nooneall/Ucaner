@@ -1,10 +1,10 @@
 /**
  * <html>
  * <body>
- *  <P> Copyright 2014 广东天泽阳光康众医疗投资管理有限公司. 粤ICP备09007530号-15</p>
+ *  <P> Copyright 1994 JsonInternational</p>
  *  <p> All rights reserved.</p>
- *  <p> Created on 2016年4月6日</p>
- *  <p> Created by 申姜</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
  *  </body>
  * </html>
  */
@@ -33,18 +33,15 @@ import org.mybatis.generator.config.MergeConstants;
 import org.mybatis.generator.config.PropertyRegistry;
 
 /**
- * 修改mybatisGenerator生成的注释
- * @Project: sunshine_health 
- * @Package: com.sunshine.framework.utils
- * @ClassName: MybatisCommentGenerator
- * @Description: <p></p>
- * @JDK version used: 
- * @Author: 申姜
- * @Create Date: 2016年4月6日
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 1.0
+* @Package：cn.ucaner.common.mybatisgenerator   
+* @ClassName：MyCommentGenerator   
+* @Description：   <p> 修改mybatisGenerator生成的注释 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月20日 下午3:53:57   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class MyCommentGenerator implements CommentGenerator {
 	private Properties properties;
@@ -66,7 +63,7 @@ public class MyCommentGenerator implements CommentGenerator {
 		compilationUnit.addFileCommentLine("/**");
 		compilationUnit.addFileCommentLine("* <html>");
 		compilationUnit.addFileCommentLine("*  <body>");
-		compilationUnit.addFileCommentLine("*   <P> Copyright 2014 广东天泽阳光康众医疗投资管理有限公司. 粤ICP备09007530号-15</p>");
+		compilationUnit.addFileCommentLine("*   <P> Copyright 1994 JasonInternational</p>");
 		compilationUnit.addFileCommentLine("*   <p> All rights reserved.</p>");
 		compilationUnit.addFileCommentLine("*   <p> Created on " + cal.get(Calendar.YEAR) + "年" + ( cal.get(Calendar.MONTH) + 1 ) + "月"
 				+ cal.get(Calendar.DAY_OF_MONTH) + "日" + "</p>");

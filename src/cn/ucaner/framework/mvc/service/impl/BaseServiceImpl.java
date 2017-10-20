@@ -25,7 +25,7 @@ import com.github.pagehelper.PageInfo;
 /**
 * @Package：cn.ucaner.framework.mvc.service.impl   
 * @ClassName：BaseServiceImpl   
-* @Description：   <p> TODO</p>
+* @Description：   <p> BaseServiceImpl</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午2:02:47   
 * @Modify By：   

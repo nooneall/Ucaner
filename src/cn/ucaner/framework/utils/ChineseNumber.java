@@ -16,7 +16,6 @@ import java.util.Map;
 
 import cn.ucaner.framework.exception.SystemException;
 
-
 /**
 * @Package：cn.ucaner.framework.utils   
 * @ClassName：ChineseNumber   

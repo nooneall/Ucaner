@@ -17,7 +17,7 @@ import java.util.Map;
 /**
 * @Package：cn.ucaner.framework.mvc.controller   
 * @ClassName：FormParams   
-* @Description：   <p> TODO</p>
+* @Description：   <p> FormParams</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:54:36   
 * @Modify By：   

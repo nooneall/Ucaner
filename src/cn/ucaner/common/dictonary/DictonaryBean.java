@@ -1,10 +1,10 @@
 /**
  * <html>
  * <body>
- *  <P> Copyright 2014 广东天泽阳光康众医疗投资管理有限公司. 粤ICP备09007530号-15</p>
+ *  <P> Copyright 1994 JsonInternational</p>
  *  <p> All rights reserved.</p>
- *  <p> Created on 2017年6月12日</p>
- *  <p> Created by 钟乳石</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
  *  </body>
  * </html>
  */
@@ -14,18 +14,17 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * @Project: easy_health 
- * @Package: com.sunshine.platform.ordermanager
- * @ClassName: DictonaryBean
- * @Description: <p>字典项配置</p>
- * @JDK version used: 
- * @Author: 钟乳石
- * @Create Date: 2017年6月12日
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 1.0
+* @Package：cn.ucaner.common.dictonary   
+* @ClassName：DictonaryBean   
+* @Description：   <p> 字典项配置</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月20日 下午3:47:16   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
+
 
 public class DictonaryBean {
     private  static Map<String,String> platformCodeDic=new LinkedHashMap<String,String>();

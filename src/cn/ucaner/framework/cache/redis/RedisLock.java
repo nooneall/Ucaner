@@ -21,19 +21,16 @@ import redis.clients.jedis.ShardedJedis;
 import redis.clients.jedis.ShardedJedisPool;
 import cn.ucaner.framework.exception.SystemException;
 
-
 /**
- * redis锁
- * @Package: com.sunshine.framework.cache.redis
- * @ClassName: RedisLock
- * @Statement: <p>redis的锁</p>
- * @JDK version used: 
- * @Author: 无名子
- * @Create Date: 2016-4-2
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 0
+* @Package：cn.ucaner.framework.cache.redis   
+* @ClassName：RedisLock   
+* @Description：   <p> redis锁</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月20日 下午3:43:35   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class RedisLock {
 	public static Logger logger = LoggerFactory.getLogger(RedisLock.class);

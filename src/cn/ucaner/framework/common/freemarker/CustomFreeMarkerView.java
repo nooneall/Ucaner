@@ -25,7 +25,7 @@ import cn.ucaner.framework.config.SystemConfig;
 /**
 * @Package：cn.ucaner.framework.common.freemarker   
 * @ClassName：CustomFreeMarkerView   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 用户自定义视图解析器 </p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月28日 下午4:39:36   
 * @Modify By：   

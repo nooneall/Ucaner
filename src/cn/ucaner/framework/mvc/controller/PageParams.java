@@ -17,7 +17,7 @@ import java.util.Map;
 /**
 * @Package：cn.ucaner.framework.mvc.controller   
 * @ClassName：PageParams   
-* @Description：   <p> TODO</p>
+* @Description：   <p> PageParams</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:54:48   
 * @Modify By：   

@@ -27,7 +27,7 @@ import cn.ucaner.framework.utils.StringHelper;
 /**
 * @Package：cn.ucaner.framework.interceptor   
 * @ClassName：ReqInfoLogInterceptor   
-* @Description：   <p> TODO</p>
+* @Description：   <p> ReqInfoLogInterceptor</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:52:13   
 * @Modify By：   

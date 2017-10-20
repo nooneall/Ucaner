@@ -1,10 +1,10 @@
 /**
  * <html>
  * <body>
- *  <P> Copyright 2014 广东天泽阳光康众医疗投资管理有限公司. 粤ICP备09007530号-15</p>
+ *  <P> Copyright 1994 JsonInternational</p>
  *  <p> All rights reserved.</p>
- *  <p> Created on 2016年4月2日</p>
- *  <p> Created by 申姜</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
  *  </body>
  * </html>
  */
@@ -34,18 +34,15 @@ import com.github.pagehelper.PageInfo;
 
 
 /**
- * 基础Dao接口实现类，实现该类的子类必须设置泛型类型
- * @Package: com.sunshine.framework.mvc.dao.impl
- * @ClassName: BaseDaoImpl
- * @Statement: <p>
- *             </p>
- * @JDK version used:
- * @Author: 申姜
- * @Create Date: 2016-4-2
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 1.0
+* @Package：cn.ucaner.framework.mvc.dao.impl   
+* @ClassName：BaseDaoImpl   
+* @Description：   <p> 基础Dao接口实现类，实现该类的子类必须设置泛型类型</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月20日 下午4:00:03   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class BaseDaoImpl<T extends BaseEntity, PK extends Serializable> implements BaseDao<T, PK> {
 	private static Logger logger = LoggerFactory.getLogger(BaseDaoImpl.class);

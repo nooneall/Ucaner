@@ -22,7 +22,7 @@ import com.github.pagehelper.PageInfo;
 /**
 * @Package：cn.ucaner.framework.mvc.service   
 * @ClassName：BaseService   
-* @Description：   <p> TODO</p>
+* @Description：   <p> BaseService</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午2:03:20   
 * @Modify By：   

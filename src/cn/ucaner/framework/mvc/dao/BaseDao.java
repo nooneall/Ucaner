@@ -22,7 +22,7 @@ import com.github.pagehelper.PageInfo;
 /**
 * @Package：cn.ucaner.framework.mvc.dao   
 * @ClassName：BaseDao   
-* @Description：   <p> TODO</p>
+* @Description：   <p> BaseDao基类</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:57:54   
 * @Modify By：   

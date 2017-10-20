@@ -1,10 +1,10 @@
 /**
  * <html>
  * <body>
- *  <P> Copyright 2014 广东天泽阳光康众医疗投资管理有限公司. 粤ICP备09007530号-15</p>
+ *  <P> Copyright 1994 JsonInternational</p>
  *  <p> All rights reserved.</p>
- *  <p> Created on 2016年4月6日</p>
- *  <p> Created by 申姜</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
  *  </body>
  * </html>
  */
@@ -20,17 +20,15 @@ import org.mybatis.generator.config.xml.ConfigurationParser;
 import org.mybatis.generator.internal.DefaultShellCallback;
 
 /**
- * @Project: sunshine_health 
- * @Package: com.sunshine.framework.utils
- * @ClassName: MybatisGenerator
- * @Description: <p></p>
- * @JDK version used: 
- * @Author: 申姜
- * @Create Date: 2016年4月6日
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 1.0
+* @Package：cn.ucaner.common.mybatisgenerator   
+* @ClassName：MybatisGenerator   
+* @Description：   <p> MybatisGenerator mybatis自动生成工具的具体实现</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月20日 下午3:53:05   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class MybatisGenerator {
 	public static void main(String[] args) {

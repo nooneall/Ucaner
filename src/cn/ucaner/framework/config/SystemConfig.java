@@ -25,7 +25,7 @@ import cn.ucaner.framework.common.spring.ext.config.ExtPropertyPlaceholderConfig
 /**
 * @Package：cn.ucaner.framework.config   
 * @ClassName：SystemConfig   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 系统配置 </p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:49:57   
 * @Modify By：   

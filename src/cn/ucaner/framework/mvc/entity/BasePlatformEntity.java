@@ -17,7 +17,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 /**
 * @Package：cn.ucaner.framework.mvc.entity   
 * @ClassName：BasePlatformEntity   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 平台基类</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:58:32   
 * @Modify By：   

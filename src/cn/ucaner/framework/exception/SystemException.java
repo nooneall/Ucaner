@@ -13,7 +13,7 @@ package cn.ucaner.framework.exception;
 /**
 * @Package：cn.ucaner.framework.exception   
 * @ClassName：SystemException   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 系统异常</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:50:19   
 * @Modify By：   
@@ -22,6 +22,7 @@ package cn.ucaner.framework.exception;
 * @version    V1.0
  */
 public class SystemException extends RuntimeException {
+	
 	private static final long serialVersionUID = 1401593546385403720L;
 
 	public SystemException() {

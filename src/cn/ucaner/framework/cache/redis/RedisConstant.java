@@ -13,7 +13,7 @@ package cn.ucaner.framework.cache.redis;
 /**
 * @Package：cn.ucaner.framework.cache.redis   
 * @ClassName：RedisConstant   
-* @Description：   <p>RedisConstant </p>
+* @Description：   <p>redis常量 </p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:46:52   
 * @Modify By：   

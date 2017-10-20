@@ -34,7 +34,7 @@ import com.alibaba.fastjson.JSON;
 /**
 * @Package：cn.ucaner.framework.cache.redis.impl   
 * @ClassName：RedisServiceImpl   
-* @Description：   <p> RedisServiceImpl</p>
+* @Description：   <p> redis实现</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:46:21   
 * @Modify By：   

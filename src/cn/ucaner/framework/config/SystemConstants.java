@@ -13,7 +13,7 @@ package cn.ucaner.framework.config;
 /**
 * @Package：cn.ucaner.framework.config   
 * @ClassName：SystemConstants   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 系统常量配置</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:49:46   
 * @Modify By：   

@@ -29,7 +29,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
 * @Package：cn.ucaner.framework.filter.gzip   
 * @ClassName：GzipFilter   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 过滤器  Gzip</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:51:26   
 * @Modify By：   

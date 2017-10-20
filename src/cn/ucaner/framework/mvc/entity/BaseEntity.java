@@ -15,7 +15,7 @@ import java.io.Serializable;
 /**
 * @Package：cn.ucaner.framework.mvc.entity   
 * @ClassName：BaseEntity   
-* @Description：   <p> TODO</p>
+* @Description：   <p> BaseEntity 实体基类</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:58:42   
 * @Modify By：   

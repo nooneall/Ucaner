@@ -18,7 +18,7 @@ import org.springframework.util.StringUtils;
 /**
 * @Package：cn.ucaner.framework.mvc.controller   
 * @ClassName：DateConvertEditor   
-* @Description：   <p> TODO</p>
+* @Description：   <p> DateConvertEditor</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:54:17   
 * @Modify By：   

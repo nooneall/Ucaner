@@ -1,10 +1,10 @@
 /**
  * <html>
  * <body>
- *  <P> Copyright 2017 阳光康众</p>
+ *  <P> Copyright 1994 JsonInternational</p>
  *  <p> All rights reserved.</p>
- *  <p> Created on 2017年7月10日</p>
- *  <p> Created by 于策/yu.ce@foxmail.com</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
  *  </body>
  * </html>
  */
@@ -14,17 +14,15 @@ import java.util.List;
 import cn.ucaner.common.vo.TreeNodeVo;
 
 /**
- * @Project ChuFangLiuZhuan_PlatForm
- * @Package com.sunshine.common.dao
- * @ClassName CommonDao.java
- * @Description
- * @JDK version used 1.8
- * @Author 于策/yu.ce@foxmail.com
- * @Create Date 2017年7月10日
- * @modify By
- * @modify Date
- * @Why&What is modify
- * @Version 1.0
+* @Package：cn.ucaner.common.dao   
+* @ClassName：CommonDao   
+* @Description：   <p> 通用Dao</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月20日 下午3:45:21   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public interface CommonDao {
 	/**
