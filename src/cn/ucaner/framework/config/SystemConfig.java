@@ -34,6 +34,7 @@ import cn.ucaner.framework.common.spring.ext.config.ExtPropertyPlaceholderConfig
 * @version    V1.0
  */
 public class SystemConfig {
+	
 	private static Logger logger = LoggerFactory.getLogger(SystemConfig.class);
 	/**
 	 * 系统参数集合

@@ -28,6 +28,7 @@ import cn.ucaner.framework.config.SystemConfig;
 * @version    V1.0
  */
 public class GlobalConstant {
+	
 	/************************ 文件存放的常量 start **************************/
 	/** 文件上传根目录 **/
 	public static String filePath = SystemConfig.getStringValue("file_path");
@@ -132,19 +133,6 @@ public class GlobalConstant {
 	 */
 	public static final String DES_KEY_PATH = SystemConfig.getStringValue("des_key");
 
-	/************************ 文件上传参数常量定义 end **************************/
-	
-	/************************ 订单流水号缓存类型key start **************************/
-	
-	public static final String EH_COMMON_ORDER_SERIAL_NUMBER = "easyhealth_common_order_serial_number";
-
-	public static final String EH_MEDICARE_ORDER_SERIAL_NUMBER = "easyhealth_medicare_order_serial_number";
-	
-	/************************ 订单流水号缓存类型key end **************************/
-
-	/************************
-	 * 注册用户 家人 就诊人 等人员信息相关常量定义 start
-	 **********************/
 	/**
 	 * 男
 	 */
@@ -167,133 +155,14 @@ public class GlobalConstant {
 	public static final String CSS_VERSION = "css_version";
 	public static final String JS_VERSION = "js_version";
 
-	/************************ 支付相关常量定义 start **************************/
 	/**
-	 * 支付方式编码:医程通钱包
+	 * 
 	 */
-	public static final String TRADE_TYPE_YCT_WALLET = "yctWallet";
-
-	/**
-	 * 支付方式编码:银联支付
-	 */
-	public static final String TRADE_TYPE_UNIONPAY = "unionpay";
-
-	/**
-	 * 支付方式编码:微信支付
-	 */
-	public static final String TRADE_TYPE_WECHAT = "wechat";
-
-	/**
-	 * 支付方式编码:支付宝支付
-	 */
-	public static final String TRADE_TYPE_ALIPAY = "alipay";
-
-	/**
-	 * 支付方式编码:医保支付
-	 */
-	public static final String TRADE_TYPE_MEDICARE_PAYMENT = "medicarePayment";
-
-	/**
-	 * 支付方式编码:银联先诊后付（代收）
-	 */
-	public static final String TRADE_TYPE_DS_UNIONPAY = "dsunionpay";
-
-	/**
-	 * 支付方式值:医程通钱包
-	 */
-	public static final int TRADE_TYPE_YCT_WALLET_VALUE = 1;
-
-	/**
-	 * 支付方式值:银联支付
-	 */
-	public static final int TRADE_TYPE_UNIONPAY_VALUE = 2;
-
-	/**
-	 * 支付方式值:微信支付
-	 */
-	public static final int TRADE_TYPE_WECHAT_VALUE = 3;
-
-	/**
-	 * 支付方式值:支付宝支付
-	 */
-	public static final int TRADE_TYPE_ALIPAY_VALUE = 4;
-
-	/**
-	 * 支付方式值:医保支付
-	 */
-	public static final int TRADE_TYPE_MEDICARE_PAYMENT_VALUE = 5;
-
-	/**
-	 * 支付方式编码:银联先诊后付（代收）
-	 */
-	public static final int TRADE_TYPE_DS_UNIONPAY_VALUE = 6;
-
-	/**
-	 * 支付方式编码:医程通钱包
-	 */
-	public static final String TRADE_TYPE_YCT_WALLET_NAME = "医程通钱包";
-	public static final String TRADE_TYPE_YCT_WALLET_ICON_NAME = "";
-
-	/**
-	 * 支付方式名称:银联支付
-	 */
-	public static final String TRADE_TYPE_UNIONPAY_NAME = "银联支付";
-	public static final String TRADE_TYPE_UNIONPAY_ICON_NAME = "icon-upay";
-
-	/**
-	 * 支付方式名称:微信支付
-	 */
-	public static final String TRADE_TYPE_WECHAT_NAME = "微信支付";
-	public static final String TRADE_TYPE_WECHAT_ICON_NAME = "icon-wpay";
-
-	/**
-	 * 支付方式名称:支付宝支付
-	 */
-	public static final String TRADE_TYPE_ALIPAY_NAME = "支付宝支付";
-	public static final String TRADE_TYPE_ALIPAY_ICON_NAME = "icon-alipay";
-
-	/**
-	 * 支付方式名称:医保支付
-	 */
-	public static final String TRADE_TYPE_MEDICARE_PAYMENT_NAME = "医保支付";
-	public static final String TRADE_TYPE_MEDICARE_ICON_NAME = "icon-si";
-
-	/**
-	 * 支付方式名称:银联先诊后付（代收）
-	 */
-	public static final String TRADE_TYPE_DS_UNIONPAY_NAME = "先诊后付";
-
-	/************************ 支付相关常量定义 end **************************/
-
-	/************************ 消息相关常量定义 start **************************/
-	/** 消息模板类型--短信 **/
-	public static final int MSG_LIBRARY_TYPE_SMS = 1;
-	/** 消息模板类型--app端 **/
-	public static final int MSG_LIBRARY_TYPE_CENTER = 2;
-
-	/** 消息发送状态--待发送 **/
-	public static final int MSG_UNSEND = 0;
-	/** 消息发送状态--发送中 **/
-	public static final int MSG_SENDING = 1;
-	/** 消息发送状态--发送完成 **/
-	public static final int MSG_SEND_SUCCESS = 2;
-	/** 消息发送状态--发送失败 **/
-	public static final int MSG_SEND_FAILURE = 3;
-
-	/** 接收消息用户--医生 **/
-	public static final int MSG_RECEIVE_USER_Doctor = 1;
-	/** 接收消息用户--患者 **/
-	public static final int MSG_RECEIVE_USER_PATIENT = 2;
-	/************************ 消息相关常量定义 end **************************/
-	
-	/********************** 服务类型 *************************************/
-	/** 图文咨询  **/
-	public static final int SERVICE_TYPE_TEXT_IMAGE = 1;
-	/** 电话咨询  **/
-	public static final int SERVICE_TYPE_PHONE_CALL = 2;
-	/** 视频咨询  **/
-	public static final int SERVICE_TYPE_VEDIO_CALL = 3;
 	public static final String STRING_SPLIT_CHAR = null;
-	public static final Object SESSION_PLATFORM_USER_ACCOUNT_KEY = null;
+	public static final String SESSION_PLATFORM_USER_ACCOUNT_KEY = null;
+	public static final String STRING_AND_CHAR = null;
+	public static final String STRING_ASSIGN_CHAR = null;
+	public static final String EH_COMMON_ORDER_SERIAL_NUMBER = null;
+	public static final String EH_MEDICARE_ORDER_SERIAL_NUMBER = null;
 
 }
