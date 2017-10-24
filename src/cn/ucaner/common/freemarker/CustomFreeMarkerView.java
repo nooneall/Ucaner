@@ -35,16 +35,25 @@ import cn.ucaner.framework.config.SystemConfig;
 * @version    V1.0
  */
 public class CustomFreeMarkerView extends FreeMarkerView {
+	
 	public static Logger logger = LoggerFactory.getLogger(CustomFreeMarkerView.class);
 
+	/**
+	* 描述: 渲染数据到全局页面
+	* @param model     变量信息
+	* @param request   请求
+	* @throws Exception
+	 */
 	@Override
 	protected void exposeHelpers(Map<String, Object> model, HttpServletRequest request) throws Exception {
 		String path = request.getContextPath();
 		String basePath = CommonUtil.getRequestContextPath(request);
 		if (logger.isDebugEnabled()) {
-			logger.debug("CustomFreeMarkerView exposeHelpers's basePath:{}", basePath);
+			logger.debug("CustomFreeMarkerView用户自定义的渲染基础路径:{}", basePath);
 		}
-		String imgPath = SystemConfig.getStringValue("file_virtual_path");
+		//图片虚拟路径
+		String imgPath = SystemConfig.getStringValue(GlobalConstant.FILE_VIRTUAL_PATH);
+		//配置文件里后去
 		String css_version = SystemConfig.getStringValue(GlobalConstant.CSS_VERSION);
 		if (StringUtils.isBlank(css_version)) {
 			css_version = "1.0";
@@ -53,8 +62,7 @@ public class CustomFreeMarkerView extends FreeMarkerView {
 		if (StringUtils.isBlank(js_version)) {
 			js_version = "1.0";
 		}
-
-		// 设置项目路径为全局变量
+		//渲染系统全局变量
 		model.put("path", path);
 		model.put("basePath", basePath);
 		model.put("imgPath", imgPath);
