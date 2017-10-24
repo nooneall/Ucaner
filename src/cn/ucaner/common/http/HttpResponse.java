@@ -47,8 +47,11 @@ import com.alibaba.fastjson.JSONObject;
  */
 
 public class HttpResponse {
+	
 	private static Logger logger = Logger.getLogger(HttpResponse.class.getName());
+	
 	private final static boolean DEBUG = SystemConfig.getBooleanValue("http_debug");
+	
 	private static ThreadLocal<DocumentBuilder> builders = new ThreadLocal<DocumentBuilder>() {
 		@Override
 		protected DocumentBuilder initialValue() {

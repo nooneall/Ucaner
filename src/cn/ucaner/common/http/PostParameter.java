@@ -82,8 +82,7 @@ public class PostParameter implements Serializable {
 	}
 
 	/**
-	 * 
-	 * @return content-type
+	 * 获取Content类型
 	 */
 	public String getContentType() {
 		if (!isFile()) {
@@ -134,7 +133,7 @@ public class PostParameter implements Serializable {
 		return containsFile;
 	}
 
-	/* package */static boolean containsFile(List<PostParameter> params) {
+	static boolean containsFile(List<PostParameter> params) {
 		boolean containsFile = false;
 		for (PostParameter param : params) {
 			if (param.isFile()) {

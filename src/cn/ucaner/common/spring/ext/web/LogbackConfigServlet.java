@@ -17,55 +17,48 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Bootstrap servlet for custom Logback initialization in a web environment.
- * Delegates to LogbackWebConfigurer (see its javadoc for configuration details).
- * <p/>
- * <b>WARNING: Assumes an expanded WAR file</b>, both for loading the configuration
- * file and for writing the log files. If you want to keep your WAR unexpanded or
- * don't need application-specific log files within the WAR directory, don't use
- * Logback setup within the application (thus, don't use LogbackConfigListener or
- * LogbackConfigServlet). Instead, use a global, VM-wide Logback setup (for example,
- * in JBoss) or JDK 1.4's <code>java.util.logging</code> (which is global too).
- * <p/>
- * Note: This servlet should have a lower <code>load-on-startup</code> value
- * in <code>web.xml</code> than ContextLoaderServlet, when using custom Logback
- * initialization.
- * <p/>
- * <i>Note that this class has been deprecated for containers implementing
- * Servlet API 2.4 or higher, in favor of LogbackConfigListener.</i><br>
- * According to Servlet 2.4, listeners must be initialized before load-on-startup
- * servlets. Many Servlet 2.3 containers already enforce this behavior
- * (see ContextLoaderServlet javadocs for details). If you use such a container,
- * this servlet can be replaced with LogbackConfigListener. Else or if working
- * with a Servlet 2.2 container, stick with this servlet.
- *
- * @author Juergen Hoeller
- * @author Les Hazlewood
- * @see WebLogbackConfigurer
- * @see LogbackConfigListener
- * @since 0.1
+* @Package：cn.ucaner.common.spring.ext.web   
+* @ClassName：LogbackConfigServlet   
+* @Description：   <p> 在一个web环境中为自定义Logback初始化的引导servlet。
+*					委派到LogbackWebConfigurer(请参阅其javadoc的配置细节)。</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 下午1:58:50   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class LogbackConfigServlet extends HttpServlet {
 
+	private static final long serialVersionUID = 3181533221135461498L;
+
+	/**
+	* 描述: 初始化
+	 */
 	@Override
 	public void init() {
 		WebLogbackConfigurer.initLogging(getServletContext());
 	}
 
+	/**
+	* 描述: 销毁
+	 */
 	@Override
 	public void destroy() {
 		WebLogbackConfigurer.shutdownLogging(getServletContext());
 	}
 
+	/**
+	* 描述:获取servlet信息
+	 */
 	@Override
 	public String getServletInfo() {
 		return "LogbackConfigServlet for Servlet API 2.2/2.3 " + "(deprecated in favor of LogbackConfigListener for Servlet API 2.4+)";
 	}
 
 	/**
-	 * This should never even be called since no mapping to this servlet should
-	 * ever be created in web.xml. That's why a correctly invoked Servlet 2.3
-	 * listener is much more appropriate for initialization work ;-)
+	 * 这甚至不应该被调用，因为没有映射到这个servlet应该在web.xml中创建。
+	 * 这就是正确调用Servlet 2.3的原因侦听器更适合初始化工作
 	 */
 	@Override
 	public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {

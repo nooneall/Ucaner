@@ -23,7 +23,7 @@ import redis.clients.util.MurmurHash;
 /**
 * @Package：cn.ucaner.common.hash   
 * @ClassName：HashingTableNameGenerator   
-* @Description：   <p> hash一致性算法</p>
+* @Description：   <p> 表明生成器 </p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午2:24:13   
 * @Modify By：   
@@ -32,6 +32,7 @@ import redis.clients.util.MurmurHash;
 * @version    V1.0
  */
 public class HashingTableNameGenerator {
+	
 	/**
 	 * 虚拟节点数
 	 */
@@ -46,6 +47,7 @@ public class HashingTableNameGenerator {
 	 * hash存储
 	 */
 	private static final Map<String, TreeMap<Long, String>> resources = new LinkedHashMap<String, TreeMap<Long, String>>();
+	
 	public static final int subTableCount = 10;
 
 	public static String[] tableNames = new String[] {};

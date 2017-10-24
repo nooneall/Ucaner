@@ -27,8 +27,9 @@ import org.slf4j.LoggerFactory;
 public class SimpleHashTableNameGenerator {
 	
 	private static final Logger logger = LoggerFactory.getLogger(SimpleHashTableNameGenerator.class);
+	
 	/**
-	 * 分表的子表数
+	 * 分表的子表数 10张表
 	 */
 	public static final int subTableCount = 10;
 
@@ -46,22 +47,22 @@ public class SimpleHashTableNameGenerator {
 	 *            是否需要均匀散列<br>
 	 * @return
 	 */
-	private static String getSplitTableName(String tableName, Object splitKeyVal, Integer subTableCount, Boolean isNeedUniform) {
+	@SuppressWarnings("unused")
+	private static String getSplitTableName(final String tableName, final Object splitKeyVal, final Integer subTableCount, final Boolean isNeedUniform) {
 		long hashVal = 0;
 		if (splitKeyVal instanceof Number) {
 			hashVal = Integer.parseInt(splitKeyVal.toString());
 		} else {
 			hashVal = splitKeyVal.toString().hashCode();
 		}
-
 		// 斐波那契（Fibonacci）散列
 		if (isNeedUniform) {
 			hashVal = ( hashVal * 2654435769L ) >> 28;
 		}
-
 		// 避免hashVal超出 MAX_VALUE = 0x7fffffff时变为负数,取绝对值
 		hashVal = Math.abs(hashVal) % subTableCount;
 		String splitableName = tableName + "_" + ( hashVal + 1 );
+		logger.info("splitableName - {}",splitableName);
 		return splitableName;
 	}
 

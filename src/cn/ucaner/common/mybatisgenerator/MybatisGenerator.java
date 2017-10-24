@@ -45,7 +45,7 @@ public class MybatisGenerator {
 			e.printStackTrace();
 		}
 		for (int i = 0; i < warnings.size(); i++) {
-			System.out.println(warnings.get(i));
+			System.out.println("[生成警告:]"+warnings.get(i));
 		}
 
 	}

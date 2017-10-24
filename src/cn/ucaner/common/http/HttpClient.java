@@ -52,66 +52,86 @@ import cn.ucaner.framework.exception.SystemException;
 public class HttpClient implements Serializable {
 
 	private static final long serialVersionUID = 6762839916800221637L;
-	protected static Logger logger = Logger.getLogger(HttpClient.class.getName());
+	
+	protected static Logger logger = Logger.getLogger(HttpClient.class);
+	
 	/**
-	 * OK: Success!
+	 * OK: Success! 成功！
 	 */
 	private static final int OK = 200;
+	
 	/**
 	 * Move temporarily:The requested resource temporary from different URI in
 	 * response to a request.
+	 * 临时移动:来自不同URI的请求资源对请求的响应
 	 */
 	private static final int NOT_RESOURCE = 302;
+	
 	/**
 	 * Not Modified: If the client sends a GET request with the condition and
 	 * the request is allowed, and the content of the document (since the last
 	 * visit or request according to the conditions of) did not change, the
-	 * server should return a status code.
+	 * server should return a status code. 没有改变.
 	 */
 	private static final int NOT_MODIFIED = 304;
+	
 	/**
 	 * Bad Request: Semantic error, the current request cannot be understood by
 	 * the server.
+	 * 错误请求:语义错误,当前请求不能被理解服务器。
 	 */
 	private static final int BAD_REQUEST = 400;
+	
 	/**
 	 * Unauthorized: Require the user to verify the current request.
+	 * 未经授权:要求用户验证当前请求。
 	 */
 	private static final int UNAUTHORIZED = 401;
+	
 	/**
-	 * Forbidden: The server has understood the request, but refused to
-	 * implement it.
+	 * Forbidden: The server has understood the request, but refused to implement it.
+	 * 禁止:服务器已理解请求，但拒绝实现它。
 	 */
 	private static final int FORBIDDEN = 403;
+	
 	/**
-	 * Not Found: The request failed requests, hope to get the resource is not
-	 * found on the server.
+	 * Not Found: The request failed requests, hope to get the resource is not found on the server.
+	 * 请求失败，希望在服务器上没有找到资源。
 	 */
 	private static final int NOT_FOUND = 404;
+	
 	/**
 	 * Not Acceptable:The content characteristics of the requested resource can
 	 * not meet the head condition request, thus unable to generate the response
 	 * entity.
 	 */
 	private static final int NOT_ACCEPTABLE = 406;
+	
 	/**
 	 * Internal Server Error:The server encountered an unexpected condition,
 	 * cause it can't fulfill the request processing.
+	 * 内部服务器错误:服务器遇到意外情况,因为它无法完成请求处理。
 	 */
 	private static final int INTERNAL_SERVER_ERROR = 500;
+	
 	/**
 	 * Bad Gateway: As a gateway or proxy work server attempts to execute the
 	 * request, response from the upstream server received an invalid.
+	 * 坏网关:作为网关或代理工作服务器试图请求，上游服务器的响应接收到无效。
 	 */
+	
 	private static final int BAD_GATEWAY = 502;
 	/**
 	 * Service Unavailable:Due to a temporary server maintenance or overload,
 	 * the server cannot process the request.
+	 * 服务不可用:由于临时服务器维护或过载,服务器无法处理请求。
 	 */
 	private static final int SERVICE_UNAVAILABLE = 503;
 
 	private final static boolean DEBUG = SystemConfig.getBooleanValue("http_debug");
+	
 	private org.apache.commons.httpclient.HttpClient client = null;
+	
 	/**
 	 * 多线程HTTP连接管理器
 	 */
@@ -139,7 +159,6 @@ public class HttpClient implements Serializable {
 
 	/**
 	 * log调试
-	 * 
 	 */
 	private static void log(String message) {
 		if (DEBUG) {
@@ -149,7 +168,6 @@ public class HttpClient implements Serializable {
 
 	/**
 	 * 处理http getmethod 请求
-	 * 
 	 */
 	public HttpResponse get(String url) throws SystemException {
 		return get(url, new PostParameter[0]);
@@ -157,7 +175,6 @@ public class HttpClient implements Serializable {
 
 	/**
 	 * 处理http getmethod 请求
-	 * 
 	 */
 	public HttpResponse get(String url, PostParameter[] params) throws SystemException {
 		log("Request:");
@@ -176,7 +193,6 @@ public class HttpClient implements Serializable {
 
 	/**
 	 * 处理http getmethod 请求
-	 * 
 	 */
 	public HttpResponse get(String url, List<PostParameter> params) throws SystemException {
 		log("Request:");
@@ -282,7 +298,6 @@ public class HttpClient implements Serializable {
 
 	/**
 	 * 处理http post请求
-	 * 
 	 * @param url
 	 * @param value
 	 * @return
@@ -301,7 +316,6 @@ public class HttpClient implements Serializable {
 
 	/**
 	 * 处理http post请求
-	 * 
 	 */
 	public HttpResponse post(String url, PostParameter[] params) throws SystemException {
 		log("Request:");
@@ -320,7 +334,6 @@ public class HttpClient implements Serializable {
 
 	/**
 	 * 执行请求
-	 * 
 	 * @param method
 	 * @return
 	 * @throws SystemException
@@ -381,7 +394,6 @@ public class HttpClient implements Serializable {
 
 	/**
 	 * 对parameters进行encode处理
-	 * 
 	 * @param postParams
 	 * @return
 	 */
@@ -403,7 +415,6 @@ public class HttpClient implements Serializable {
 
 	/**
 	 * 对parameters进行encode处理
-	 * 
 	 * @param postParams
 	 * @return
 	 */

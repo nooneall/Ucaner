@@ -24,7 +24,6 @@ import org.springframework.web.util.WebUtils;
 import cn.ucaner.common.spring.ext.LogbackConfigurer;
 import ch.qos.logback.core.joran.spi.JoranException;
 
-
 /**
 * @Package：cn.ucaner.common.spring.ext.web   
 * @ClassName：WebLogbackConfigurer   
@@ -56,27 +55,25 @@ public class WebLogbackConfigurer {
 	 * @param servletContext
 	 */
 	public static void initLogging(ServletContext servletContext) {
-		// Expose the web app root system property.
+		// 公开web应用程序根系统属性。
 		if (exposeWebAppRoot(servletContext)) {
 			WebUtils.setWebAppRootSystemProperty(servletContext);
 		}
 
-		// Only perform custom Logback initialization in case of a config file.
+		// 只在配置文件的情况下执行自定义的登录初始化。
 		String location = servletContext.getInitParameter(CONFIG_LOCATION_PARAM);
 		if (location != null) {
-			// Perform actual Logback initialization; else rely on Logback's default initialization.
+			// 执行实际Logback初始化;其他依赖于Logback的默认初始化。
 			try {
-				// Resolve system property placeholders before potentially resolving real path.
+				// 解析系统属性占位符，然后才有可能解决真正的路径。
 				location = SystemPropertyUtils.resolvePlaceholders(location);
 				// Return a URL (e.g. "classpath:" or "file:") as-is;
-				// consider a plain file path as relative to the web application root directory.
+				// 考虑相对于web应用程序根目录的普通文件路径。
 				if (!ResourceUtils.isUrl(location)) {
 					location = WebUtils.getRealPath(servletContext, location);
 				}
-
-				// Write log message to server log.
+				//将日志消息写入服务器日志。
 				servletContext.log("Initializing Logback from [" + location + "]");
-
 				// Initialize
 				LogbackConfigurer.initLogging(location);
 			} catch (FileNotFoundException ex) {
@@ -86,8 +83,8 @@ public class WebLogbackConfigurer {
 			}
 		}
 
-		//If SLF4J's java.util.logging bridge is available in the classpath, install it. This will direct any messages
-		//from the Java Logging framework into SLF4J. When logging is terminated, the bridge will need to be uninstalled
+		//如果SLF4J java.util 在类路径中可以使用日志桥，安装它。这将指导任何消息
+		//从Java日志框架到SLF4J 当日志被终止时，桥将需要卸载
 		try {
 			Class<?> julBridge = ClassUtils.forName("org.slf4j.bridge.SLF4JBridgeHandler", ClassUtils.getDefaultClassLoader());
 
@@ -110,11 +107,11 @@ public class WebLogbackConfigurer {
 
 	/**
 	 * 关闭Logback，适当地释放所有文件锁
-*重新设置web应用程序根系统属性。
+	 * 重新设置web应用程序根系统属性.
 	 * @param servletContext
 	 */
 	public static void shutdownLogging(ServletContext servletContext) {
-		//Uninstall the SLF4J java.util.logging bridge *before* shutting down the Logback framework.
+		//卸载SLF4J java.util.日志记录桥*在*关闭Logback框架之前。
 		try {
 			Class<?> julBridge = ClassUtils.forName("org.slf4j.bridge.SLF4JBridgeHandler", ClassUtils.getDefaultClassLoader());
 			Method uninstall = ReflectionUtils.findMethod(julBridge, "uninstall");
@@ -123,14 +120,14 @@ public class WebLogbackConfigurer {
 				ReflectionUtils.invokeMethod(uninstall, null);
 			}
 		} catch (ClassNotFoundException ignored) {
-			//No need to shutdown the java.util.logging bridge. If it's not on the classpath, it wasn't started either.
+			//没有必要关闭java.util日志桥。 如果它不在类路径上,它也不会启动。
 		}
 
 		try {
 			servletContext.log("Shutting down Logback");
 			LogbackConfigurer.shutdownLogging();
 		} finally {
-			// Remove the web app root system property.
+			// 删除web应用程序根系统属性。
 			if (exposeWebAppRoot(servletContext)) {
 				WebUtils.removeWebAppRootSystemProperty(servletContext);
 			}
@@ -138,14 +135,11 @@ public class WebLogbackConfigurer {
 	}
 
 	/**
-	 * Return whether to expose the web app root system property,
-	 * checking the corresponding ServletContext init parameter.
-	 *
-	 * @param servletContext the servlet context
-	 * @return {@code true} if the webapp's root should be exposed; otherwise, {@code false}
-	 * @see #EXPOSE_WEB_APP_ROOT_PARAM
+	 * 返回是否公开web应用程序根系统属性，
+	 * 检查相应的ServletContext init参数。
+	 * @param servletContext
+	 * @return
 	 */
-	@SuppressWarnings({ "BooleanMethodNameMustStartWithQuestion" })
 	private static boolean exposeWebAppRoot(ServletContext servletContext) {
 		String exposeWebAppRootParam = servletContext.getInitParameter(EXPOSE_WEB_APP_ROOT_PARAM);
 		return ( exposeWebAppRootParam == null || Boolean.valueOf(exposeWebAppRootParam) );

@@ -288,9 +288,7 @@ public class MyCommentGenerator implements CommentGenerator {
 	}
 
 	@Override
-	public void addModelClassComment(TopLevelClass topLevelClass,
-			IntrospectedTable introspectedTable) {
-		// TODO Auto-generated method stub
+	public void addModelClassComment(TopLevelClass topLevelClass,IntrospectedTable introspectedTable) {
 		
 	}
 }

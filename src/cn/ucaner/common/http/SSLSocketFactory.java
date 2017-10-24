@@ -42,8 +42,12 @@ import org.apache.commons.httpclient.protocol.ProtocolSocketFactory;
 * @version    V1.0
  */
 public class SSLSocketFactory implements ProtocolSocketFactory {
+	
 	private SSLContext sslcontext = null;
 
+	/**
+	 * 创建 SSL
+	 */
 	private SSLContext createSSLContext() {
 		SSLContext sslcontext = null;
 		try {
@@ -57,6 +61,7 @@ public class SSLSocketFactory implements ProtocolSocketFactory {
 		return sslcontext;
 	}
 
+	
 	private SSLContext getSSLContext() {
 		if (this.sslcontext == null) {
 			this.sslcontext = createSSLContext();
@@ -64,6 +69,9 @@ public class SSLSocketFactory implements ProtocolSocketFactory {
 		return this.sslcontext;
 	}
 
+	/**
+	 * 创建套接字
+	 */
 	public Socket createSocket(Socket socket, String host, int port, boolean autoClose) throws IOException, UnknownHostException {
 		return getSSLContext().getSocketFactory().createSocket(socket, host, port, autoClose);
 	}
