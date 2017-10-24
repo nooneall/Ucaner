@@ -37,18 +37,7 @@ import cn.ucaner.security.entity.User;
 import cn.ucaner.security.service.ResourceService;
 import cn.ucaner.security.service.UserService;
 
-/**
-* @Package：cn.ucaner.security   
-* @ClassName：SunshineRealm   
-* @Description：   <p> TODO</p>
-* @Author： - DaoDou 
-* @CreatTime：2017年10月20日 下午4:10:25   
-* @Modify By：   
-* @ModifyTime：  
-* @Modify marker：   
-* @version    V1.0
- */
-public class SunshineRealm extends AuthorizingRealm {
+public class UcanerRealm extends AuthorizingRealm {
 
 	/**
 	 * 为当前登录的Subject授予角色和权限

@@ -11,14 +11,7 @@
 package cn.ucaner.common.dao.impl;
 
 import java.io.Serializable;
-import java.util.List;
-import java.util.Map;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import cn.ucaner.common.dao.ExpandBaseDao;
-import cn.ucaner.framework.exception.SystemException;
 import cn.ucaner.framework.mvc.dao.impl.BaseDaoImpl;
 import cn.ucaner.framework.mvc.entity.BaseEntity;
 
@@ -39,8 +32,7 @@ import cn.ucaner.framework.mvc.entity.BaseEntity;
 @SuppressWarnings("rawtypes")
 public class ExpandBaseDaoImpl<T extends BaseEntity, PK extends Serializable> extends BaseDaoImpl implements ExpandBaseDao<T, PK> {
 
-	private static Logger logger = LoggerFactory.getLogger(BaseDaoImpl.class);
+	//private static Logger logger = LoggerFactory.getLogger(BaseDaoImpl.class);
 
-	private final static String SQLNAME_FIND_LIST_BY_PARAMS = "findListByParams";
 
 }

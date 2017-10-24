@@ -1,10 +1,10 @@
 /**
  * <html>
  * <body>
- *  <P> Copyright 1994 JsonInternational</p>
+ *  <P> Copyright 2017 阳光康众</p>
  *  <p> All rights reserved.</p>
- *  <p> Created on 19941115</p>
- *  <p> Created by Jason</p>
+ *  <p> Created on 2016年4月7日</p>
+ *  <p> Created by x-lan</p>
  *  </body>
  * </html>
  */
@@ -16,17 +16,7 @@ import java.util.Map;
 import cn.ucaner.framework.mvc.service.BaseService;
 import cn.ucaner.security.entity.Resource;
 
-/**
-* @Package：cn.ucaner.security.service   
-* @ClassName：ResourceService   
-* @Description：   <p> TODO</p>
-* @Author： - DaoDou 
-* @CreatTime：2017年10月20日 下午4:08:39   
-* @Modify By：   
-* @ModifyTime：  
-* @Modify marker：   
-* @version    V1.0
- */
+
 public interface ResourceService extends BaseService<Resource, String> {
 
 	/**

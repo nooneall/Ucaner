@@ -8,7 +8,7 @@
 						   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd  
 						   http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd  
 						   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">  
-    <bean id="ucanerShiro" class="cn.ucaner.security.SunshineRealm"/>  
+    <bean id="ucanerShiro" class="cn.ucaner.security.UcanerRealm"/>  
     <!-- <bean id="ucanerLogoutFilter" class="com.ucaner.framework.shiro.CamboLogoutFilter" /> -->
       
     <!-- 配置shiro的过滤器工厂类，id- shiroFilter要和我们在web.xml中配置的过滤器一致 -->  
