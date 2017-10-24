@@ -17,25 +17,17 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 
 /**
- * A special bean which may be defined in the Spring {@code ApplicationContext} to make the context available statically
- * to objects which, for whatever reason, cannot be wired up in Spring (for example, logging appenders which must be
- * defined in XML or properties files used to initialize the logging system).
- * <p/>
- * To use this holder, <i>exactly one</i> bean should be declared as follows:
- * <pre>
- *     &lt;bean class="ch.qos.logback.ext.spring.ApplicationContextHolder"/&gt;
- * </pre>
- * Note that no ID is necessary because this holder should always be used via its static accessors, rather than being
- * injected. Any Spring bean which wishes to access the {@code ApplicationContext} should not rely on this holder; it
- * should simply implement {@code ApplicationContextAware}.
- * <p/>
- * <b>WARNING: This object uses static memory to retain the ApplicationContext.</b>  This means this bean (and the
- * related configuration strategy) is only usable when no other Logback-enabled Spring applications exist in the same
- * JVM.
- *
- * @author Bryan Turner
- * @author Les Hazlewood
- * @since 0.1
+* @Package：cn.ucaner.common.spring.ext   
+* @ClassName：ApplicationContextHolder   
+* @Description：   <p> 一个特殊的bean,可以在Spring {@code ApplicationContext}中定义,
+* 					  以静态地使用上下文 对于任何出于某种原因不能在Spring中连接的对象(例如，日志程序必须是这样的)
+* 					  定义在XML或用于初始化日志系统的属性文件中.</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 上午11:53:14   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ApplicationContextHolder implements ApplicationContextAware, ApplicationListener<ContextRefreshedEvent> {
 
@@ -48,34 +40,19 @@ public class ApplicationContextHolder implements ApplicationContextAware, Applic
 	}
 
 	/**
-	 * Ensures that the {@code ApplicationContext} has been set <i>and</i> that it has been refreshed. The refresh
-	 * event is sent when the context has completely finished starting up, meaning all beans have been created and
-	 * initialized successfully.
-	 * <p/>
-	 * This method has a loosely defined relationship with {@link #getApplicationContext()}. When this method returns
-	 * {@code true}, calling {@link #getApplicationContext()} is guaranteed to return a non-{@code null} context which
-	 * has been completely initialized. When this method returns {@code false}, {@link #getApplicationContext()} may
-	 * return {@code null}, or it may return a non-{@code null} context which is not yet completely initialized.
-	 *
-	 * @return {@code true} if the context has been set and refreshed; otherwise, {@code false}
+	 * 确保{@ code ApplicationContext}已经设置为< i >和< /i >，它已被刷新。刷新
+	 * 事件是在上下文已经完全启动时发送的，这意味着所有bean都已经创建好了 初始化成功。
+	 * @return
 	 */
 	public static boolean hasApplicationContext() {
 		return ( refreshed && applicationContext != null );
 	}
 
 	/**
-	 * Retrieves the {@code ApplicationContext} set when Spring created and initialized the holder bean. If the
-	 * holder has not been created (see the class documentation for details on how to wire up the holder), or if
-	 * the holder has not been initialized, this accessor may return {@code null}.
-	 * <p/>
-	 * As a general usage pattern, callers should wrap this method in a check for {@link #hasApplicationContext()}.
-	 * That ensures both that the context is set and also that it has fully initialized. Using a context which has
-	 * not been fully initialized can result in unexpected initialization behaviors for some beans. The most common
-	 * example of this behavior is receiving unproxied references to some beans, such as beans which were supposed
-	 * to have transactional semantics applied by AOP. By waiting for the context refresh event, the likelihood of
-	 * encountering such behavior is greatly reduced.
-	 *
-	 * @return the set context, or {@code null} if the holder bean has not been initialized
+	 * 检索在Spring创建和初始化holder bean时设置的{@ code ApplicationContext}。如果
+	 * holder没有被创建(请参阅类文档了解如何连接holder)，
+	 * 或者如果holder未初始化，此访问器可能返回{@ code null}。
+	 * @return
 	 */
 	public static ApplicationContext getApplicationContext() {
 		return applicationContext;
@@ -87,12 +64,10 @@ public class ApplicationContextHolder implements ApplicationContextAware, Applic
 	}
 
 	/**
-	 * Returns a flag indicating whether the {@code ApplicationContext} has been refreshed. Theoretically, it is
-	 * possible for this method to return {@code true} when {@link #hasApplicationContext()} returns {@code false},
-	 * but in practice that is very unlikely since the bean for the holder should have been created and initialized
-	 * before the refresh event was raised.
-	 *
-	 * @return {@code true} if the context refresh event has been received; otherwise, {@code false}
+	 * 返回指示是否刷新{@ code ApplicationContext}的标志。从理论上讲,这是
+	 *当{@ link # hasApplicationContext()}返回{@ code false}时，此方法可以返回{@ code true}，
+	 *但是在实践中，这是非常不可能的，因为所有者的bean应该已经创建并初始化了在刷新事件之前。
+	 * @return
 	 */
 	public static boolean isRefreshed() {
 		return refreshed;

@@ -22,7 +22,7 @@ import org.apache.log4j.Logger;
 /**
 * @Package：cn.ucaner.common.threadpool   
 * @ClassName：FixedThreadPoolExecutor   
-* @Description：   <p> 固定大小的线程池,防止线程无限制增长 需要注意控制任务队列的大小,避免系统资源被耗尽</p>
+* @Description：   <p> 固定大小的线程池,防止线程无限制增长 需要注意控制任务队列的大小,避免系统资源被耗尽,固定线程执行器</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午2:31:07   
 * @Modify By：   
@@ -30,11 +30,12 @@ import org.apache.log4j.Logger;
 * @Modify marker：   
 * @version    V1.0
  */
-
 public class FixedThreadPoolExecutor implements Serializable {
 
 	private static final long serialVersionUID = -7335649496979582087L;
+	
 	protected static Logger logger = Logger.getLogger(FixedThreadPoolExecutor.class);
+	
 	/**
 	 * 默认线程池大小
 	 */
@@ -65,24 +66,23 @@ public class FixedThreadPoolExecutor implements Serializable {
 		int corePoolSize = this.nThreads;
 		// 线程池中允许的最大线程数。
 		int maximumPoolSize = this.nThreads;
+		// 生存时间
 		long keepAliveTime = 0L;
 		// 无界队列.其实是有界的,其默认值为Integer.MAX_VALUE个大小.
 		this.workQueue = new LinkedBlockingDeque<Runnable>();
-		// 用于被拒绝任务的处理程序，它直接在 execute 方法的调用线程中运行被拒绝的任务；如果执行程序已关闭，则会丢弃该任务。
+		// 用于被拒绝任务的处理程序，它直接在 execute 方法的调用线程中运行被拒绝的任务;如果执行程序已关闭，则会丢弃该任务。
 		// 意思就是如果任务被拒绝,则使用调用者的线程来执行该任务
 		this.handler = new ThreadPoolExecutor.AbortPolicy();
 		// 固定大小的线程池,corePoolSize和maximumPoolSize保持一致,当使用无界队列（例如，不具有预定义容量的 LinkedBlockingQueue）将导致在所有 corePoolSize
 		// 线程都忙时新任务在队列中等待。这样，创建的线程就不会超过 corePoolSize。（因此，maximumPoolSize的值也就无效了。）
 		this.threadPoolExecutor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime, TimeUnit.MILLISECONDS, workQueue, handler);
-
 	}
 
 	/**
-	 * 
-	 * @param nThreads
-	 *            线程池大小
-	 * @param threadPoolName
-	 *            线程名称
+	* <p>Title: 线程池</p> 
+	* <p>Description: 固定线程池执行器</p> 
+	* @param nThreads  线程池大小
+	* @param threadPoolName 线程池名称
 	 */
 	public FixedThreadPoolExecutor(int nThreads, String threadPoolName) {
 		this.nThreads = nThreads;
@@ -98,11 +98,8 @@ public class FixedThreadPoolExecutor implements Serializable {
 	}
 
 	/**
-	 * 
-	 * @param nThreads
-	 *            线程池大小
-	 * @param maxTaskSize
-	 *            任务队列大小
+	* @param nThreads    线程池大小
+	* @param maxTaskSize 任务大小
 	 */
 	public FixedThreadPoolExecutor(int nThreads, int maxTaskSize) {
 		this.nThreads = nThreads;
@@ -116,13 +113,9 @@ public class FixedThreadPoolExecutor implements Serializable {
 	}
 
 	/**
-	 * 
-	 * @param nThreads
-	 *            线程池大小
-	 * @param maxTaskSize
-	 *            任务队列大小
-	 * @param threadPoolName
-	 *            线程名称
+	 * @param nThreads  线程池大小
+	 * @param maxTaskSize 任务队列大小
+	 * @param threadPoolName 线程名称
 	 */
 	public FixedThreadPoolExecutor(int nThreads, int maxTaskSize, String threadPoolName) {
 		this.nThreads = nThreads;
@@ -140,7 +133,6 @@ public class FixedThreadPoolExecutor implements Serializable {
 
 	/**
 	 * 执行任务
-	 * 
 	 * @param tasker
 	 */
 	public void execute(Tasker tasker) {
@@ -151,6 +143,9 @@ public class FixedThreadPoolExecutor implements Serializable {
 		}
 	}
 
+	/**
+	 * @param tasker
+	 */
 	public void execute(Runnable tasker) {
 		this.threadPoolExecutor.execute(tasker);
 		if (logger.isInfoEnabled()) {
@@ -161,7 +156,6 @@ public class FixedThreadPoolExecutor implements Serializable {
 
 	/**
 	 * 获取当前ThreadPoolExecutor的信息
-	 * 
 	 * @param pool
 	 * @return
 	 */
@@ -183,16 +177,13 @@ public class FixedThreadPoolExecutor implements Serializable {
 	/**
 	 * @return the nThreads
 	 */
-
 	public int getnThreads() {
 		return nThreads;
 	}
 
 	/**
 	 * @param nThreads
-	 *            the nThreads to set
 	 */
-
 	public void setnThreads(int nThreads) {
 		this.nThreads = nThreads;
 	}
@@ -200,16 +191,13 @@ public class FixedThreadPoolExecutor implements Serializable {
 	/**
 	 * @return the maxTaskSize
 	 */
-
 	public int getMaxTaskSize() {
 		return maxTaskSize;
 	}
 
 	/**
 	 * @param maxTaskSize
-	 *            the maxTaskSize to set
 	 */
-
 	public void setMaxTaskSize(int maxTaskSize) {
 		this.maxTaskSize = maxTaskSize;
 	}
@@ -217,7 +205,6 @@ public class FixedThreadPoolExecutor implements Serializable {
 	/**
 	 * @return the threadPoolName
 	 */
-
 	public String getThreadPoolName() {
 		return threadPoolName;
 	}
@@ -226,7 +213,6 @@ public class FixedThreadPoolExecutor implements Serializable {
 	 * @param threadPoolName
 	 *            the threadPoolName to set
 	 */
-
 	public void setThreadPoolName(String threadPoolName) {
 		this.threadPoolName = threadPoolName;
 	}
@@ -234,7 +220,6 @@ public class FixedThreadPoolExecutor implements Serializable {
 	/**
 	 * @return the threadPoolExecutor
 	 */
-
 	public ThreadPoolExecutor getThreadPoolExecutor() {
 		return threadPoolExecutor;
 	}
@@ -243,7 +228,6 @@ public class FixedThreadPoolExecutor implements Serializable {
 	 * @param threadPoolExecutor
 	 *            the threadPoolExecutor to set
 	 */
-
 	public void setThreadPoolExecutor(ThreadPoolExecutor threadPoolExecutor) {
 		this.threadPoolExecutor = threadPoolExecutor;
 	}
@@ -251,7 +235,6 @@ public class FixedThreadPoolExecutor implements Serializable {
 	/**
 	 * @return the workQueue
 	 */
-
 	public BlockingQueue<Runnable> getWorkQueue() {
 		return workQueue;
 	}
@@ -260,7 +243,6 @@ public class FixedThreadPoolExecutor implements Serializable {
 	 * @param workQueue
 	 *            the workQueue to set
 	 */
-
 	public void setWorkQueue(BlockingQueue<Runnable> workQueue) {
 		this.workQueue = workQueue;
 	}
@@ -268,7 +250,6 @@ public class FixedThreadPoolExecutor implements Serializable {
 	/**
 	 * @return the handler
 	 */
-
 	public RejectedExecutionHandler getHandler() {
 		return handler;
 	}
@@ -277,7 +258,6 @@ public class FixedThreadPoolExecutor implements Serializable {
 	 * @param handler
 	 *            the handler to set
 	 */
-
 	public void setHandler(RejectedExecutionHandler handler) {
 		this.handler = handler;
 	}

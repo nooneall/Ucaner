@@ -16,18 +16,15 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 /**
- * @Package: com.sunshine.framework.common.spring.ext
- * @ClassName: SpringContextHolder
- * @Statement: <p>
- *             提供 Spring的扩展工具类 可在任何层调用getBean得到Spring bean
- *             </p>
- * @JDK version used:
- * @Author: 无名子
- * @Create Date: 2016-4-2
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 1.0
+* @Package：cn.ucaner.common.spring.ext   
+* @ClassName：SpringContextHolder   
+* @Description：   <p> 提供 Spring的扩展工具类 可在任何层调用getBean得到Spring bean </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 上午11:45:16   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class SpringContextHolder implements ApplicationContextAware {
 	private static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(SpringContextHolder.class);

@@ -20,43 +20,17 @@ import ch.qos.logback.core.Appender;
 import ch.qos.logback.core.UnsynchronizedAppenderBase;
 
 /**
- * A Logback {@code Appender} implementation which delegates the actual appending to a named bean contained in a Spring
- * {@code ApplicationContext}.
- * <p/>
- * This appender is similar in spirit to Spring's {@code DelegatingFilterProxy}, which allows servlet filters to be
- * created and wired in the ApplicationContext and then accessed in the filter chain. As with the filter proxy, the
- * delegating appender uses its own name to find the target appender in the context.
- * <p/>
- * Because the logging framework is usually started before the Spring context, this appender supports caching for
- * {@code ILoggingEvent}s which are received before the {@code ApplicationContext} is available. This caching has
- * 3 possible modes:
- * <ul>
- * <li><b>off</b> - Events are discarded until the {@code ApplicationContext} is available.</li>
- * <li><b>on</b> - Events are cached with strong references until the {@code ApplicationContext} is available, at
- * which time they will be forwarded to the delegate appender. In systems which produce substantial amounts of log
- * events while starting up the {@code ApplicationContext} this mode may result in heavy memory usage.</li>
- * <li><b>soft</b> - Events are wrapped in {@code SoftReference}s and cached until the {@code ApplicationContext}
- * is available. Memory pressure may cause the garbage collector to collect some or all of the cached events before
- * the {@code ApplicationContext} is available, so some or all events may be lost. However, in systems with heavy
- * logging, this mode may result in more efficient memory usage.</li>
- * </ul>
- * Caching is <b>{@code on}</b> by default, so strong references will be used for all events.
- * <p/>
- * An example of how to use this appender in {@code logback.xml}:
- * <pre>
- * &lt;appender name="<em>appenderBeanName</em>" class="ch.qos.logback.ext.spring.DelegatingLogbackAppender"/&gt;
- * </pre>
- * <p/>
- * Or, if specifying a different cache mode, e.g.:
- * <pre>
- * &lt;appender name="<em>appenderBeanName</em>" class="ch.qos.logback.ext.spring.DelegatingLogbackAppender"&gt;
- *     &lt;cacheMode&gt;soft&lt;/cacheMode&gt;
- * &lt;/appender&gt;
- * </pre>
- * Using this appender requires that the {@link ApplicationContextHolder} be included in the {@code ApplicationContext}.
- *
- * @author Bryan Turner
- * @since 0.1
+* @Package：cn.ucaner.common.spring.ext   
+* @ClassName：DelegatingLogbackAppender   
+* @Description：   <p> 一个Logback {@code Appender}实现,
+* 					它将实际追加到一个Spring中所包含的指定bean
+* 					{ @code ApplicationContext }.</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 上午11:51:55   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class DelegatingLogbackAppender extends UnsynchronizedAppenderBase<ILoggingEvent> {
 

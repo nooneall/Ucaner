@@ -18,8 +18,15 @@ import java.util.List;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 
 /**
- * @author Bryan Turner
- * @since 0.1
+* @Package：cn.ucaner.common.spring.ext   
+* @ClassName：EventCacheMode   
+* @Description：   <p> EventCacheMode   </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 上午11:50:29   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public enum EventCacheMode {
 
@@ -35,11 +42,12 @@ public enum EventCacheMode {
 
 				@Override
 				public void put(ILoggingEvent event) {
-					//When caching is off, events are discarded as they are received
+					//当缓存关闭时,当事件被接收时就会被丢弃
 				}
 			};
 		}
 	},
+	
 	ON {
 		@Override
 		public ILoggingEventCache createCache() {
@@ -61,6 +69,7 @@ public enum EventCacheMode {
 			};
 		}
 	},
+	
 	SOFT {
 		@Override
 		public ILoggingEventCache createCache() {
@@ -80,7 +89,6 @@ public enum EventCacheMode {
 					references = null;
 					return Collections.unmodifiableList(events);
 				}
-
 				@Override
 				public void put(ILoggingEvent event) {
 					references.add(new SoftReference<ILoggingEvent>(event));

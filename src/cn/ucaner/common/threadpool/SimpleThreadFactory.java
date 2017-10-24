@@ -27,10 +27,18 @@ import org.apache.log4j.Logger;
 * @version    V1.0
  */
 public class SimpleThreadFactory implements ThreadFactory {
+	
 	protected static Logger logger = Logger.getLogger(SimpleThreadFactory.class);
+	
+	/**
+	 * AtomicInteger是在使用非阻塞算法实现并发控制,在一些高并发程序中非常适合 by Jason
+	 */
 	static final AtomicInteger poolNumber = new AtomicInteger(1);
+	
 	final ThreadGroup group;
+	
 	final AtomicInteger threadNumber = new AtomicInteger(1);
+	
 	final String namePrefix;
 
 	public SimpleThreadFactory() {

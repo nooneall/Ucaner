@@ -15,10 +15,15 @@ import java.util.List;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 
 /**
- * Abstraction interface for defining a cache for Logback {@code ILoggingEvent} instances.
- *
- * @author Bryan Turner
- * @since 0.1
+* @Package：cn.ucaner.common.spring.ext   
+* @ClassName：ILoggingEventCache   
+* @Description：   <p> 为Logback {@code ILoggingEvent}实例定义缓存的抽象接口。</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 上午11:49:41   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public interface ILoggingEventCache {
 
