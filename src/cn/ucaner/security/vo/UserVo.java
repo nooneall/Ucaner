@@ -17,7 +17,7 @@ import java.util.Set;
 /**
 * @Package：cn.ucaner.security.vo   
 * @ClassName：UserVo   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 用户传输vo </p>
 * @Author： - DaoDou 
 * @CreatTime：2017年10月20日 下午4:10:05   
 * @Modify By：   
@@ -29,9 +29,11 @@ public class UserVo {
 
 	private Integer id;
 	// @NotEmpty(message="用户名不能为空")
+	
 	private String username;
 	// @NotEmpty(message="密码不能为空")
 	private String password;
+	
 	private List<RoleVo> roleList;// 一个用户具有多个角色
 
 	public Integer getId() {

@@ -13,7 +13,7 @@ package cn.ucaner.security.vo;
 /**
 * @Package：cn.ucaner.security.vo   
 * @ClassName：Permission   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 允许 </p>
 * @Author： - DaoDou 
 * @CreatTime：2017年10月20日 下午4:09:39   
 * @Modify By：   
@@ -22,8 +22,11 @@ package cn.ucaner.security.vo;
 * @version    V1.0
  */
 public class Permission {
+	
 	private Integer id;
+	
 	private String permissionname;
+	
 	private RoleVo role;// 一个权限对应一个角色
 
 	public Integer getId() {

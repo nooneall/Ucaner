@@ -13,9 +13,7 @@ package cn.ucaner.security.entity;
 import cn.ucaner.framework.mvc.entity.BaseEntity;
 
 public class UserRole extends BaseEntity {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 	private String userId;

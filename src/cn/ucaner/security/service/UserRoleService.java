@@ -18,7 +18,7 @@ import cn.ucaner.security.entity.UserRole;
 /**
 * @Package：cn.ucaner.security.service   
 * @ClassName：UserRoleService   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 用户角色管理</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年10月20日 下午4:09:12   
 * @Modify By：   

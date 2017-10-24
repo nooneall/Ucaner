@@ -16,7 +16,7 @@ import java.util.List;
 /**
 * @Package：cn.ucaner.security.vo   
 * @ClassName：RoleVo   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 权限vo</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年10月20日 下午4:09:53   
 * @Modify By：   
@@ -26,6 +26,7 @@ import java.util.List;
  */
 public class RoleVo {
 	private Integer id;
+	// 权限名
 	private String rolename;
 	// 一个角色对应多个权限
 	private List<Permission> permissionList;

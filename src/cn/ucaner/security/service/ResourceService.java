@@ -16,7 +16,17 @@ import java.util.Map;
 import cn.ucaner.framework.mvc.service.BaseService;
 import cn.ucaner.security.entity.Resource;
 
-
+/**
+* @Package：cn.ucaner.security.service   
+* @ClassName：ResourceService   
+* @Description：   <p> 资管管理</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 下午3:03:16   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public interface ResourceService extends BaseService<Resource, String> {
 
 	/**

@@ -37,6 +37,17 @@ import cn.ucaner.security.entity.User;
 import cn.ucaner.security.service.ResourceService;
 import cn.ucaner.security.service.UserService;
 
+/**
+* @Package：cn.ucaner.security   
+* @ClassName：UcanerRealm   
+* @Description：   <p> Ucaner  权限关系 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 下午2:58:16   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class UcanerRealm extends AuthorizingRealm {
 
 	/**
@@ -46,7 +57,7 @@ public class UcanerRealm extends AuthorizingRealm {
 	 */
 	@Override
 	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-		// TODO Auto-generated method stub
+		
 		// long startTime = System.currentTimeMillis();
 		Subject subject = SecurityUtils.getSubject();
 		User user = (User) subject.getSession().getAttribute(GlobalConstant.SESSION_PLATFORM_USER_KEY);
@@ -74,15 +85,18 @@ public class UcanerRealm extends AuthorizingRealm {
 	}
 
 	/**
-	 * 获取身份验证信息
-	 * 
+	* 描述: 获取身份验证信息
+	* @param token
+	* @return
+	* @throws AuthenticationException
 	 */
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
-		// TODO Auto-generated method stub
+		
 		String account = (String) token.getPrincipal(); // 得到用户名
-
+		
 		UserService userService = SpringContextHolder.getBean(UserService.class);
+		
 		User user = userService.findUserByAccount(account);
 
 		// 用户不存在
@@ -95,7 +109,7 @@ public class UcanerRealm extends AuthorizingRealm {
 			throw new LockedAccountException();
 		}
 
-		// 身份认证验证成功，返回一个AuthenticationInfo
+		// 身份认证验证成功,返回一个AuthenticationInfo
 		AuthenticationInfo authcInfo = new SimpleAuthenticationInfo(user.getAccount(), user.getPassword(), getName());
 		Subject subject = SecurityUtils.getSubject();
 		subject.getSession().setAttribute(GlobalConstant.SESSION_PLATFORM_USER_KEY, user);
@@ -105,6 +119,7 @@ public class UcanerRealm extends AuthorizingRealm {
 
 	/**
 	 * 更新用户授权信息缓存.
+	 * @param principal
 	 */
 	public void clearCachedAuthorizationInfo(String principal) {
 		SimplePrincipalCollection principals = new SimplePrincipalCollection(principal, getName());
@@ -112,18 +127,13 @@ public class UcanerRealm extends AuthorizingRealm {
 	}
 
 	/**
-	 * 清除所有用户授权信息缓存.
+	 * 清除所有用户授权信息缓存
 	 */
 	public void clearAllCachedAuthorizationInfo() {
 		Cache<Object, AuthorizationInfo> cache = getAuthorizationCache();
 		cache.clear();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.apache.shiro.realm.AuthenticatingRealm#supports(org.apache.shiro.authc.AuthenticationToken)
-	 */
 	@Override
 	public boolean supports(AuthenticationToken token) {
 		// 仅支持UsernamePasswordToken类型的Token

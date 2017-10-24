@@ -17,7 +17,7 @@ import cn.ucaner.security.entity.Dept;
 /**
 * @Package：cn.ucaner.security.service   
 * @ClassName：DeptService   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 部门管理</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年10月20日 下午4:08:28   
 * @Modify By：   

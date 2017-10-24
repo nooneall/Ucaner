@@ -16,7 +16,7 @@ import cn.ucaner.security.entity.User;
 /**
 * @Package：cn.ucaner.security.service   
 * @ClassName：UserService   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 用户操作</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年10月20日 下午4:09:25   
 * @Modify By：   
