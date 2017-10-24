@@ -1,14 +1,28 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.common.utils.base;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
 /**
- * 转换工具类<br>
- * 若待转换值为null或者出现异常，则使用默认值
- *
- * @Author:chenssy
- * @date:2016年5月21日 上午10:18:12
+* @Package：cn.ucaner.common.utils.base   
+* @ClassName：ConvertUtils   
+* @Description：   <p> 若待转换值为null或者出现异常，则使用默认值 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 下午3:41:37   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ConvertUtils {
 	

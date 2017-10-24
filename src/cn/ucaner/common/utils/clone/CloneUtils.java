@@ -19,20 +19,21 @@ import java.io.Serializable;
 import java.util.Collection;
 
 /**
- * 克隆工具类，进行深克隆,包括对象、集合
- * 
- * @Author:chenssy
- * @date:2014年8月9日
+* @Package：cn.ucaner.common.utils.clone   
+* @ClassName：CloneUtils   
+* @Description：   <p> 克隆工具类，进行深克隆,包括对象、集合</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 下午3:52:04   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class CloneUtils {
 
 	/**
 	 * 采用对象的序列化完成对象的深克隆
-	 * @autor:chenssy
-	 * @date:2014年8月9日
-	 *
 	 * @param obj
-	 * 			待克隆的对象
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
@@ -59,14 +60,10 @@ public class CloneUtils {
 	
 	/**
 	 * 利用序列化完成集合的深克隆
-	 * @autor:chenssy
-	 * @date:2014年8月9日
-	 *
 	 * @param collection
-	 * 					待克隆的集合
 	 * @return
 	 * @throws ClassNotFoundException
-	 * @throws java.io.IOException
+	 * @throws IOException
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> Collection<T> cloneCollection(Collection<T> collection) throws ClassNotFoundException, IOException{

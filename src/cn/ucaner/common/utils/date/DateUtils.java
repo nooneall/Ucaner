@@ -32,7 +32,6 @@ public class DateUtils {
 
 	/**
 	 * 将日期格式化转成字符串
-	 * 
 	 * @param date
 	 * @return String
 	 * @throws ParseException
@@ -47,7 +46,6 @@ public class DateUtils {
 
 	/**
 	 * 将字符串转成日期
-	 * 
 	 * @param dateStr
 	 * @return Date
 	 */
@@ -73,7 +71,6 @@ public class DateUtils {
 
 	/**
 	 * 将字符串转成日期
-	 * 
 	 * @param dateStr
 	 * @return Date
 	 */
@@ -91,7 +88,6 @@ public class DateUtils {
 
 	/**
 	 * 用日期加五位随机数作为文件名
-	 * 
 	 * @param fileName
 	 *            文件名
 	 * @return String
@@ -110,7 +106,6 @@ public class DateUtils {
 
 	/**
 	 * 取昨天日期
-	 * 
 	 * @return
 	 */
 	public static Date yesterdayDate() {

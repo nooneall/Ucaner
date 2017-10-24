@@ -15,11 +15,15 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * TimeStamp工具类，提供TimeStamp与String、Date的转换
- *
- * @author chenssy
- * @date 2016-09-24
- * @since 1.0.0
+* @Package：cn.ucaner.common.utils.date   
+* @ClassName：TimestampUtils   
+* @Description：   <p> TimeStamp工具类，提供TimeStamp与String、Date的转换</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 下午4:02:30   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class TimestampUtils {
 

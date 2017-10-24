@@ -1,24 +1,34 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.common.utils.base;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * 
- * 字符串工具类，对字符串进行常规的处理
- * 
- * @Author:chenssy
- * @date:2014年8月5日
+* @Package：cn.ucaner.common.utils.base   
+* @ClassName：StringUtils   
+* @Description：   <p> 字符串工具类，对字符串进行常规的处理 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 下午3:44:23   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class StringUtils {
 	
 	/**
 	 * 将半角的符号转换成全角符号.(即英文字符转中文字符)
-	 * @autor:chenssy
-	 * @date:2014年8月7日
-	 *
 	 * @param str
-	 * 			要转换的字符
 	 * @return
 	 */
 	public static String changeToFull(String str) {
@@ -44,14 +54,10 @@ public class StringUtils {
     }
 	
 	/**
-	 *  将字符转换为编码为Unicode，格式 为'\u0020'<br>
+	 * 	   将字符转换为编码为Unicode，格式 为'\u0020'<br>
 	 * 		  unicodeEscaped(' ') = "\u0020"<br>
 	 * 		  unicodeEscaped('A') = "\u0041"
-	 * @autor:chenssy
-	 * @date:2014年8月7日
-	 *
 	 * @param ch
-	 * 			待转换的char 字符
 	 * @return
 	 */
 	public static String unicodeEscaped(char ch) {
@@ -66,14 +72,9 @@ public class StringUtils {
 	}
 	
 	/**
-	 * 进行toString操作，若为空，返回默认值
-	 * @autor:chenssy
-	 * @date:2014年8月9日
-	 *
+	 * 进行toString操作,若为空,返回默认值
 	 * @param object
-	 * 				要进行toString操作的对象
 	 * @param nullStr
-	 * 				返回的默认值
 	 * @return
 	 */
 	public static String toString(Object object,String nullStr){
@@ -81,16 +82,11 @@ public class StringUtils {
 	}
 	
 	/**
-	 * 将字符串重复N次，null、""不在循环次数里面 <br>
+	 * 				      将字符串重复N次，null、""不在循环次数里面 <br>
 	 * 		 当value == null || value == "" return value;<br>
 	 * 		 当count <= 1 返回  value
-	 * @autor:chenssy
-	 * @date:2014年8月9日
-	 *
 	 * @param value
-	 * 				需要循环的字符串
 	 * @param count
-	 * 				循环的次数
 	 * @return
 	 */
 	public static String repeatString(String value,int count){
@@ -128,13 +124,8 @@ public class StringUtils {
 	
 	/**
 	 * 将某个字符重复N次
-	 * @autor:chenssy
-	 * @date:2014年8月9日
-	 *
-	 * @param ch
-	 * 			需要循环的字符
-	 * @param count
-	 * 			循环的次数
+	 * @param ch    需要重复的字符
+	 * @param count 需要重复的次数
 	 * @return
 	 */
 	public static String repeatChar(char ch, int count) {
@@ -147,11 +138,7 @@ public class StringUtils {
 
 	/**
 	 * 判断字符串是否全部都为小写
-	 * @autor:chenssy
-	 * @date:2014年8月9日
-	 *
 	 * @param value
-	 * 				待判断的字符串
 	 * @return
 	 */
 	public static boolean isAllLowerCase(String value){
@@ -168,11 +155,7 @@ public class StringUtils {
 	
 	/**
 	 * 判断字符串是否全部大写
-	 * @autor:chenssy
-	 * @date:2014年8月9日
-	 *
 	 * @param value
-	 * 				待判断的字符串
 	 * @return
 	 */
 	public static boolean isAllUpperCase(String value){
@@ -189,11 +172,7 @@ public class StringUtils {
 	
 	/**
 	 * 反转字符串
-	 * @autor:chenssy
-	 * @date:2014年8月9日
-	 *
-	 * @param value
-	 * 				待反转的字符串
+	 * @param value 需要反转的字符串
 	 * @return
 	 */
 	public static String reverse(String value){
@@ -204,10 +183,7 @@ public class StringUtils {
 	}
 	
 	/**
-	 * @desc:截取字符串，支持中英文混乱，其中中文当做两位处理
-	 * @autor:chenssy
-	 * @date:2014年8月10日
-	 *
+	 * 截取字符串，支持中英文混乱，其中中文当做两位处理
 	 * @param resourceString
 	 * @param length
 	 * @return
@@ -252,9 +228,6 @@ public class StringUtils {
 	
 	/**
 	 * 
-	 * @autor:chenssy
-	 * @date:2014年8月10日
-	 *
 	 * @param htmlString
 	 * @param length
 	 * @return
@@ -265,9 +238,6 @@ public class StringUtils {
 	
 	/**
 	 * 过滤html标签，包括script、style、html、空格、回车标签
-	 * @autor:chenssy
-	 * @date:2014年8月10日
-	 *
 	 * @param htmlStr
 	 * @return
 	 */

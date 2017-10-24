@@ -1,3 +1,13 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.common.utils.base;
 
 import java.lang.reflect.Array;
@@ -6,19 +16,22 @@ import java.util.Date;
 import java.util.Map;
 
 /**
- * 判断对象、字符串、集合是否为空、不为空
- * 
- * @Author:chenssy
- * @date:2014年8月4日
+* @Package：cn.ucaner.common.utils.base   
+* @ClassName：ValidateHelper   
+* @Description：   <p> 判断对象、字符串、集合是否为空、不为空</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 下午3:49:47   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public final class ValidateHelper {
 	
 	/**
-	 *  判断数组是否为空
-	 * @author chenssy
-	 * @date Dec 23, 2013
+	 * 判断数组是否为空
 	 * @param array
-	 * @return boolean
+	 * @return
 	 */
 	@SuppressWarnings("unused")
 	private static <T> boolean isEmptyArray(T[] array){
@@ -31,11 +44,9 @@ public final class ValidateHelper {
 	}
 	
 	/**
-	 *  判断数组是否不为空
-	 * @author chenssy
-	 * @date Dec 23, 2013
+	 * 判断数组是否不为空
 	 * @param array
-	 * @return boolean
+	 * @return
 	 */
 	public static <T> boolean isNotEmptyArray(T[] array){
 		if (array != null && array.length > 0){
@@ -47,11 +58,9 @@ public final class ValidateHelper {
 	}
 	
 	/**
-	 *  判断字符串是否为空
-	 * @author chenssy
-	 * @date Dec 23, 2013
+	 * 判断字符串是否为空
 	 * @param string
-	 * @return boolean
+	 * @return
 	 */
 	public static boolean isEmptyString(String string){
 		if (string == null || string.length() == 0){
@@ -63,11 +72,9 @@ public final class ValidateHelper {
 	}
 	
 	/**
-	 *  判断字符串是否不为空
-	 * @author chenssy
-	 * @date Dec 23, 2013
+	 * 判断字符串是否不为空
 	 * @param string
-	 * @return boolean
+	 * @return
 	 */
 	public static boolean isNotEmptyString(String string){
 		if (string != null && string.length() > 0){
@@ -79,11 +86,9 @@ public final class ValidateHelper {
 	}
 	
 	/**
-	 *  判断集合是否为空
-	 * @author chenssy
-	 * @date Dec 26, 2013
+	 * 判断集合是否为空
 	 * @param collection
-	 * @return boolean
+	 * @return
 	 */
 	public static boolean isEmptyCollection(Collection<?> collection){
 		if (collection == null || collection.isEmpty()){
@@ -95,11 +100,9 @@ public final class ValidateHelper {
 	}
 	
 	/**
-	 *  判断集合是否不为空
-	 * @author chenssy
-	 * @date Dec 26, 2013
+	 * 判断集合是否不为空
 	 * @param collection
-	 * @return boolean
+	 * @return
 	 */
 	public static boolean isNotEmptyCollection(Collection<?> collection){
 		if (collection != null && !collection.isEmpty()){
@@ -111,11 +114,9 @@ public final class ValidateHelper {
 	}
 	
 	/**
-	 *  判断map集合是否不为空
-	 * @author chenssy
-	 * @date Dec 26, 2013
+	 * 判断map集合是否不为空
 	 * @param map
-	 * @return boolean
+	 * @return
 	 */
 	@SuppressWarnings("rawtypes")
 	public static boolean isNotEmptyMap(Map map){
@@ -129,10 +130,8 @@ public final class ValidateHelper {
 	
 	/**
 	 *  判断map集合是否为空
-	 * @author ming.chen
-	 * @date Dec 26, 2013
 	 * @param map
-	 * @return boolean
+	 * @return
 	 */
 	@SuppressWarnings("rawtypes")
 	public static boolean isEmptyMap(Map map){
@@ -147,7 +146,7 @@ public final class ValidateHelper {
 	/**
 	 * 检验对象是否为空,String 中只有空格在对象中也算空.
 	 * @param object
-	 * @return 为空返回true,否则false.
+	 * @return
 	 */
 	@SuppressWarnings("rawtypes")
 	public static boolean isEmpty(Object object) {

@@ -17,19 +17,24 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * @desc:时间处理工具类
- * 
- * @Author:chenssy
- * @date:2014年8月4日
+* @Package：cn.ucaner.common.utils.date   
+* @ClassName：DateUtilOne   
+* @Description：   <p> 时间处理工具类 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 下午3:56:09   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class DateUtilOne {
+	
 	private static final String[] weeks = {"星期日","星期一","星期二","星期三","星期四","星期五","星期六"};
+	
 	/**
 	 * 根据指定格式获取当前时间
-	 * @author chenssy
-	 * @date Dec 27, 2013
 	 * @param format
-	 * @return String
+	 * @return
 	 */
 	public static String getCurrentTime(String format){
 		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
@@ -39,9 +44,6 @@ public class DateUtilOne {
 	
 	/**
 	 * 获取当前时间，格式为：yyyy-MM-dd HH:mm:ss
-	 * @author chenssy
-	 * @date Dec 27, 2013
-	 * @return String
 	 */
 	public static String getCurrentTime(){
 		return getCurrentTime(DateFormatUtils.DATE_FORMAT2);
@@ -49,10 +51,8 @@ public class DateUtilOne {
 	
 	/**
 	 * 获取指定格式的当前时间：为空时格式为yyyy-mm-dd HH:mm:ss
-	 * @author chenssy
-	 * @date Dec 30, 2013
 	 * @param format
-	 * @return Date
+	 * @return
 	 */
 	public static Date getCurrentDate(String format){
 		 SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
@@ -68,9 +68,7 @@ public class DateUtilOne {
 	
 	/**
 	 * 获取当前时间，格式为yyyy-MM-dd HH:mm:ss
-	 * @author chenssy
-	 * @date Dec 30, 2013
-	 * @return Date
+	 * @return
 	 */
 	public static Date getCurrentDate(){
 		return getCurrentDate(DateFormatUtils.DATE_FORMAT2);
@@ -78,8 +76,6 @@ public class DateUtilOne {
 	
 	/**
 	 * 给指定日期加入年份，为空时默认当前时间
-	 * @author chenssy
-	 * @date Dec 30, 2013
 	 * @param year 年份  正数相加、负数相减
 	 * @param date 为空时，默认为当前时间
 	 * @param format 默认格式为：yyyy-MM-dd HH:mm:ss
@@ -88,16 +84,12 @@ public class DateUtilOne {
 	public static String addYearToDate(int year,Date date,String format){
 		Calendar calender = getCalendar(date,format);
 		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
-		
 		calender.add(Calendar.YEAR, year);
-		
 		return sdf.format(calender.getTime());
 	}
 	
 	/**
 	 * 给指定日期加入年份，为空时默认当前时间
-	 * @author chenssy
-	 * @date Dec 30, 2013
 	 * @param year 年份  正数相加、负数相减
 	 * @param date 为空时，默认为当前时间
 	 * @param format 默认格式为：yyyy-MM-dd HH:mm:ss
@@ -108,14 +100,11 @@ public class DateUtilOne {
 		if(null != date && !"".equals(date)){
 			newDate = string2Date(date, format);
 		}
-		
 		return addYearToDate(year, newDate, format);
 	}
 	
 	/**
 	 * 给指定日期增加月份 为空时默认当前时间
-	 * @author chenssy
-	 * @date Dec 30, 2013
 	 * @param month  增加月份  正数相加、负数相减
 	 * @param date 指定时间
 	 * @param format 指定格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -124,16 +113,12 @@ public class DateUtilOne {
 	public static String addMothToDate(int month,Date date,String format) {
 		Calendar calender = getCalendar(date,format);
 		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
-		
 		calender.add(Calendar.MONTH, month);
-		
 		return sdf.format(calender.getTime());
 	}
 	
 	/**
 	 * 给指定日期增加月份 为空时默认当前时间
-	 * @author chenssy
-	 * @date Dec 30, 2013
 	 * @param month  增加月份  正数相加、负数相减
 	 * @param date 指定时间
 	 * @param format 指定格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -144,14 +129,11 @@ public class DateUtilOne {
 		if(null != date && !"".equals(date)){
 			newDate = string2Date(date, format);
 		}
-		
 		return addMothToDate(month, newDate, format);
 	}
 	
 	/**
 	 * 给指定日期增加天数，为空时默认当前时间
-	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param day 增加天数 正数相加、负数相减
 	 * @param date 指定日期
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -160,16 +142,12 @@ public class DateUtilOne {
 	public static String addDayToDate(int day,Date date,String format) {
 		Calendar calendar = getCalendar(date, format);
 		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
-		
 		calendar.add(Calendar.DATE, day);
-		
 		return sdf.format(calendar.getTime());
 	}
 	
 	/**
 	 * 给指定日期增加天数，为空时默认当前时间
-	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param day 增加天数 正数相加、负数相减
 	 * @param date 指定日期
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -180,14 +158,11 @@ public class DateUtilOne {
 		if(null != date && !"".equals(date)){
 			newDate = string2Date(date, format);
 		}
-		
 		return addDayToDate(day, newDate, format);
 	}
 	
 	/**
 	 * 给指定日期增加小时，为空时默认当前时间
-	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param hour 增加小时  正数相加、负数相减
 	 * @param date 指定日期
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -196,16 +171,12 @@ public class DateUtilOne {
 	public static String addHourToDate(int hour,Date date,String format) {
 		Calendar calendar = getCalendar(date, format);
 		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
-		
 		calendar.add(Calendar.HOUR, hour);
-		
 		return sdf.format(calendar.getTime());
 	}
 	
 	/**
 	 * 给指定日期增加小时，为空时默认当前时间
-	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param hour 增加小时  正数相加、负数相减
 	 * @param date 指定日期
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -216,14 +187,11 @@ public class DateUtilOne {
 		if(null != date && !"".equals(date)){
 			newDate = string2Date(date, format);
 		}
-		
 		return addHourToDate(hour, newDate, format);
 	}
 	
 	/**
-	 * 给指定的日期增加分钟，为空时默认当前时间
-	 * @author chenssy
-	 * @date Dec 31, 2013
+	 * 给指定的日期增加分钟,为空时默认当前时间
 	 * @param minute 增加分钟  正数相加、负数相减
 	 * @param date 指定日期 
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -232,16 +200,12 @@ public class DateUtilOne {
 	public static String addMinuteToDate(int minute,Date date,String format) {
 		Calendar calendar = getCalendar(date, format);
 		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
-		
 		calendar.add(Calendar.MINUTE, minute);
-		
 		return sdf.format(calendar.getTime());
 	}
 	
 	/**
 	 * 给指定的日期增加分钟，为空时默认当前时间
-	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param minute 增加分钟  正数相加、负数相减
 	 * @param date 指定日期 
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -252,14 +216,11 @@ public class DateUtilOne {
 		if(null != date && !"".equals(date)){
 			newDate = string2Date(date, format);
 		}
-		
 		return addMinuteToDate(minute, newDate, format);
 	}
 	
 	/**
 	 * 给指定日期增加秒，为空时默认当前时间
-	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param second 增加秒 正数相加、负数相减
 	 * @param date 指定日期
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -268,16 +229,12 @@ public class DateUtilOne {
 	public static String addSecondToDate(int second,Date date,String format){
 		Calendar calendar = getCalendar(date, format);
 		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
-		
 		calendar.add(Calendar.SECOND, second);
-		
 		return sdf.format(calendar.getTime());
 	}
 	
 	/**
 	 * 给指定日期增加秒，为空时默认当前时间
-	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param second 增加秒 正数相加、负数相减
 	 * @param date 指定日期
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -289,14 +246,11 @@ public class DateUtilOne {
 		if(null != date && !"".equals(date)){
 			newDate = string2Date(date, format);
 		}
-		
 		return addSecondToDate(second, newDate, format);
 	}
 	
 	/**
 	 * 获取指定格式指定时间的日历
-	 * @author chenssy
-	 * @date Dec 30, 2013
 	 * @param date 时间 
 	 * @param format 格式
 	 * @return Calendar
@@ -305,19 +259,13 @@ public class DateUtilOne {
 		if(date == null){
 			date = getCurrentDate(format);
 		}
-		
 		Calendar calender = Calendar.getInstance();
 		calender.setTime(date);
-		
 		return calender;
 	}
 	
 	/**
-	 * 字符串转换为日期，日期格式为
-	 * 
-	 * @author : chenssy
-	 * @date : 2016年5月31日 下午5:20:22
-	 *
+	 * 字符串转换为日期,日期格式为
 	 * @param value
 	 * @return
 	 */
@@ -325,10 +273,8 @@ public class DateUtilOne {
 		if(value == null || "".equals(value)){
 			return null;
 		}
-		
 		SimpleDateFormat sdf = DateFormatUtils.getFormat(DateFormatUtils.DATE_FORMAT2);
 		Date date = null;
-		
 		try {
 			value = DateFormatUtils.formatDate(value, DateFormatUtils.DATE_FORMAT2);
 			date = sdf.parse(value);
@@ -338,13 +284,12 @@ public class DateUtilOne {
 		return date;
 	}
 	
+
 	/**
 	 * 将字符串(格式符合规范)转换成Date
-	 * @author chenssy
-	 * @date Dec 31, 2013
-	 * @param value 需要转换的字符串
-	 * @param format 日期格式 
-	 * @return Date
+	 * @param value
+	 * @param format
+	 * @return
 	 */
 	public static Date string2Date(String value,String format){
 		if(value == null || "".equals(value)){
@@ -365,12 +310,9 @@ public class DateUtilOne {
 	
 	/**
 	 * 将日期格式转换成String
-	 * @author chenssy
-	 * @date Dec 31, 2013
-	 * 
-	 * @param value 需要转换的日期
-	 * @param format 日期格式
-	 * @return String
+	 * @param value
+	 * @param format
+	 * @return
 	 */
 	public static String date2String(Date value,String format){
 		if(value == null){
@@ -383,10 +325,6 @@ public class DateUtilOne {
 	
 	/**
 	 * 日期转换为字符串
-	 * 
-	 * @author : chenssy
-	 * @date : 2016年5月31日 下午5:21:38
-	 *
 	 * @param value
 	 * @return
 	 */
@@ -401,10 +339,8 @@ public class DateUtilOne {
 	
 	/**
 	 * 获取指定日期的年份
-	 * @author chenssy
-	 * @date Dec 31, 2013
-	 * @param value 日期
-	 * @return int
+	 * @param value
+	 * @return
 	 */
 	public static int getCurrentYear(Date value){
 		String date = date2String(value, DateFormatUtils.DATE_YEAR);
@@ -413,10 +349,8 @@ public class DateUtilOne {
 	
 	/**
 	 * 获取指定日期的年份
-	 * @author chenssy
-	 * @date Dec 31, 2013
-	 * @param value 日期
-	 * @return int
+	 * @param value
+	 * @return
 	 */
 	public static int getCurrentYear(String value) {
 		Date date = string2Date(value, DateFormatUtils.DATE_YEAR);
@@ -426,10 +360,8 @@ public class DateUtilOne {
 	
 	/**
 	 * 获取指定日期的月份
-	 * @author chenssy
-	 * @date Dec 31, 2013
-	 * @param value 日期
-	 * @return int
+	 * @param value
+	 * @return
 	 */
 	public static int getCurrentMonth(Date value){
 		String date = date2String(value, DateFormatUtils.DATE_MONTH);
@@ -438,22 +370,17 @@ public class DateUtilOne {
 	
 	/**
 	 * 获取指定日期的月份
-	 * @author chenssy
-	 * @date Dec 31, 2013
-	 * @param value 日期
-	 * @return int
+	 * @param value
+	 * @return
 	 */
 	public static int getCurrentMonth(String value) {
 		Date date = string2Date(value, DateFormatUtils.DATE_MONTH);
 		Calendar calendar = getCalendar(date, DateFormatUtils.DATE_MONTH);
-		
 		return calendar.get(Calendar.MONTH);
 	}
 	
 	/**
 	 * 获取指定日期的天份
-	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return int
 	 */
@@ -464,36 +391,29 @@ public class DateUtilOne {
 	
 	/**
 	 * 获取指定日期的天份
-	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return int
 	 */
 	public static int getCurrentDay(String value){
 		Date date = string2Date(value, DateFormatUtils.DATE_DAY);
 		Calendar calendar = getCalendar(date, DateFormatUtils.DATE_DAY);
-		
 		return calendar.get(Calendar.DATE);
 	}
 	
 	/**
 	 * 获取当前日期为星期几
-	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return String
 	 */
 	public static String getCurrentWeek(Date value) {
 		Calendar calendar = getCalendar(value, DateFormatUtils.DATE_FORMAT1);
 		int weekIndex = calendar.get(Calendar.DAY_OF_WEEK) - 1 < 0 ? 0 : calendar.get(Calendar.DAY_OF_WEEK) - 1;
-		
 		return weeks[weekIndex];
 	}
 	
 	/**
 	 * 获取当前日期为星期几
 	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return String
 	 */
@@ -504,8 +424,6 @@ public class DateUtilOne {
 	
 	/**
 	 * 获取指定日期的小时
-	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return int
 	 */
@@ -516,8 +434,6 @@ public class DateUtilOne {
 	
 	/**
 	 * 获取指定日期的小时
-	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return
 	 * @return int
@@ -531,8 +447,6 @@ public class DateUtilOne {
 	
 	/**
 	 * 获取指定日期的分钟
-	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return int
 	 */
@@ -543,8 +457,6 @@ public class DateUtilOne {
 	
 	/**
 	 * 获取指定日期的分钟
-	 * @author chenssy
-	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return int
 	 */
@@ -558,12 +470,9 @@ public class DateUtilOne {
 	/**  
 	 * 比较两个日期相隔多少天(月、年) <br>
 	 * 例：<br>
-	 * &nbsp;compareDate("2009-09-12", null, 0);//比较天 <br>
-     * &nbsp;compareDate("2009-09-12", null, 1);//比较月 <br> 
-     * &nbsp;compareDate("2009-09-12", null, 2);//比较年 <br>
-     * 
-	 * @author chenssy
-	 * @date Dec 31, 2013 
+	 * compareDate("2009-09-12", null, 0);//比较天 <br>
+     * compareDate("2009-09-12", null, 1);//比较月 <br> 
+     * compareDate("2009-09-12", null, 2);//比较年 <br>
      * @param startDay 需要比较的时间 不能为空(null),需要正确的日期格式 ,如：2009-09-12   
      * @param endDay 被比较的时间  为空(null)则为当前时间    
      * @param stype 返回值类型   0为多少天，1为多少个月，2为多少年    
@@ -610,8 +519,6 @@ public class DateUtilOne {
     
     /**
      * 比较两个时间相差多少小时(分钟、秒)
-     * @author chenssy
-     * @date Jan 2, 2014
      * @param startTime 需要比较的时间 不能为空，且必须符合正确格式：2012-12-12 12:12:
      * @param endTime 需要被比较的时间 若为空则默认当前时间
      * @param type 1：小时   2：分钟   3：秒
@@ -645,13 +552,10 @@ public class DateUtilOne {
     }
     
     /**
-     * 比较两个日期的大小。<br>
+     * 比较两个日期的大小                   <br>
      * 若date1 > date2 则返回 1<br>
      * 若date1 = date2 则返回 0<br>
      * 若date1 < date2 则返回-1
-     * @autor:chenssy
-     * @date:2014年9月9日
-     *
      * @param date1  
      * @param date2
      * @param format  待转换的格式
@@ -675,29 +579,21 @@ public class DateUtilOne {
         return 0;
     }
     
-    /**
-     * 获取指定月份的第一天 
-     * 
-     * @author : chenssy
-     * @date : 2016年5月31日 下午5:31:10
-     *
-     * @param date
-     * @return
-     */
+   /**
+    * 获取指定月份的第一天 
+    * @param date
+    * @return
+    */
     public static String getMonthFirstDate(String date){
     	date = DateFormatUtils.formatDate(date);
 		return DateFormatUtils.formatDate(date, "yyyy-MM") + "-01";
     }
     
-    /**
-     * 获取指定月份的最后一天
-     * 
-     * @author : chenssy
-     * @date : 2016年5月31日 下午5:32:09
-     *
-     * @param strdate
-     * @return
-     */
+   /**
+    * 获取指定月份的最后一天
+    * @param date
+    * @return
+    */
 	public static String getMonthLastDate(String date) {
 		Date strDate = DateUtilOne.string2Date(getMonthFirstDate(date));
 		Calendar calendar = Calendar.getInstance();
@@ -709,10 +605,6 @@ public class DateUtilOne {
 	
 	/**
 	 * 获取所在星期的第一天
-	 * 
-	 * @author : chenssy
-	 * @date : 2016年6月1日 下午12:38:53
-	 *
 	 * @param date
 	 * @return
 	 */
@@ -728,10 +620,6 @@ public class DateUtilOne {
 	
 	/**
 	 * 获取所在星期的最后一天
-	 * 
-	 * @author : chenssy
-	 * @date : 2016年6月1日 下午12:40:31
-	 *
 	 * @param date
 	 * @return
 	 */

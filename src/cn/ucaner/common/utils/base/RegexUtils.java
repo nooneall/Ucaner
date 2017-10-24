@@ -1,22 +1,33 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.common.utils.base;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * 正则表达式工具类，验证数据是否符合规范
- * 
- * @Author:chenssy
- * @date:2014年8月7日
+* @Package：cn.ucaner.common.utils.base   
+* @ClassName：RegexUtils   
+* @Description：   <p> 正则表达式工具类，验证数据是否符合规范 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 下午3:43:07   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class RegexUtils {
 	
 	/**
 	 * 判断字符串是否符合正则表达式
-	 * 
-	 * @author : chenssy
-	 * @date : 2016年6月1日 下午12:43:05
-	 *
 	 * @param str
 	 * @param regex
 	 * @return
@@ -30,12 +41,8 @@ public class RegexUtils {
 	
 	/**
 	 * 判断输入的字符串是否符合Email格式.
-	 * @autor:chenssy
-	 * @date:2014年8月7日
-	 *
 	 * @param email
-	 * 				传入的字符串
-	 * @return 符合Email格式返回true，否则返回false
+	 * @return
 	 */
 	public static boolean isEmail(String email) {
 		if (email == null || email.length() < 1 || email.length() > 256) {
@@ -47,11 +54,7 @@ public class RegexUtils {
 	
 	/**
 	 * 判断输入的字符串是否为纯汉字
-	 * @autor:chenssy
-	 * @date:2014年8月7日
-	 *
 	 * @param value
-	 * 				传入的字符串
 	 * @return
 	 */
 	public static boolean isChinese(String value) {
@@ -61,11 +64,7 @@ public class RegexUtils {
 	
 	/**
 	 * 判断是否为浮点数，包括double和float
-	 * @autor:chenssy
-	 * @date:2014年8月7日
-	 *
 	 * @param value
-	 * 			传入的字符串
 	 * @return
 	 */
 	public static boolean isDouble(String value) {
@@ -75,11 +74,7 @@ public class RegexUtils {
 	
 	/**
 	 * 判断是否为整数
-	 * @autor:chenssy
-	 * @date:2014年8月7日
-	 *
 	 * @param value
-	 * 			传入的字符串
 	 * @return
 	 */
 	public static boolean isInteger(String value) {

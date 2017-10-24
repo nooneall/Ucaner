@@ -20,23 +20,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Bean与Map的转换
- *
- * @author chenssy
- * @date 2016-09-24
- * @since 1.0.0
+* @Package：cn.ucaner.common.utils.beanConvert   
+* @ClassName：BeanMapConvert   
+* @Description：   <p> Bean与Map的转换</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 下午3:51:19   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class BeanMapConvert {
-    /**
-     * Bean转换为Map
-     *
-     * @param object
-     * @return String-Object的HashMap
-     *
-     * @author chenssy
-     * @date 2016-09-25
-     * @since v1.0.0
-     */
+   
+	/**
+	 * Bean转换为Map
+	 * @param object
+	 * @return
+	 */
     public static Map<String,Object> bean2MapObject(Object object){
         if(object == null){
             return null;
@@ -64,20 +64,13 @@ public class BeanMapConvert {
         return map;
     }
 
-    /**
-     * Map转换为Java Bean
-     *
-     * @param map
-     *              待转换的Map
-     * @param object
-     *              Java Bean
-     * @return java.lang.Object
-     *
-     * @author chenssy
-     * @date 2016-09-25
-     * @since v1.0.0
-     */
-    public static Object map2Bean(Map map,Object object){
+   /**
+    *  Map转换为Java Bean
+    * @param map
+    * @param object
+    * @return
+    */
+    public static Object map2Bean(Map<?, ?> map,Object object){
         if(map == null || object == null){
             return null;
         }

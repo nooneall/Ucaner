@@ -1,15 +1,28 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.common.utils.base;
 
 import java.util.regex.Pattern;
 
 /**
- * --15位身份证号码：第7、8位为出生年份(两位数)，第9、10位为出生月份，第11、12位代表出生日期，第15位代表性别，奇数为男，偶数为女。
- * --18位身份证号码
- * ：第7、8、9、10位为出生年份(四位数)，第11、第12位为出生月份，第13、14位代表出生日期，第17位代表性别，奇数为男，偶数为女。
- *
- * @Author:chenssy
- * @date:2016年6月1日 下午12:29:41
- *
+* @Package：cn.ucaner.common.utils.base   
+* @ClassName：IdcardValidator   
+* @Description：   <p> --15位身份证号码：第7、8位为出生年份(两位数)，第9、10位为出生月份，第11、12位代表出生日期，第15位代表性别，奇数为男，偶数为女。
+* --18位身份证号码 :第7、8、9、10位为出生年份(四位数)，第11、第12位为出生月份，第13、14位代表出生日期，第17位代表性别，奇数为男，偶数为女。</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 下午3:42:03   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class IdcardValidator {
 

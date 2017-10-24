@@ -15,13 +15,18 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * 日期格式化工具类
- *
- * @Author:chenssy
- * @date:2016年5月26日 下午12:39:57
- *
+* @Package：cn.ucaner.common.utils.date   
+* @ClassName：DateFormatUtils   
+* @Description：   <p> 日期格式化工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 下午3:55:08   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class DateFormatUtils {
+	
 	/** yyyy:年 */
 	public static final String DATE_YEAR = "yyyy";
 	
@@ -145,10 +150,6 @@ public class DateFormatUtils {
 
 	/**
 	 * 格式化日期
-	 *
-	 * @author chenming
-	 * @date 2016年5月31日
-	 * 
 	 * @param date
 	 * @param format
 	 * @return
@@ -158,10 +159,7 @@ public class DateFormatUtils {
 	}
 	
 	/**
-	 * @desc:格式化是时间，采用默认格式（yyyy-MM-dd HH:mm:ss）
-	 * @autor:chenssy
-	 * @date:2014年8月6日
-	 *
+	 * 格式化是时间，采用默认格式（yyyy-MM-dd HH:mm:ss）
 	 * @param value
 	 * @return
 	 */
@@ -171,10 +169,6 @@ public class DateFormatUtils {
 	
 	/**
 	 * 格式化日期
-	 * 
-	 * @author : chenssy
-	 * @date : 2016年5月31日 下午5:40:58
-	 *
 	 * @param value
 	 * @return
 	 */
@@ -183,12 +177,9 @@ public class DateFormatUtils {
 	}
 	
 	/**
-	 * 获取日期显示格式，为空默认为yyyy-mm-dd HH:mm:ss
-	 * @author chenssy
-	 * @date Dec 30, 2013
+	 * 获取日期显示格式,为空默认为yyyy-mm-dd HH:mm:ss
 	 * @param format
 	 * @return
-	 * @return SimpleDateFormat
 	 */
 	protected static SimpleDateFormat getFormat(String format){
 		if(format == null || "".equals(format)){

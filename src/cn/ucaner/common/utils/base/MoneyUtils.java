@@ -1,13 +1,28 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.common.utils.base;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 /**
- * 金钱处理工具类
- * 
- * @Author:chenssy
- * @date:2014年8月7日
+* @Package：cn.ucaner.common.utils.base   
+* @ClassName：MoneyUtils   
+* @Description：   <p> 人民币处理工具 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月24日 下午3:42:37   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class MoneyUtils {
 	
