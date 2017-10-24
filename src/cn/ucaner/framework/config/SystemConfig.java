@@ -36,19 +36,22 @@ import cn.ucaner.framework.common.spring.ext.config.ExtPropertyPlaceholderConfig
 public class SystemConfig {
 	
 	private static Logger logger = LoggerFactory.getLogger(SystemConfig.class);
+	
 	/**
-	 * 系统参数集合
+	 * 系统的配置参数
 	 */
 	private static Map<String, String> systemConfigMap = new HashMap<String, String>();
 	
+	/**
+	 * 系统标记码 by Jason
+	 */
 	private static final String SIGN_CODE = "【Ucaner】";
 
 	/**
 	 * 业务规则集合
 	 */
-
 	private SystemConfig() {
-
+		
 	}
 
 	public static String getSignCode() {
@@ -60,12 +63,11 @@ public class SystemConfig {
 	 */
 	public static void loadSystemConfig() {
 		ExtPropertyPlaceholderConfigurer propsConfig = SpringContextHolder.getBean(ExtPropertyPlaceholderConfigurer.class);
-
 		try {
 			Properties props = propsConfig.mergeProperties();
+			//使用spring的文件解析类库 将加载到的配置文件的数据转存到 系统配置map中   by Jason
 			systemConfigMap.putAll(propsConfig.convertPropsToMap(props));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if (logger.isDebugEnabled()) {
@@ -75,7 +77,6 @@ public class SystemConfig {
 
 	/**
 	 * 添加参数
-	 * 
 	 * @param key
 	 * @param value
 	 */
@@ -85,7 +86,6 @@ public class SystemConfig {
 
 	/**
 	 * 根据key值返回value
-	 * 
 	 * @param key
 	 * @return
 	 */
@@ -101,7 +101,7 @@ public class SystemConfig {
 	}
 
 	/**
-	 * 根据key值返回Integer类型的value.如果都為Null則返回Default值，如果内容错误则抛出异常
+	 * 根据key值返回Integer类型的value.如果都为Null返回Default值,如果内容错误则抛出异常
 	 */
 	public static String getStringValue(String key, String defaultValue) {
 		String value = getValue(key);
@@ -109,7 +109,8 @@ public class SystemConfig {
 	}
 
 	/**
-	 * 根据key值返回Integer类型的value.如果都為Null或内容错误则抛出异常.
+	 * 根据key值返回Integer类型的value.
+	 * 如果都为Null或内容错误则抛出异常.
 	 */
 	public static Integer getIntegerValue(String key) {
 		String value = getValue(key);
@@ -120,7 +121,8 @@ public class SystemConfig {
 	}
 
 	/**
-	 * 根据key值返回Integer类型的value.如果都為Null則返回Default值，如果内容错误则抛出异常
+	 * 根据key值返回Integer类型的value.
+	 * 如果都为Null返回Default值,如果内容错误则抛出异常
 	 */
 	public static Integer getInteger(String key, Integer defaultValue) {
 		String value = getValue(key);
@@ -128,7 +130,8 @@ public class SystemConfig {
 	}
 
 	/**
-	 * 根据key值返回Double类型的value.如果都為Null或内容错误则抛出异常.
+	 * 根据key值返回Double类型的value.
+	 * 如果都为Null或内容错误则抛出异常.
 	 */
 	public static Double getDoubleValue(String key) {
 		String value = getValue(key);
@@ -139,7 +142,8 @@ public class SystemConfig {
 	}
 
 	/**
-	 * 根据key值返回Double类型的value.如果都為Null則返回Default值，如果内容错误则抛出异常
+	 * 根据key值返回Double类型的value.
+	 * 如果都為Null則返回Default值，如果内容错误则抛出异常
 	 */
 	public static Double getDoubleValue(String key, Integer defaultValue) {
 		String value = getValue(key);
@@ -147,7 +151,8 @@ public class SystemConfig {
 	}
 
 	/**
-	 * 根据key值返回Boolean类型的value.如果都為Null抛出异常,如果内容不是true/false则返回false.
+	 * 根据key值返回Boolean类型的value.
+	 * 如果都為Null抛出异常,如果内容不是true/false则返回false.
 	 */
 	public static Boolean getBooleanValue(String key) {
 		String value = getValue(key);
@@ -158,7 +163,8 @@ public class SystemConfig {
 	}
 
 	/**
-	 * 根据key值返回Boolean类型的value.如果都為Null則返回Default值,如果内容不为true/false则返回false.
+	 * 根据key值返回Boolean类型的value.
+	 * 如果都为Null返回Default值,如果内容不为true/false则返回false.
 	 */
 	public static Boolean getBooleanValue(String key, boolean defaultValue) {
 		String value = getValue(key);
