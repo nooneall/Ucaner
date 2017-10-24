@@ -15,6 +15,8 @@ import java.text.SimpleDateFormat;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang.StringUtils;
 
+import cn.ucaner.common.utils.date.DateUtils;
+
 /**
 * @Package：cn.ucaner.common.utils   
 * @ClassName：MedicalCardUtil   

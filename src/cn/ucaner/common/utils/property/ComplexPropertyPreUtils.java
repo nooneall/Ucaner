@@ -8,7 +8,7 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.common.utils;
+package cn.ucaner.common.utils.property;
 
 import java.util.HashMap;
 import java.util.Map;

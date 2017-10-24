@@ -8,7 +8,7 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.common.utils;
+package cn.ucaner.common.utils.date;
 
 /**
 * @Package：cn.ucaner.common.utils   

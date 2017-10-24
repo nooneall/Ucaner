@@ -8,13 +8,12 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.common.utils;
+package cn.ucaner.common.utils.date;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
-
 
 /**
 * @Package：com.sunshine.common.utils   

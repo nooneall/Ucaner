@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerView;
 
 import cn.ucaner.common.GlobalConstant;
-import cn.ucaner.common.utils.CommonUtil;
+import cn.ucaner.common.utils.common.CommonUtil;
 import cn.ucaner.framework.config.SystemConfig;
 /**
 * @Package：cn.ucaner.framework.common.freemarker   

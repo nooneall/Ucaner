@@ -8,7 +8,7 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.common.utils;
+package cn.ucaner.common.utils.json;
 
 import java.lang.reflect.Method;
 import java.text.ParseException;

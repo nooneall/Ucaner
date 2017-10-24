@@ -8,7 +8,7 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.common.utils;
+package cn.ucaner.common.utils.common;
 
 import javax.servlet.http.HttpServletRequest;
 

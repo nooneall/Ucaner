@@ -12,6 +12,12 @@
         <mysql-connector-java.version>5.1.38</mysql-connector-java.version>
     </properties>
     <dependencies>
+    	<!-- google 二维码工具 引入  -->
+	    <dependency>
+		    <groupId>com.google.zxing</groupId>
+		    <artifactId>core</artifactId>
+		    <version>3.3.0</version>
+		</dependency>
     	<!-- poi excel 引入 -->
     	<dependency>
 			<groupId>commons-collections</groupId>
