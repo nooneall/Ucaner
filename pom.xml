@@ -12,6 +12,12 @@
         <mysql-connector-java.version>5.1.38</mysql-connector-java.version>
     </properties>
     <dependencies>
+    	<!-- poi excel 引入 -->
+    	<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2.1</version>
+		</dependency>
     	<!-- dubbo 引入 -->
     	<dependency>
             <groupId>com.alibaba</groupId>
