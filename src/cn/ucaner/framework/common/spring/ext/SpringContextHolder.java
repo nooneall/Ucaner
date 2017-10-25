@@ -102,7 +102,6 @@ public class SpringContextHolder implements ApplicationContextAware {
 	 * <p>
 	 * 从静态变量applicationContext中取得Bean, 自动转型为所赋值对象的类型.
 	 * </p>
-	 * 
 	 * @param requiredType
 	 * @return
 	 */
@@ -122,7 +121,6 @@ public class SpringContextHolder implements ApplicationContextAware {
 	 * <p>
 	 * 从静态变量applicationContext中取得clazz类型bean的Map集合
 	 * </p>
-	 * 
 	 * @param clazz
 	 * @return
 	 */

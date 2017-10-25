@@ -12,7 +12,7 @@
     
     
      <!-- 支付超时检查任务 -->
-    <bean id="paymentTimeoutTask" class="com.sunshine.task.biz.taskitem.PaymentTimeoutTask" />  
+    <bean id="paymentTimeoutTask" class="com.ucaner.task.biz.taskitem.PaymentTimeoutTask" />  
     
       <!-- 支付超时检查任务  -->
     <bean id="payTimeOutJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
