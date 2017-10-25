@@ -11,11 +11,15 @@
 package cn.ucaner.common.utils.encrypt;
 
 /**
- * BASE64加解密工具类
- *
- * @Author:chenssy
- * @date:2016年5月20日 下午5:05:30
- *
+* @Package：cn.ucaner.common.utils.encrypt   
+* @ClassName：Base64Utils   
+* @Description：   <p> BASE64加解密工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月25日 下午5:49:33   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 class Base64Utils {
 
@@ -38,10 +42,6 @@ class Base64Utils {
 
 	/**
 	 * BASE64加密
-	 * 
-	 * @author : chenssy
-	 * @date : 2016年5月20日 下午5:10:18
-	 *
 	 * @param data
 	 * @return
 	 */
@@ -80,13 +80,9 @@ class Base64Utils {
 
 	/**
 	 * Base64 解密
-	 * 
-	 * @author : chenssy
-	 * @date : 2016年5月20日 下午5:11:51
-	 *
 	 * @param str
 	 * @return
-	 * @throws java.io.UnsupportedEncodingException
+	 * @throws Exception
 	 */
 	protected static byte[] decrypt(String str) throws Exception{
 		StringBuffer sb = new StringBuffer();

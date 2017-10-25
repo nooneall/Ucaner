@@ -18,26 +18,25 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 
 /**
- * DES加解密工具类
- *
- * @Author:chenssy
- * @date:2016年5月20日 下午5:19:00
- *
+* @Package：cn.ucaner.common.utils.encrypt   
+* @ClassName：DESUtils   
+* @Description：   <p> DES加解密工具类 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月25日 下午5:50:07   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 class DESUtils {
+	
 	/** 默认key */
 	protected final static String KEY = "ScAKC0XhadTHT3Al0QIDAQAB";
 	
 	/**
 	 * DES加密
-	 * 
-	 * @author : chenssy
-	 * @date : 2016年5月20日 下午5:51:37
-	 *
-	 * @param data
-	 * 				待加密字符串
-	 * @param key
-	 * 				校验位
+	 * @param data 待加密字符串
+	 * @param key   校验位
 	 * @return
 	 */
     @SuppressWarnings("restriction")
@@ -63,14 +62,8 @@ class DESUtils {
 	
     /**
      * DES解密
-     * 
-     * @author : chenssy
-     * @date : 2016年5月20日 下午5:52:23
-     *
-     * @param cryptData
-     * 						待解密密文
-     * @param key
-     * 						校验位
+     * @param cryptData 待解密密文
+     * @param key  校验位
      * @return
      */
     @SuppressWarnings("restriction")

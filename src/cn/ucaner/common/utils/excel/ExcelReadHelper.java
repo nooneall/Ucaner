@@ -33,10 +33,15 @@ import cn.ucaner.common.utils.date.DateFormatUtils;
 import cn.ucaner.common.utils.date.DateUtilOne;
 
 /**
- * 解析Excel，支持2003、2007
- * 
- * @Author:chenssy
- * @date:2014年8月3日
+* @Package：cn.ucaner.common.utils.excel   
+* @ClassName：ExcelReadHelper   
+* @Description：   <p> 解析Excel,支持2003,2007</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月25日 下午5:45:51   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ExcelReadHelper {
 	
@@ -49,16 +54,9 @@ public class ExcelReadHelper {
 	 * 3、properties中值得顺序要与Excel中列相相应，否则值会设置错：<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;excel:编号    姓名         年龄       性别<br>
 	 * properties:id  name  age  sex<br>
-	 * 
-	 * @autor:chenssy
-	 * @date:2014年8月9日
-	 *
-	 * @param file
-	 * 				待解析的Excel文件
-	 * @param properties
-	 * 				与Excel相对应的属性
-	 * @param obj
-	 * 				反射对象的Class
+	 * @param file 待解析的Excel文件
+	 * @param properties 与Excel相对应的属性
+	 * @param obj 反射对象的Class
 	 * @return
 	 * @throws Exception 
 	 */
@@ -83,16 +81,9 @@ public class ExcelReadHelper {
 	 * 3、properties中值得顺序要与Excel中列相相应，否则值会设置错：<br>
 	 * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;excel：编号    姓名         年龄       性别<br>
 	 * properties：id  name  age  sex<br>
-	 * 
-	 * @autor:chenssy
-	 * @date:2014年8月9日
-	 *
-	 * @param file
-	 * 				待解析的Excel文件的路径
-	 * @param properties
-	 * 				与Excel相对应的属性
-	 * @param obj
-	 * 				反射对象的Class
+	 * @param file  待解析的Excel文件的路径
+	 * @param properties  与Excel相对应的属性
+	 * @param obj  反射对象的Class
 	 * @return
 	 * @throws Exception 
 	 */
@@ -107,16 +98,9 @@ public class ExcelReadHelper {
 	
 	/**
 	 * 根据params、object解析Excel，并且构建list集合
-	 * @autor:chenssy
-	 * @date:2014年8月9日
-	 *
-	 * @param book
-	 * 				WorkBook对象，他代表了待将解析的Excel文件
-	 * @param properties
-	 * 				需要参考Object的属性
-	 * @param object
-	 * 				构建的Object对象，每一个row都相当于一个object对象
-	 * @return
+	 * @param book  WorkBook对象，他代表了待将解析的Excel文件
+	 * @param properties  需要参考Object的属性
+	 * @param object  构建的Object对象，每一个row都相当于一个object对象
 	 * @throws Exception 
 	 */
 	@SuppressWarnings("rawtypes")
@@ -130,7 +114,6 @@ public class ExcelReadHelper {
 			if(sheet == null){   //谨防中间空一行
 				continue;
 			}
-			
 			for(int numRow = 1 ; numRow < sheet.getLastRowNum() ; numRow++){   //一个row就相当于一个Object
 				Row row = sheet.getRow(numRow);
 				if(row == null){
@@ -143,19 +126,11 @@ public class ExcelReadHelper {
 	}
 
 	/**
-	 * 获取row的数据，利用反射机制构建Object对象
-	 * @autor:chenssy
-	 * @date:2014年8月9日
-	 *
-	 * @param row
-	 * 				row对象
-	 * @param properties
-	 * 				Object参考的属性
-	 * @param methodMap 
-	 * 				object对象的setter方法映射
-	 * @param fieldMap
-	 * 				object对象的属性映射
-	 * @return
+	 * 获取row的数据 利用反射机制构建Object对象
+	 * @param row  row对象
+	 * @param properties   Object参考的属性
+	 * @param methodMap   object对象的setter方法映射
+	 * @param fieldMap   object对象的属性映射
 	 * @throws Exception 
 	 */
 	@SuppressWarnings("rawtypes")
@@ -178,17 +153,10 @@ public class ExcelReadHelper {
 	
 	/**
 	 * 根据指定属性的的setter方法给object对象设置值
-	 * @autor:chenssy
-	 * @date:2014年8月10日
-	 *
-	 * @param obj
-	 * 			object对象
-	 * @param field
-	 * 				object对象的属性
-	 * @param method
-	 * 				object对象属性的相对应的方法
-	 * @param value
-	 * 				需要设置的值	
+	 * @param obj     object对象
+	 * @param field   object对象的属性
+	 * @param method  object对象属性的相对应的方法
+	 * @param value    需要设置的值	
 	 * @throws Exception 
 	 */
 	private static void setObjectPropertyValue(Object obj, Field field,
@@ -237,7 +205,7 @@ public class ExcelReadHelper {
 		}
 	}
 
-	@SuppressWarnings("static-access")
+	@SuppressWarnings({ "static-access", "deprecation" })
 	private static String getValue(Cell cell) {  
         if (cell.getCellType() == cell.CELL_TYPE_BOOLEAN) {  
             return String.valueOf(cell.getBooleanCellValue());  
@@ -250,11 +218,7 @@ public class ExcelReadHelper {
 
 	/**
 	 * 获取object对象所有属性的Setter方法，并构建map对象，结构为Map<'field','method'>
-	 * @autor:chenssy
-	 * @date:2014年8月9日
-	 *
-	 * @param object
-	 * 				object对象
+	 * @param object object对象
 	 * @return
 	 */
 	@SuppressWarnings("rawtypes")
@@ -275,17 +239,12 @@ public class ExcelReadHelper {
                     }   
                 }   
         }
-        
 		return methodMap;
 	}
 	
 	/**
 	 * 获取object对象的所有属性，并构建map对象，对象结果为Map<'field','field'>
-	 * @autor:chenssy
-	 * @date:2014年8月10日
-	 *
-	 * @param object
-	 * 				object对象	
+	 * @param object  object对象	
 	 * @return
 	 */
 	@SuppressWarnings("rawtypes")
