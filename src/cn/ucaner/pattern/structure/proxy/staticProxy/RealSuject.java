@@ -22,8 +22,9 @@ package cn.ucaner.pattern.structure.proxy.staticProxy;
 * @version    V1.0
  */
 public class RealSuject implements Subject {
+	
     @Override
     public void request() {
-        System.out.print("do request 代理模式实现类！");
+        System.out.println("*** static proxy do request ！By Jason ***");
     }
 }

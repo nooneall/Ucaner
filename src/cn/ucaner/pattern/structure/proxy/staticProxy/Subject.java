@@ -13,7 +13,7 @@ package cn.ucaner.pattern.structure.proxy.staticProxy;
 /**
 * @Package：cn.ucaner.pattern.structure.proxy.staticProxy   
 * @ClassName：Subject   
-* @Description：   <p> 代理模式接口类 </p>
+* @Description：   <p> static Proxy 代理模式接口类 </p>
 * @Author： - DaoDou 
 * @CreatTime：2017年10月26日 下午1:46:44   
 * @Modify By：   
@@ -23,6 +23,9 @@ package cn.ucaner.pattern.structure.proxy.staticProxy;
  */
 public interface Subject {
 	
+	/**
+	 * static Proxy
+	 */
     void request();
     
 }

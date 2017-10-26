@@ -40,11 +40,9 @@ public class ProxyMain {
      * 静态代理
      */
     private static void staticProxy() {
-
         RealSuject realSuject = new RealSuject();
         Proxy proxy = new Proxy(realSuject);
         proxy.request();
-
     }
 
    /**

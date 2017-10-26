@@ -10,15 +10,22 @@
  */
 package cn.ucaner.pattern.structure.proxy.dynamicProxy;
 
-/***
- *作者：MirsFang
- *模式：代理模式
- *时间：2017/2/28/
- *备注  动态代理接口类
- ***/
+/**
+* @Package：cn.ucaner.pattern.structure.proxy.dynamicProxy   
+* @ClassName：Subject   
+* @Description：   <p> 代理模式   -   动态代理接口类 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:09:26   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public interface Subject {
 
-
+	/**
+	 * dynamicProxy
+	 */
     public abstract void request();
 
 }
