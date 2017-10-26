@@ -96,4 +96,15 @@ public class BeanMapConvert {
         }
         return object;
     }
+    
+    /**
+     * Test for Jason 
+     */
+    public static void main(String[] args) {
+		DemoBean demoBean = new DemoBean();
+		demoBean.setAge(23);
+		demoBean.setName("Jason");
+		demoBean.setSex(null);
+    	System.out.println(bean2MapObject(demoBean));
+	}
 }

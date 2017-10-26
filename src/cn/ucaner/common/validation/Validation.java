@@ -28,14 +28,15 @@ import org.apache.commons.lang3.StringUtils;
 * @version    V1.0
  */
 public class Validation {
+	
 	// wi =2(n-1)(mod 11);加权因子
 	private final int[] wi = { 7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2, 1 };
+	
 	// 校验码
 	private final char[] vi = { '1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2' };
 
 	/***
 	 * 验证只能为中文和字母的字符串
-	 * 
 	 * @param value
 	 * @return
 	 */
@@ -49,7 +50,6 @@ public class Validation {
 
 	/***
 	 * 验证只能为字母和数字的字符串
-	 * 
 	 * @param value
 	 * @return
 	 */
@@ -63,7 +63,6 @@ public class Validation {
 
 	/***
 	 * 验证手机
-	 * 
 	 * @param value
 	 * @return
 	 */
@@ -88,7 +87,6 @@ public class Validation {
 
 	/***
 	 * 验证电子邮箱
-	 * 
 	 * @param value
 	 * @return
 	 */
@@ -103,7 +101,6 @@ public class Validation {
 
 	/***
 	 * 验证分数
-	 * 
 	 * @param value
 	 * @return/^[0-9]+([.]\d{1,2 )?$/
 	 */
@@ -117,7 +114,6 @@ public class Validation {
 
 	/***
 	 * 验证日期格式为yyyy-MM-dd HH:mm:ss
-	 * 
 	 * @param value
 	 * @return
 	 */
@@ -132,7 +128,6 @@ public class Validation {
 
 	/***
 	 * 验证日期格式为yyyy-MM-dd HH:mm
-	 * 
 	 * @param value
 	 * @return
 	 */
@@ -147,7 +142,6 @@ public class Validation {
 
 	/***
 	 * 验证日期格式为yyyy-MM-dd
-	 * 
 	 * @param value
 	 * @return
 	 */
@@ -162,7 +156,6 @@ public class Validation {
 
 	/***
 	 * 验证日期格式为yyyyMMdd
-	 * 
 	 * @param value
 	 * @return
 	 */
@@ -177,7 +170,6 @@ public class Validation {
 
 	/***
 	 * 验证日期格式为yyyy/MM/dd
-	 * 
 	 * @param value
 	 * @return
 	 */
@@ -192,7 +184,6 @@ public class Validation {
 
 	/***
 	 * 验证固话
-	 * 
 	 * @param value
 	 * @return
 	 */
@@ -207,7 +198,6 @@ public class Validation {
 
 	/***
 	 * 验证身份证号码
-	 * 
 	 * @param value
 	 * @return
 	 */
@@ -231,7 +221,6 @@ public class Validation {
 		if (!StringUtils.isNumeric(value)) {
 			return false;
 		}
-
 		if (verify == getVerify(value)) {
 			return true;
 		}
@@ -240,7 +229,6 @@ public class Validation {
 
 	/**
 	 * (身份证验证)计算最后一位校验码
-	 * 
 	 * @param eighteen
 	 * @return
 	 */
@@ -266,7 +254,6 @@ public class Validation {
 
 	/***
 	 * 验证URL
-	 * 
 	 * @param value
 	 * @return
 	 */
@@ -288,7 +275,6 @@ public class Validation {
 
 	/**
 	 * 验证对象是否为空
-	 * 
 	 * @param s
 	 * @return 如果为null或者空字符串则返回true,否则返回false
 	 */
@@ -311,11 +297,10 @@ public class Validation {
 
 	/**
 	 * 判断List对象是否为空,要求list的size大于0;注意这里并没有要求list.get(0)!=null
-	 * 
 	 * @param list
 	 * @return 非空则返回true;空则返回false
 	 */
-	public static boolean listIsNotNull(List list) {
+	public static boolean listIsNotNull(List<?> list) {
 		boolean result = false;
 		if (list != null && list.size() > 0) {
 			result = true;
@@ -325,7 +310,6 @@ public class Validation {
 
 	/**
 	 * 判断String数组是否为空,要求数组的length大于0;注意这里并没有要求sa[0]!="";
-	 * 
 	 * @param sa
 	 * @return
 	 */
