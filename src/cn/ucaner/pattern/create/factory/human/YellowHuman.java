@@ -12,14 +12,19 @@ package cn.ucaner.pattern.create.factory.human;
 
 import cn.ucaner.pattern.create.factory.Human;
 
-/***
- *作者：MirsFang
- *模式：工厂模式
- *时间：2017/05/05/上午10:22
- *备注  黄人
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.create.factory.human   
+* @ClassName：YellowHuman   
+* @Description：   <p> 工厂模式  --- 黄色人种</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:49:38   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class YellowHuman implements Human {
+	
     @Override
     public void getColor() {
         System.out.println("黄色人种");

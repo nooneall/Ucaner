@@ -13,14 +13,19 @@ package cn.ucaner.pattern.create.factory.factory;
 import cn.ucaner.pattern.create.factory.AbsHumanFactory;
 import cn.ucaner.pattern.create.factory.Human;
 
-/***
- *作者：MirsFang    
- *模式：工厂模式
- *时间：2017/05/05/上午10:17  
- *备注  具体工厂
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.create.factory.factory   
+* @ClassName：HumanFactory   
+* @Description：   <p> 工厂模式   --- 具体工厂</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:46:37   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class HumanFactory extends AbsHumanFactory {
+	
     @Override
     public <T extends Human> T createHumen(Class<T> tClass) {
         Human humen=null;

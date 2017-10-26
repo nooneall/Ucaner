@@ -10,13 +10,17 @@
  */
 package cn.ucaner.pattern.create.factory;
 
-/***             
- *作者：MirsFang    
- *模式：工厂模式
- *时间：2017/05/05/上午10:15  
- *备注      
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.create.factory   
+* @ClassName：Human   
+* @Description：   <p> 工厂模式  ---- human </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:47:27   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public interface Human {
     void getColor();
 }

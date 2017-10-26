@@ -15,16 +15,20 @@ import cn.ucaner.pattern.create.factory.human.BlackHuman;
 import cn.ucaner.pattern.create.factory.human.WhiteHuman;
 import cn.ucaner.pattern.create.factory.human.YellowHuman;
 
-/***
- *作者：MirsFang    
- *模式：工厂模式
- *时间：2017/05/05/上午10:28  
- *备注  执行类
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.create.factory   
+* @ClassName：FactoryMain   
+* @Description：   <p> 工厂模式  - 执行类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:47:54   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class FactoryMain {
+	
     public static void main(String[] args) {
-
         //初始化一个工厂
         AbsHumanFactory humanFactory = new HumanFactory();
 
