@@ -8,22 +8,24 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.pattern.action.observer.observerIml;import cn.ucaner.pattern.action.observer.observerAbs.Observer;
+package cn.ucaner.pattern.action.observer.observerIml;
+
+import cn.ucaner.pattern.action.observer.observerAbs.Observer;
 
 /**
- * Created by MirsFang on 2017/3/3.
+* @Package：cn.ucaner.pattern.action.observer.observerIml   
+* @ClassName：DiaoSi   
+* @Description：   <p> 观察者模式  ---  屌丝</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:28:58   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
-
-
-/***
- *作者：MirsFang    
- *模式：观察者模式
- *时间：2017/03/03/下午1:02  
- *备注  屌丝
- ***/
-
 public class DiaoSi  implements Observer{
-    //你的名字
+   
+	//你的名字
     private String name;
 
     public String getName() {

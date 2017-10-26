@@ -14,13 +14,17 @@ import cn.ucaner.pattern.action.observer.observerAbs.Subject;
 import cn.ucaner.pattern.action.observer.observerIml.DiaoSi;
 import cn.ucaner.pattern.action.observer.observerIml.NvShen;
 
-/***
- *作者：MirsFang    
- *模式：观察者模式
- *时间：2017/03/03/下午1:10  
- *备注  观察者模式运行类
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.action.observer   
+* @ClassName：ObserverMain   
+* @Description：   <p> 观察者模式   - 观察者模式运行类 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:26:58   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class ObserverMain {
 
     public static void main(String[] args) {
@@ -33,12 +37,12 @@ public class ObserverMain {
 
     }
 
-
     //添加10个观察者(真变态)
     public static void getObservers(Subject nvShen){
-        for (int i = 0; i < 10 ; i++) {
+        for (int i = 0; i < 100 ; i++) {
             DiaoSi diaosi=new DiaoSi("屌丝"+i);
-            nvShen.Attach(diaosi);
+            nvShen.Attach(diaosi);//添加
+            nvShen.Detach(diaosi);//删除
         }
     }
 
