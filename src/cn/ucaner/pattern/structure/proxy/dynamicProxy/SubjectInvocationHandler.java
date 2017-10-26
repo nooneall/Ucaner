@@ -1,8 +1,16 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.pattern.structure.proxy.dynamicProxy;/**
  * Created by MirsFang on 2017/2/28.
  */
-
-import com.sun.org.apache.regexp.internal.RE;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
