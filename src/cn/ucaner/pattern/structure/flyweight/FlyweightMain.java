@@ -12,13 +12,17 @@ package cn.ucaner.pattern.structure.flyweight;
 
 import cn.ucaner.pattern.structure.flyweight.flyweightAbs.Flyweight;
 
-/***
- *作者：MirsFang    
- *模式：享元模式
- *时间：2017/03/09/下午12:44  
- *备注  享元模式执行类
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.structure.flyweight   
+* @ClassName：FlyweightMain   
+* @Description：   <p> 享元模式  --- 享元模式执行类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午6:09:45   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class FlyweightMain {
 
 

@@ -14,13 +14,17 @@ import java.util.HashMap;
 
 import cn.ucaner.pattern.structure.flyweight.flyweightAbs.Flyweight;
 
-/***
- *作者：MirsFang    
- *模式：享元模式
- *时间：2017/03/09/下午12:38  
- *备注  享元工厂
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.structure.flyweight   
+* @ClassName：FlyweightFactory   
+* @Description：   <p> 享元模式  --- 享元工厂</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午6:10:24   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class FlyweightFactory {
     //定义一个池容器
     private static HashMap<String,Flyweight> pool=new HashMap<>();
@@ -36,7 +40,6 @@ public class FlyweightFactory {
         }
         return flyweight;
     }
-
 
     //获取池的大小
     public static  int getPoolSize(){

@@ -8,17 +8,19 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.pattern.structure.flyweight.flyweightAbs;/**
- * Created by MirsFang on 2017/3/9.
+package cn.ucaner.pattern.structure.flyweight.flyweightAbs;
+
+/**
+* @Package：cn.ucaner.pattern.structure.flyweight.flyweightAbs   
+* @ClassName：Flyweight   
+* @Description：   <p> 享元模式  --- 抽象享元对象</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午6:11:06   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
-
-/***             
- *作者：MirsFang    
- *模式：享元模式
- *时间：2017/03/09/下午12:32  
- *备注  抽象享元对象
- ***/
-
 public abstract class Flyweight {
     //内部状态
     private String intrinsic;

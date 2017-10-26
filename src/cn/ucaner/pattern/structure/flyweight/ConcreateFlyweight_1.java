@@ -15,13 +15,18 @@ import java.util.Random;
 
 import cn.ucaner.pattern.structure.flyweight.flyweightAbs.Flyweight;
 
-/***
- *作者：MirsFang    
- *模式：享元模式
- *时间：2017/03/09/下午12:35  
- *备注  具体享元对象
- ***/
-
+/**
+*    
+* @Package：cn.ucaner.pattern.structure.flyweight   
+* @ClassName：ConcreateFlyweight_1   
+* @Description：   <p> 享元模式 -- 具体享元对象</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午6:10:48   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class ConcreateFlyweight_1 extends Flyweight{
 
     //接受外部状态
