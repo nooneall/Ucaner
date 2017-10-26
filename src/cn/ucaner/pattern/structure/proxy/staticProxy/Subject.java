@@ -10,12 +10,19 @@
  */
 package cn.ucaner.pattern.structure.proxy.staticProxy;
 
-/***
- *作者：MirsFang
- *模式：代理模式
- *时间：2017/2/28/
- *备注  代理模式接口类
- ***/
+/**
+* @Package：cn.ucaner.pattern.structure.proxy.staticProxy   
+* @ClassName：Subject   
+* @Description：   <p> 代理模式接口类 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午1:46:44   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public interface Subject {
+	
     void request();
+    
 }

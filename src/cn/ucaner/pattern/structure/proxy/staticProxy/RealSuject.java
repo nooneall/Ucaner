@@ -10,15 +10,20 @@
  */
 package cn.ucaner.pattern.structure.proxy.staticProxy;
 
-/***
- *作者：MirsFang
- *模式：代理模式
- *时间：2017/2/28/
- *备注  代理模式真实类
- ***/
+/**
+* @Package：cn.ucaner.pattern.structure.proxy.staticProxy   
+* @ClassName：RealSuject   
+* @Description：   <p> 代理模式真实类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午1:47:02   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class RealSuject implements Subject {
     @Override
     public void request() {
-        System.out.print("do request");
+        System.out.print("do request 代理模式实现类！");
     }
 }
