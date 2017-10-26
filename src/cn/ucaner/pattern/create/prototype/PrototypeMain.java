@@ -10,14 +10,17 @@
  */
 package cn.ucaner.pattern.create.prototype;
 
-
-/***
- *作者：MirsFang    
- *模式：原型模式
- *时间：2017/03/08/下午12:21  
- *备注  原型模式执行类
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.create.prototype   
+* @ClassName：PrototypeMain   
+* @Description：   <p> 原型模式  --- 原型模式执行类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:42:54   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class PrototypeMain {
 
     public static void main(String[] args) {

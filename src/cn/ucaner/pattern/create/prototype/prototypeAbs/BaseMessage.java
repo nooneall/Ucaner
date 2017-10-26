@@ -10,16 +10,19 @@
  */
 package cn.ucaner.pattern.create.prototype.prototypeAbs;
 
-
 import java.util.ArrayList;
 
-/***
- *作者：MirsFang    
- *模式：       
- *时间：2017/03/08/下午12:32  
- *备注      
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.create.prototype.prototypeAbs   
+* @ClassName：BaseMessage   
+* @Description：   <p>BaseMessage </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:43:48   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public abstract class BaseMessage {
     //发件人
     private String send;

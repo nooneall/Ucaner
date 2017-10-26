@@ -12,13 +12,17 @@ package cn.ucaner.pattern.create.prototype;
 
 import cn.ucaner.pattern.create.prototype.prototypeAbs.BaseMessage;
 
-/***
- *作者：MirsFang    
- *模式： 原型模式
- *时间：2017/03/08/下午12:21  
- *备注  浅拷贝的对象
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.create.prototype   
+* @ClassName：ShallowCopy   
+* @Description：   <p> 设计模式  原型模式     --- 浅拷贝的对象</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:42:16   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class ShallowCopy  extends BaseMessage implements Cloneable {
 
     @Override
@@ -31,6 +35,5 @@ public class ShallowCopy  extends BaseMessage implements Cloneable {
         }
         return shallowCopy;
     }
-
 
 }

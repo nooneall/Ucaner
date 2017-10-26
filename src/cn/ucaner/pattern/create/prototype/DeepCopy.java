@@ -13,13 +13,17 @@ package cn.ucaner.pattern.create.prototype;
 import java.util.ArrayList;
 import cn.ucaner.pattern.create.prototype.prototypeAbs.BaseMessage;
 
-/***
- *作者：MirsFang    
- *模式：原型模式
- *时间：2017/03/08/下午12:21  
- *备注  原型模式深拷贝
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.create.prototype   
+* @ClassName：DeepCopy   
+* @Description：   <p> 原型模式  ---  原型模式深拷贝</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:43:23   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class DeepCopy extends BaseMessage implements Cloneable {
 
     @Override
