@@ -8,17 +8,19 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.pattern.action.command.absCommand;/**
- * Created by MirsFang on 2017/3/14.
+package cn.ucaner.pattern.action.command.absCommand;
+
+/**
+* @Package：cn.ucaner.pattern.action.command.absCommand   
+* @ClassName：Group   
+* @Description：   <p>  命令模式 ---  抽象执行者</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:36:27   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
-
-/***             
- *作者：MirsFang    
- *模式： 命令模式
- *时间：2017/03/14/下午12:58  
- *备注  抽象执行者
- ***/
-
 public abstract class Group {
     //得到命令
    public abstract void getCommand();

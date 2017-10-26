@@ -12,14 +12,17 @@ package cn.ucaner.pattern.action.command.command;
 
 import cn.ucaner.pattern.action.command.absCommand.Command;
 
-
-/***
- *作者：MirsFang    
- *模式：命令模式
- *时间：2017/03/14/下午1:06  
- *备注  新增一个页面
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.action.command.command   
+* @ClassName：AddPageCommand   
+* @Description：   <p> 命令模式  --  新增一个页面</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:36:00   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class AddPageCommand extends Command {
 	
     @Override
@@ -27,7 +30,6 @@ public class AddPageCommand extends Command {
         product.getCommand();
         ui.getCommand();
         code.getCommand();
-
         product.doAdd();
         product.plan();
         ui.doAdd();

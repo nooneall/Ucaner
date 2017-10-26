@@ -12,13 +12,17 @@ package cn.ucaner.pattern.action.command;
 
 import cn.ucaner.pattern.action.command.command.AddPageCommand;
 
-/***
- *作者：MirsFang    
- *模式：命令模式
- *时间：2017/03/14/下午1:10  
- *备注  执行类
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.action.command   
+* @ClassName：CommandMain   
+* @Description：   <p> 命令模式 -- 执行类 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:34:55   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class CommandMain {
 
     public static void main(String[] args) {

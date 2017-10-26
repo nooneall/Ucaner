@@ -12,13 +12,17 @@ package cn.ucaner.pattern.action.command;
 
 import cn.ucaner.pattern.action.command.absCommand.Group;
 
-/***
- *作者：MirsFang    
- *模式：命令模式
- *时间：2017/03/14/下午1:01
- *备注  产品经理
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.action.command   
+* @ClassName：Product   
+* @Description：   <p> 命令模式 --- 产品经理</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:34:14   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class Product extends Group {
 
 
