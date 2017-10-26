@@ -11,15 +11,23 @@
 package cn.ucaner.pattern.create.singleton;
 
 /**
- * @author PhxNirvana 2017/3/14 0014.
- * 双重锁的单例
+* @Package：cn.ucaner.pattern.create.singleton   
+* @ClassName：Singleton   
+* @Description：   <p> 双重锁的单例   单例模式</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:38:56   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
-
 public class Singleton {
-    //防止外部创建实例
+	
+    //防止外部创建实例 私有
     private Singleton() {
 
     }
+    
     //唯一实例
     private static volatile Singleton mInstance;
 
