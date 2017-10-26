@@ -8,33 +8,34 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.pattern.structure.decorator.decoratorAbs;/**
- * Created by MirsFang on 2017/3/1.
+package cn.ucaner.pattern.structure.decorator.decoratorAbs;
+
+/**
+* @Package：cn.ucaner.pattern.structure.decorator.decoratorAbs   
+* @ClassName：SchoolReport   
+* @Description：   <p> 装饰器模式  -  成绩单抽象类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:17:14   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
-
-/***             
- *作者：MirsFang    
- *模式： 装饰器模式
- *时间：2017/03/01/下午12:27  
- *备注  成绩单抽象类
- ***/
-
 public abstract class SchoolReport {
 
     /**
-    *
-    *作者:Mirsfang
-    *日期:2017/3/1/下午12:29
-    *描述:展示自己的成绩
-    **/
+     * 展示自己的成绩
+     */
     public abstract void report();
 
-    /**
-    *
-    *作者:Mirsfang
-    *日期:2017/3/1/下午12:29
-    *描述:家长签名
-    **/
+   /**
+    * 家长签名
+    */
     public abstract void sign(String name);
+    
+    /**
+     * 建议
+     */
+     public abstract void discuss(String discuss);
 
 }

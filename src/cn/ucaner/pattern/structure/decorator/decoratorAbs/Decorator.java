@@ -10,15 +10,20 @@
  */
 package cn.ucaner.pattern.structure.decorator.decoratorAbs;
 
-
-/***
- *作者：MirsFang    
- *模式：装饰器模式
- *时间：2017/03/01/下午12:48  
- *备注  抽象装饰器 这种方式看起来和静态代理模式很像 {@link structure.proxy.staticProxy.Proxy }
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.structure.decorator.decoratorAbs   
+* @ClassName：Decorator   
+* @Description：   <p> 装饰器模式  - 
+* 抽象装饰器 这种方式看起来和静态代理模式很像 {@link structure.proxy.staticProxy.Proxy }</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:16:35   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public abstract class Decorator extends SchoolReport {
+	
     private SchoolReport  schoolReport;
 
     public Decorator(SchoolReport schoolReport) {

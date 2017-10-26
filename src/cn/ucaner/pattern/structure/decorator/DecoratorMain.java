@@ -17,25 +17,28 @@ import cn.ucaner.pattern.structure.decorator.decoratorIml.RankDecortaor;
 import cn.ucaner.pattern.structure.decorator.decoratorIml.SuagrFouthGradeSchoolReport;
 
 
-/***
- *作者：MirsFang    
- *模式：装饰器模式
- *时间：2017/03/01/下午12:34  
- *备注  装饰器模式运行类
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.structure.decorator   
+* @ClassName：DecoratorMain   
+* @Description：   <p> 装饰器模式  -  装饰器模式运行类 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:15:16   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class DecoratorMain   {
 
     public static void main(String[] args) {
         absDecorator();
+        extendsDecorator();
+        normol();
     }
 
-    /**
-    *
-    *作者:Mirsfang
-    *日期:2017/3/1/下午12:35
-    *描述:一般情况下
-    **/
+   /**
+    * 一般情况下
+    */
     private static void normol(){
         //把成绩单领回家
         SchoolReport schoolReport=new FouthGradeSchoolReport();
@@ -44,12 +47,9 @@ public class DecoratorMain   {
         //、、、、挨打
     }
 
-    /**
-    *
-    *作者:Mirsfang
-    *日期:2017/3/1/下午12:37
-    *描述:如果用继承装饰
-    **/
+   /**
+    * 如果用继承装饰
+    */
     private static void extendsDecorator(){
         SchoolReport schoolReport=new SuagrFouthGradeSchoolReport();
         //家长看成绩单
@@ -66,15 +66,10 @@ public class DecoratorMain   {
 
 
     /**
-    *
-    *作者:Mirsfang
-    *日期:2017/3/1/下午12:45
-    *描述:
      * 利用抽象装饰
-    **/
+     */
     private static void absDecorator(){
         //*** 注意这边的调用方式 ***
-
         //原装成绩单
         SchoolReport schoolReport=new FouthGradeSchoolReport();
         //装饰表现
@@ -85,8 +80,8 @@ public class DecoratorMain   {
         schoolReport.report();
         //哟西 不错 签名
         schoolReport.sign("马云");
+        
+        schoolReport.discuss("建议好好读书！");
     }
-
-
 
 }

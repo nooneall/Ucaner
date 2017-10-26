@@ -12,14 +12,17 @@ package cn.ucaner.pattern.structure.decorator.decoratorIml;
 
 import cn.ucaner.pattern.structure.decorator.decoratorAbs.SchoolReport;
 
-
-/***
- *作者：MirsFang    
- *模式：装饰器模式
- *时间：2017/03/01/下午12:30  
- *备注  四年级成绩单
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.structure.decorator.decoratorIml   
+* @ClassName：FouthGradeSchoolReport   
+* @Description：   <p> 装饰器模式  - - 四年级成绩单</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:17:57   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class FouthGradeSchoolReport extends SchoolReport {
 
 
@@ -32,5 +35,10 @@ public class FouthGradeSchoolReport extends SchoolReport {
     public void sign(String name) {
         System.out.println("家长签名 : "+name);
     }
+
+	@Override
+	public void discuss(String discuss) {
+		 System.out.println("建议 : "+discuss);
+	}
 
 }
