@@ -24,9 +24,9 @@ import javax.servlet.http.HttpServletRequest;
 * @version    V1.0
  */
 public class IPAddress {
+	
 	/**
 	 * 获取客户端ip地址
-	 * 
 	 * @param request
 	 * @return
 	 */

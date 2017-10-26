@@ -28,8 +28,9 @@ import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombi
 * @version    V1.0
  */
 public class PinyinUtils {
+	
 	/** 
-	 * 获取汉字串拼音首字母，英文字符不变 
+	 * 获取汉字串拼音首字母,英文字符不变 
 	 * @param chinese 汉字串 
 	 * @return 汉语拼音首字母 
 	 */
@@ -79,5 +80,14 @@ public class PinyinUtils {
 			}
 		}
 		return pybf.toString();
+	}
+	
+	/**
+	 * For Test By Jason
+	 */
+	public static void main(String[] args) {
+		//issue: 不能空格  woaizhongguo! byJson
+		System.out.println(getChineseAllWord("我爱中国! byJson"));
+		System.out.println(getChineseFirstWord("我爱中国! byJson"));//wazgbyJson
 	}
 }

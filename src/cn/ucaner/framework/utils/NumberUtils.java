@@ -29,7 +29,6 @@ public class NumberUtils {
 
 	/**
 	 * 格式化双精度数字
-	 * 
 	 * @param num
 	 * @return Double
 	 */
@@ -49,7 +48,6 @@ public class NumberUtils {
 
 	/**
 	 * 格式化双精度数字
-	 * 
 	 * @param num
 	 * @return String
 	 */
@@ -69,7 +67,6 @@ public class NumberUtils {
 
 	/**
 	 * 格式化单精度数字
-	 * 
 	 * @param num
 	 * @return Float
 	 */
@@ -90,11 +87,8 @@ public class NumberUtils {
 
 	/**
 	 * 双精度数字转字符串
-	 * 
-	 * @param num
-	 *            双精度数字
-	 * @param dec
-	 *            保留小数位数
+	 * @param num  双精度数字
+	 * @param dec 保留小数位数
 	 * @return String
 	 */
 	public static String getCommaNumber(double num, int dec) {
@@ -105,11 +99,8 @@ public class NumberUtils {
 
 	/**
 	 * 双精度数字转金额
-	 * 
-	 * @param num
-	 *            双精度数字
-	 * @param dec
-	 *            保留小数位数
+	 * @param num  双精度数字
+	 * @param dec 保留小数位数
 	 * @return String
 	 */
 	public static String getCurrencyNationNumber(double num, int dec) {

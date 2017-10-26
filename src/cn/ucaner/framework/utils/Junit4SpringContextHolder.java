@@ -13,11 +13,8 @@ package cn.ucaner.framework.utils;
 import java.net.URL;
 
 import org.junit.Before;
-import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import cn.ucaner.framework.common.spring.ext.SpringContextHolder;
 import cn.ucaner.framework.config.SystemConfig;
@@ -37,6 +34,9 @@ import cn.ucaner.framework.config.SystemConfig;
 //@ContextConfiguration(locations = { "classpath:spring-framework.xml" })
 public class Junit4SpringContextHolder extends AbstractJUnit4SpringContextTests {
 
+	/**
+	 * 启动容器  for junit test  by Jason
+	 */
 	public Junit4SpringContextHolder() {
 		super();
 		try {

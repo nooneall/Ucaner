@@ -26,8 +26,9 @@ import javax.imageio.ImageIO;
 /**
 * @Package：cn.ucaner.framework.utils   
 * @ClassName：ValidateCode   
-* @Description：   <p> 验证码生成器类，可生成数字、大写、小写字母及三者混合类型的验证码。 支持自定义验证码字符数量； 支持自定义验证码图片的大小； 支持自定义需排除的特殊字符；
- * 支持自定义干扰线的数量； 支持自定义验证码图文颜色</p>
+* @Description：   <p> [验证码生成工具.]可生成数字,大写,小写字母及三者混合类型的验证码.
+*  支持自定义验证码字符数量; 支持自定义验证码图片的大小; 支持自定义需排除的特殊字符;
+*  支持自定义干扰线的数量; 支持自定义验证码图文颜色</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年10月20日 下午4:04:15   
 * @Modify By：   
@@ -36,7 +37,7 @@ import javax.imageio.ImageIO;
 * @version    V1.0
  */
 public class ValidateCode {
-	//add by tianzz-2017-02-28 begin .
+	
 	// 图片的宽度。  
 	private int width = 160;
 	// 图片的高度。  
@@ -196,8 +197,6 @@ public class ValidateCode {
 			e.printStackTrace();
 		}
 	}
-
-	//add by tianzz-2017-02-28 end .
 
 	/**
 	 * 验证码类型为仅数字 0~9

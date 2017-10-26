@@ -33,12 +33,15 @@ import org.apache.commons.lang3.StringEscapeUtils;
  */
 public class EncodeUtils {
 
+	/**
+	 * 默认 url 编码格式
+	 */
 	private static final String DEFAULT_URL_ENCODING = "UTF-8";
+	
 	private static final char[] BASE62 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".toCharArray();
 
 	/**
 	 * sha1编码
-	 * 
 	 * @param input
 	 * @return
 	 */
@@ -48,7 +51,6 @@ public class EncodeUtils {
 
 	/**
 	 * md5编码.
-	 * 
 	 * @param input
 	 * @return
 	 */
@@ -58,7 +60,6 @@ public class EncodeUtils {
 
 	/**
 	 * Hex编码.
-	 * 
 	 * @param input
 	 * @return
 	 */
@@ -68,7 +69,6 @@ public class EncodeUtils {
 
 	/**
 	 * Hex解码.
-	 * 
 	 * @param input
 	 * @return
 	 */
@@ -82,7 +82,6 @@ public class EncodeUtils {
 
 	/**
 	 * Base64编码.
-	 * 
 	 * @param input
 	 * @return
 	 */
@@ -92,7 +91,6 @@ public class EncodeUtils {
 
 	/**
 	 * Base64编码, URL安全(将Base64中的URL非法字符'+'和'/'转为'-'和'_', 见RFC3548).
-	 * 
 	 * @param input
 	 * @return
 	 */
@@ -102,7 +100,6 @@ public class EncodeUtils {
 
 	/**
 	 * Base64解码.
-	 * 
 	 * @param input
 	 * @return
 	 */
@@ -112,7 +109,6 @@ public class EncodeUtils {
 
 	/**
 	 * Base62编码.
-	 * 
 	 * @param input
 	 * @return
 	 */
@@ -126,7 +122,6 @@ public class EncodeUtils {
 
 	/**
 	 * Html 转码.
-	 * 
 	 * @param html
 	 * @return
 	 */
@@ -136,7 +131,6 @@ public class EncodeUtils {
 
 	/**
 	 * Html 解码.
-	 * 
 	 * @param htmlEscaped
 	 * @return
 	 */
@@ -173,7 +167,6 @@ public class EncodeUtils {
 	 * URL 解码, Encode默认为UTF-8.
 	 */
 	public static String urlDecode(String part) {
-
 		try {
 			return URLDecoder.decode(part, DEFAULT_URL_ENCODING);
 		} catch (UnsupportedEncodingException e) {

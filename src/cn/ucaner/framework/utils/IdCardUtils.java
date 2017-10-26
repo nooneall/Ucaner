@@ -29,6 +29,7 @@ import java.util.Map;
 * @version    V1.0
  */
 public class IdCardUtils extends StringHelper {
+	
 	/** 中国公民身份证号码最小长度。 */
 	public static final int CHINA_ID_MIN_LENGTH = 15;
 
@@ -160,9 +161,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 将15位身份证号码转换为18位
-	 * 
-	 * @param idCard
-	 *            15位身份编码
+	 * @param idCard 15位身份编码
 	 * @return 18位身份编码
 	 */
 	public static String conver15CardTo18(String idCard) {
@@ -227,9 +226,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 验证18位身份编码是否合法
-	 * 
-	 * @param idCard
-	 *            身份编码
+	 * @param idCard  身份编码
 	 * @return 是否合法
 	 */
 	public static boolean validateIdCard18(String idCard) {
@@ -257,9 +254,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 验证15位身份编码是否合法
-	 * 
-	 * @param idCard
-	 *            身份编码
+	 * @param idCard  身份编码
 	 * @return 是否合法
 	 */
 	public static boolean validateIdCard15(String idCard) {
@@ -293,9 +288,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 验证10位身份编码是否合法
-	 * 
-	 * @param idCard
-	 *            身份编码
+	 * @param idCard 身份编码
 	 * @return 身份证信息数组
 	 *         <p>
 	 *         [0] - 台湾、澳门、香港 [1] - 性别(男M,女F,未知N) [2] - 是否合法(合法true,不合法false)
@@ -341,9 +334,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 验证台湾身份证号码
-	 * 
-	 * @param idCard
-	 *            身份证号码
+	 * @param idCard 身份证号码
 	 * @return 验证码是否符合
 	 */
 	public static boolean validateTWCard(String idCard) {
@@ -370,9 +361,7 @@ public class IdCardUtils extends StringHelper {
 	 * <p>
 	 * 将身份证号码全部转换为数字，分别对应乘9-1相加的总和，整除11则证件号码有效
 	 * </p>
-	 * 
-	 * @param idCard
-	 *            身份证号码
+	 * @param idCard  身份证号码
 	 * @return 验证码是否符合
 	 */
 	public static boolean validateHKCard(String idCard) {
@@ -404,9 +393,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 将字符数组转换成数字数组
-	 * 
-	 * @param ca
-	 *            字符数组
+	 * @param ca  字符数组
 	 * @return 数字数组
 	 */
 	public static int[] converCharToInt(char[] ca) {
@@ -424,7 +411,6 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 将身份证的每位和对应位的加权因子相乘之后，再得到和值
-	 * 
 	 * @param iArr
 	 * @return 身份证编码。
 	 */
@@ -444,7 +430,6 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 将power和值与11取模获得余数进行校验码判断
-	 * 
 	 * @param iSum
 	 * @return 校验位
 	 */
@@ -492,9 +477,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 根据身份编号获取年龄
-	 * 
-	 * @param idCard
-	 *            身份编号
+	 * @param idCard  身份编号
 	 * @return 年龄
 	 */
 	public static int getAgeByIdCard(String idCard) {
@@ -511,9 +494,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 根据身份编号获取生日
-	 * 
-	 * @param idCard
-	 *            身份编号
+	 * @param idCard 身份编号
 	 * @return 生日(yyyyMMdd)
 	 */
 	public static String getBirthByIdCard(String idCard) {
@@ -528,9 +509,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 根据身份编号获取生日年
-	 * 
-	 * @param idCard
-	 *            身份编号
+	 * @param idCard  身份编号
 	 * @return 生日(yyyy)
 	 */
 	public static Short getYearByIdCard(String idCard) {
@@ -545,9 +524,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 根据身份编号获取生日月
-	 * 
-	 * @param idCard
-	 *            身份编号
+	 * @param idCard 身份编号
 	 * @return 生日(MM)
 	 */
 	public static Short getMonthByIdCard(String idCard) {
@@ -562,9 +539,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 根据身份编号获取生日天
-	 * 
-	 * @param idCard
-	 *            身份编号
+	 * @param idCard  身份编号
 	 * @return 生日(dd)
 	 */
 	public static Short getDateByIdCard(String idCard) {
@@ -579,9 +554,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 根据身份编号获取性别
-	 * 
-	 * @param idCard
-	 *            身份编号
+	 * @param idCard  身份编号
 	 * @return 性别(M-男，F-女，N-未知)
 	 */
 	public static String getGenderByIdCard(String idCard) {
@@ -600,9 +573,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 根据身份编号获取户籍省份
-	 * 
-	 * @param idCard
-	 *            身份编码
+	 * @param idCard 身份编码
 	 * @return 省级编码。
 	 */
 	public static String getProvinceByIdCard(String idCard) {
@@ -618,7 +589,6 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 数字验证
-	 * 
 	 * @param val
 	 * @return 提取的数字。
 	 */
@@ -628,13 +598,9 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 验证小于当前日期 是否有效
-	 * 
-	 * @param iYear
-	 *            待验证日期(年)
-	 * @param iMonth
-	 *            待验证日期(月 1-12)
-	 * @param iDate
-	 *            待验证日期(日)
+	 * @param iYear  待验证日期(年)
+	 * @param iMonth 待验证日期(月 1-12)
+	 * @param iDate 待验证日期(日)
 	 * @return 是否有效
 	 */
 	public static boolean valiDate(int iYear, int iMonth, int iDate) {
@@ -666,9 +632,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 根据身份证号，自动获取对应的星座
-	 * 
-	 * @param idCard
-	 *            身份证号码
+	 * @param idCard 身份证号码
 	 * @return 星座
 	 */
 	public static String getConstellationById(String idCard) {
@@ -710,9 +674,7 @@ public class IdCardUtils extends StringHelper {
 
 	/**
 	 * 根据身份证号，自动获取对应的生肖
-	 * 
-	 * @param idCard
-	 *            身份证号码
+	 * @param idCard  身份证号码
 	 * @return 生肖
 	 */
 	public static String getZodiacById(String idCard) { // 根据身份证号，自动返回对应的生肖
@@ -723,7 +685,6 @@ public class IdCardUtils extends StringHelper {
 		int year = IdCardUtils.getYearByIdCard(idCard);
 		int end = 3;
 		int x = ( year - end ) % 12;
-
 		String retValue = "";
 		retValue = sSX[x];
 
@@ -731,10 +692,8 @@ public class IdCardUtils extends StringHelper {
 	}
 
 	/**
-	 * 根据身份证号，自动获取对应的天干地支
-	 * 
-	 * @param idCard
-	 *            身份证号码
+	 * 根据身份证号,自动获取对应的天干地支
+	 * @param idCard  身份证号码
 	 * @return 天干地支
 	 */
 	public static String getChineseEraById(String idCard) { // 根据身份证号，自动返回对应的生肖
@@ -754,8 +713,11 @@ public class IdCardUtils extends StringHelper {
 		return retValue;
 	}
 
+	/**
+	 * Test for Jason
+	 */
 	public static void main(String[] args) {
-		String idCard = "";
+		String idCard = "430601199411151234";
 		System.out.println(IdCardUtils.getGenderByIdCard(idCard));
 		System.out.println(IdCardUtils.getBirthByIdCard(idCard));
 		System.out.println(IdCardUtils.getMonthByIdCard(idCard));
@@ -764,5 +726,6 @@ public class IdCardUtils extends StringHelper {
 		System.out.println(IdCardUtils.getZodiacById(idCard));
 		System.out.println(IdCardUtils.getChineseEraById(idCard));
 		System.out.println(IdCardUtils.getProvinceByIdCard(idCard));
+		//M 19941115 11 15 天蝎座 狗 甲戌 湖南
 	}
 }

@@ -22,7 +22,6 @@ import java.util.Hashtable;
 import java.util.Vector;
 
 /**
- * UT
 * @Package：cn.ucaner.framework.utils   
 * @ClassName：UT   
 * @Description：   <p> 时间工具</p>

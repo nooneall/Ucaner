@@ -29,20 +29,35 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class MD5Utils {
 
-	/*** 获得16位的加密字符 **/
+	/**
+	 * 获得16位的加密字符 
+	 * @param str
+	 * @return
+	 * @throws NoSuchAlgorithmException
+	 */
 	public static String getMd5String16(String str) throws NoSuchAlgorithmException {
 		String md5str = getMd5String32(str).substring(8);
 		return md5str.substring(0, md5str.length() - 8);
 	}
 
-	/** 获得24位的MD5加密字符 **/
+	/**
+	 * 获得24位的MD5加密字符
+	 * @param str
+	 * @return
+	 * @throws NoSuchAlgorithmException
+	 */
 	public static String getMd5String24(String str) throws NoSuchAlgorithmException {
 
 		String md5str = getMd5String32(str).substring(4);
 		return md5str.substring(0, md5str.length() - 4);
 	}
 
-	/** 获得32位的MD5加密算法 **/
+	/**
+	 * 获得32位的MD5加密算法
+	 * @param str
+	 * @return
+	 * @throws NoSuchAlgorithmException
+	 */
 	public static String getMd5String32(String str) throws NoSuchAlgorithmException {
 		MessageDigest md = MessageDigest.getInstance("MD5");
 		md.update(str.getBytes());
@@ -64,8 +79,9 @@ public class MD5Utils {
 	}
 
 	/**
-	 * add by tianzhuzi due to data transfer 20160723.
-	 * @param input
+	 * 获取MD5密码
+	 * @param password
+	 * @param salt
 	 * @return
 	 * @throws NoSuchAlgorithmException
 	 */
@@ -80,7 +96,7 @@ public class MD5Utils {
 	}
 
 	/**
-	 * 获取MD5加密数据-天竹子
+	 * 获取MD5加密数据
 	 * @param input
 	 * @return
 	 * @throws NoSuchAlgorithmException
@@ -99,11 +115,13 @@ public class MD5Utils {
 		return result;
 	}
 
+	/**
+	 * For test by Jason
+	 */
 	public static void main(String[] args) {
 		try {
-			System.out.println(getMd5String16("e6a5bf18dd1b845f895b99eb7c35cf46"));
+			System.out.println(getMd5String16("Jason")); //829018f9dbd65fb8
 		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

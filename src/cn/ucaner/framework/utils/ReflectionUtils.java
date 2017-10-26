@@ -51,9 +51,7 @@ public class ReflectionUtils {
 
 	/**
 	 * 调用Setter方法.
-	 * 
-	 * @param propertyType
-	 *            用于查找Setter方法,为空时使用value的Class替代.
+	 * @param propertyType   用于查找Setter方法,为空时使用value的Class替代.
 	 */
 	public static void invokeSetterMethod(Object obj, String propertyName, Object value, Class<?> propertyType) {
 		Class<?> type = propertyType != null ? propertyType : value.getClass();
@@ -99,7 +97,6 @@ public class ReflectionUtils {
 
 	/**
 	 * 循环向上转型, 获取对象的DeclaredField, 并强制设置为可访问.
-	 * 
 	 * 如向上转型到Object仍无法找到, 返回null.
 	 */
 	public static Field getAccessibleField(final Object obj, final String fieldName) {
@@ -143,9 +140,8 @@ public class ReflectionUtils {
 
 	/**
 	 * 循环向上转型, 获取对象的DeclaredMethod,并强制设置为可访问. 如向上转型到Object仍无法找到, 返回null.
-	 * 
-	 * 用于方法需要被多次调用的情况. 先使用本函数先取得Method,然后调用Method.invoke(Object obj, Object...
-	 * args)
+	 * 用于方法需要被多次调用的情况. 先使用本函数先取得Method,然后调用Method.invoke
+	 * (Object obj, Object...args)
 	 */
 	public static Method getAccessibleMethod(final Object obj, final String methodName, final Class<?>... parameterTypes) {
 		if (obj == null) {
@@ -156,9 +152,7 @@ public class ReflectionUtils {
 		for (Class<?> superClass = obj.getClass(); superClass != Object.class; superClass = superClass.getSuperclass()) {
 			try {
 				Method method = superClass.getDeclaredMethod(methodName, parameterTypes);
-
 				method.setAccessible(true);
-
 				return method;
 
 			} catch (NoSuchMethodException e) {
@@ -172,11 +166,8 @@ public class ReflectionUtils {
 	/**
 	 * 通过反射, 获得Class定义中声明的父类的泛型参数的类型. 如无法找到, 返回Object.class. eg. public UserDao
 	 * extends HibernateDao<User>
-	 * 
-	 * @param clazz
-	 *            The class to introspect
-	 * @return the first generic declaration, or Object.class if cannot be
-	 *         determined
+	 * @param clazz The class to introspect
+	 * @return the first generic declaration, or Object.class if cannot be determined
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> Class<T> getSuperClassGenricType(final Class clazz) {
@@ -185,15 +176,10 @@ public class ReflectionUtils {
 
 	/**
 	 * 通过反射, 获得Class定义中声明的父类的泛型参数的类型. 如无法找到, 返回Object.class.
-	 * 
 	 * 如public UserDao extends HibernateDao<User,Long>
-	 * 
-	 * @param clazz
-	 *            clazz The class to introspect
-	 * @param index
-	 *            the Index of the generic ddeclaration,start from 0.
-	 * @return the index generic declaration, or Object.class if cannot be
-	 *         determined
+	 * @param clazz clazz The class to introspect
+	 * @param index the Index of the generic ddeclaration,start from 0.
+	 * @return the index generic declaration, or Object.class if cannot be determined
 	 */
 	public static Class getSuperClassGenricType(final Class clazz, final int index) {
 

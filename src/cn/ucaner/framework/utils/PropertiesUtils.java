@@ -34,8 +34,11 @@ import org.springframework.core.io.ResourceLoader;
 * @version    V1.0
  */
 public class PropertiesUtils {
+	
 	private static Logger logger = LoggerFactory.getLogger(PropertiesUtils.class);
+	
 	private static ResourceLoader resourceLoader = new DefaultResourceLoader();
+	
 	private final Properties properties;
 
 	public PropertiesUtils(String... resourcesPaths) {

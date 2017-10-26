@@ -26,7 +26,6 @@ import java.util.regex.Pattern;
 * @Modify marker：   
 * @version    V1.0
  */
-@SuppressWarnings("unchecked")
 public class RegexUtil {
 
 	public static void main(String[] args) {
@@ -47,14 +46,14 @@ public class RegexUtil {
 		return false;
 	}
 
-	public final static boolean isNull(Collection collection) {
+	public final static boolean isNull(Collection<?> collection) {
 		if (collection == null || collection.size() == 0) {
 			return true;
 		}
 		return false;
 	}
 
-	public final static boolean isNull(Map map) {
+	public final static boolean isNull(Map<?, ?> map) {
 		if (map == null || map.size() == 0) {
 			return true;
 		}
@@ -80,11 +79,11 @@ public class RegexUtil {
 		return !isNull(str);
 	}
 
-	public final static boolean isNotNull(Collection collection) {
+	public final static boolean isNotNull(Collection<?> collection) {
 		return !isNull(collection);
 	}
 
-	public final static boolean isNotNull(Map map) {
+	public final static boolean isNotNull(Map<?, ?> map) {
 		return !isNull(map);
 	}
 
@@ -98,10 +97,8 @@ public class RegexUtil {
 
 	/**
 	 * 匹配URL地址
-	 * 
 	 * @param str
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isUrl(String str) {
 		return match(str, "^http://([\\w-]+\\.)+[\\w-]+(/[\\w-./?%&=]*)?$");
@@ -109,10 +106,8 @@ public class RegexUtil {
 
 	/**
 	 * 匹配密码，以字母开头，长度在6-12之间，只能包含字符、数字和下划线。
-	 * 
 	 * @param str
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isPwd(String str) {
 		return match(str, "^[a-zA-Z]\\w{6,12}$");
@@ -120,10 +115,8 @@ public class RegexUtil {
 
 	/**
 	 * 验证字符，只能包含中文、英文、数字、下划线等字符。
-	 * 
 	 * @param str
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean stringCheck(String str) {
 		return match(str, "^[a-zA-Z0-9\u4e00-\u9fa5-_]+$");
@@ -131,10 +124,8 @@ public class RegexUtil {
 
 	/**
 	 * 匹配Email地址
-	 * 
 	 * @param str
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isEmail(String str) {
 		return match(str, "^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$");
@@ -142,10 +133,8 @@ public class RegexUtil {
 
 	/**
 	 * 匹配非负整数（正整数+0）
-	 * 
 	 * @param str
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isInteger(String str) {
 		return match(str, "^[+]?\\d+$");
@@ -153,10 +142,8 @@ public class RegexUtil {
 
 	/**
 	 * 判断数值类型，包括整数和浮点数
-	 * 
 	 * @param str
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isNumeric(String str) {
 		if (isFloat(str) || isInteger(str)) {
@@ -167,10 +154,8 @@ public class RegexUtil {
 
 	/**
 	 * 只能输入数字
-	 * 
 	 * @param str
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isDigits(String str) {
 		return match(str, "^[0-9]*$");
@@ -178,10 +163,8 @@ public class RegexUtil {
 
 	/**
 	 * 匹配正浮点数
-	 * 
 	 * @param str
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isFloat(String str) {
 		return match(str, "^[-\\+]?\\d+(\\.\\d+)?$");
@@ -189,10 +172,8 @@ public class RegexUtil {
 
 	/**
 	 * 联系电话(手机/电话皆可)验证
-	 * 
 	 * @param text
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isTel(String text) {
 		if (isMobile(text) || isPhone(text)) {
@@ -203,10 +184,8 @@ public class RegexUtil {
 
 	/**
 	 * 电话号码验证
-	 * 
 	 * @param text
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isPhone(String text) {
 		return match(text, "^(\\d{3,4}-?)?\\d{7,9}$");
@@ -214,10 +193,8 @@ public class RegexUtil {
 
 	/**
 	 * 手机号码验证
-	 * 
 	 * @param text
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isMobile(String text) {
 		if (text.length() != 11) {
@@ -228,10 +205,8 @@ public class RegexUtil {
 
 	/**
 	 * 身份证号码验证
-	 * 
 	 * @param text
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isIdCardNo(String text) {
 		return match(text, "^(\\d{6})()?(\\d{4})(\\d{2})(\\d{2})(\\d{3})(\\w)$");
@@ -239,10 +214,8 @@ public class RegexUtil {
 
 	/**
 	 * 邮政编码验证
-	 * 
 	 * @param text
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isZipCode(String text) {
 		return match(text, "^[0-9]{6}$");
@@ -250,10 +223,8 @@ public class RegexUtil {
 
 	/**
 	 * 判断整数num是否等于0
-	 * 
 	 * @param num
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isIntEqZero(int num) {
 		return num == 0;
@@ -261,10 +232,8 @@ public class RegexUtil {
 
 	/**
 	 * 判断整数num是否大于0
-	 * 
 	 * @param num
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isIntGtZero(int num) {
 		return num > 0;
@@ -272,10 +241,8 @@ public class RegexUtil {
 
 	/**
 	 * 判断整数num是否大于或等于0
-	 * 
 	 * @param num
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isIntGteZero(int num) {
 		return num >= 0;
@@ -283,11 +250,8 @@ public class RegexUtil {
 
 	/**
 	 * 判断浮点数num是否等于0
-	 * 
-	 * @param num
-	 *            浮点数
+	 * @param num  浮点数
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isFloatEqZero(float num) {
 		return num == 0f;
@@ -295,11 +259,8 @@ public class RegexUtil {
 
 	/**
 	 * 判断浮点数num是否大于0
-	 * 
-	 * @param num
-	 *            浮点数
+	 * @param num 浮点数
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isFloatGtZero(float num) {
 		return num > 0f;
@@ -307,11 +268,8 @@ public class RegexUtil {
 
 	/**
 	 * 判断浮点数num是否大于或等于0
-	 * 
-	 * @param num
-	 *            浮点数
+	 * @param num 浮点数
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isFloatGteZero(float num) {
 		return num >= 0f;
@@ -319,10 +277,8 @@ public class RegexUtil {
 
 	/**
 	 * 判断是否为合法字符(a-zA-Z0-9-_)
-	 * 
 	 * @param text
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isRightfulString(String text) {
 		return match(text, "^[A-Za-z0-9_-]+$");
@@ -330,10 +286,8 @@ public class RegexUtil {
 
 	/**
 	 * 判断英文字符(a-zA-Z)
-	 * 
 	 * @param text
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isEnglish(String text) {
 		return match(text, "^[A-Za-z]+$");
@@ -341,10 +295,8 @@ public class RegexUtil {
 
 	/**
 	 * 判断中文字符(包括汉字和符号)
-	 * 
 	 * @param text
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isChineseChar(String text) {
 		return match(text, "^[\u0391-\uFFE5]+$");
@@ -352,10 +304,8 @@ public class RegexUtil {
 
 	/**
 	 * 匹配汉字
-	 * 
 	 * @param text
 	 * @return
-	 * @author jiqinlin
 	 */
 	public final static boolean isChinese(String text) {
 		return match(text, "^[\u4e00-\u9fa5]+$");
@@ -363,7 +313,6 @@ public class RegexUtil {
 
 	/**
 	 * 是否包含中英文特殊字符，除英文"-_"字符外
-	 * 
 	 * @param str
 	 * @return
 	 */
@@ -384,7 +333,6 @@ public class RegexUtil {
 
 	/**
 	 * 过滤中英文特殊字符，除英文"-_"字符外
-	 * 
 	 * @param text
 	 * @return
 	 */
@@ -397,9 +345,7 @@ public class RegexUtil {
 
 	/**
 	 * 过滤html代码
-	 * 
-	 * @param inputString
-	 *            含html标签的字符串
+	 * @param inputString 含html标签的字符串
 	 * @return
 	 */
 	public static String htmlFilter(String inputString) {
@@ -449,13 +395,9 @@ public class RegexUtil {
 
 	/**
 	 * 正则表达式匹配
-	 * 
-	 * @param text
-	 *            待匹配的文本
-	 * @param reg
-	 *            正则表达式
+	 * @param text 待匹配的文本
+	 * @param reg 正则表达式
 	 * @return
-	 * @author jiqinlin
 	 */
 	private final static boolean match(String text, String reg) {
 		if (org.apache.commons.lang3.StringUtils.isBlank(text) || org.apache.commons.lang3.StringUtils.isBlank(reg)) {
@@ -510,7 +452,7 @@ public class RegexUtil {
 	// 验证InternetURL：“^http://([\\w-]+\\.)+[\\w-]+(/[\\w-./?%&=]*)?$”
 	// 验证电话号码：“^((d{3,4})|d{3,4}-)?d{7,8}$”
 	//
-	// 正确格式为：“XXXX-XXXXXXX”，“XXXX-XXXXXXXX”，“XXX-XXXXXXX”，
+	// 正确格式为：“ XXXX-XXXXXXX”，“XXXX-XXXXXXXX”，“XXX-XXXXXXX”，
 	//
 	// “XXX-XXXXXXXX”，“XXXXXXX”，“XXXXXXXX”。
 	// 验证身份证号（15位或18位数字）：“^d{15}|d{}18$”

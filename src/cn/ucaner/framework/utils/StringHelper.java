@@ -65,7 +65,7 @@ public class StringHelper {
 	 *            待转换的符串对象
 	 * @return ArrayList对象
 	 */
-	public static ArrayList strToArrayList(String str) {
+	public static ArrayList<?> strToArrayList(String str) {
 		return strToArrayListManager(str, DEFAULT_PATH_SEPARATOR);
 	}
 
@@ -108,10 +108,8 @@ public class StringHelper {
 	/**
 	 * 将字符串对象按给定的分隔符separator转象为字符型数组对象
 	 * 
-	 * @param str
-	 *            待转换的符串对象
-	 * @param separator
-	 *            字符型分隔符
+	 * @param str  待转换的符串对象
+	 * @param separator 字符型分隔符
 	 * @return 字符型数组
 	 */
 	public static String[] strToStrArray(String str, String separator) {
@@ -147,11 +145,8 @@ public class StringHelper {
 
 	/**
 	 * 将一个数组，用逗号分隔变为一个字符串
-	 * 
 	 * @param array
-	 * @return
-	 * 
-	 *         modify by yuce reason:user StringBuffer replace "+"
+	 * @return modify by yuce reason:user StringBuffer replace "+"
 	 */
 	public static String ArrayToStr(Object[] array) {
 		if (array == null || array.length < 0) {
@@ -184,13 +179,9 @@ public class StringHelper {
 
 	/**
 	 * 转换给定字符串的编码格式
-	 * 
-	 * @param inputString
-	 *            待转换字符串对象
-	 * @param inencoding
-	 *            待转换字符串的编码格式
-	 * @param outencoding
-	 *            准备转换为的编码格式
+	 * @param inputString  待转换字符串对象
+	 * @param inencoding 待转换字符串的编码格式
+	 * @param outencoding  准备转换为的编码格式
 	 * @return 指定编码与字符串的字符串对象
 	 */
 	public static String encodingTransfer(String inputString, String inencoding, String outencoding) {
@@ -206,11 +197,8 @@ public class StringHelper {
 
 	/**
 	 * 删除字符串中指定的字符 只要在delStrs参数中出现的字符，并且在inputString中也出现都会将其它删除
-	 * 
-	 * @param inputString
-	 *            待做删除处理的字符串
-	 * @param delStrs
-	 *            作为删除字符的参照数据，用逗号分隔。如果要删除逗号可以在这个字符串再加一个逗号
+	 * @param inputString 待做删除处理的字符串
+	 * @param delStrs  作为删除字符的参照数据，用逗号分隔。如果要删除逗号可以在这个字符串再加一个逗号
 	 * @return 返回一个以inputString为基础不在delStrs出现新字符串
 	 */
 	public static String delString(String inputString, String delStrs) {
@@ -237,9 +225,7 @@ public class StringHelper {
 
 	/**
 	 * 去除左边多余的空格。
-	 * 
-	 * @param value
-	 *            待去左边空格的字符串
+	 * @param value  待去左边空格的字符串
 	 * @return 去掉左边空格后的字符串
 	 */
 	public static String trimLeft(String value) {
@@ -264,9 +250,7 @@ public class StringHelper {
 
 	/**
 	 * 去除右边多余的空格。
-	 * 
-	 * @param value
-	 *            待去右边空格的字符串
+	 * @param value 待去右边空格的字符串
 	 * @return 去掉右边空格后的字符串
 	 */
 	public static String trimRight(String value) {
@@ -291,11 +275,8 @@ public class StringHelper {
 
 	/**
 	 * 判断一个字符串中是否包含另一个字符串
-	 * 
-	 * @param parentStr
-	 *            父串
-	 * @param subStr
-	 *            子串
+	 * @param parentStr  父串
+	 * @param subStr  子串
 	 * @return 如果父串包含子串的内容返回真，否则返回假
 	 */
 	public static boolean isInclude(String parentStr, String subStr) {
@@ -304,11 +285,8 @@ public class StringHelper {
 
 	/**
 	 * 判断一个字符串中是否包含另一个字符串数组的任何一个
-	 * 
-	 * @param parentStr
-	 *            父串
-	 * @param subStrs
-	 *            子串集合(以逗号分隔的字符串)
+	 * @param parentStr    父串
+	 * @param subStrs  子串集合(以逗号分隔的字符串)
 	 * @return 如果父串包含子串的内容返回真，否则返回假
 	 */
 	public static boolean isIncludes(String parentStr, String subStrs) {
@@ -326,11 +304,8 @@ public class StringHelper {
 
 	/**
 	 * 判断一个子字符串在父串中重复出现的次数
-	 * 
-	 * @param parentStr
-	 *            父串
-	 * @param subStr
-	 *            子串
+	 * @param parentStr 父串
+	 * @param subStr  子串
 	 * @return 子字符串在父字符串中重得出现的次数
 	 */
 	public static int subCount(String parentStr, String subStr) {
@@ -342,19 +317,14 @@ public class StringHelper {
 				count++;
 			}
 		}
-
 		return count;
 	}
 
 	/**
 	 * 得到在字符串中从开始字符串到结止字符串中间的子串
-	 * 
-	 * @param parentStr
-	 *            父串
-	 * @param startStr
-	 *            开始串
-	 * @param endStr
-	 *            结止串
+	 * @param parentStr 父串
+	 * @param startStr 开始串
+	 * @param endStr 结止串
 	 * @return 返回开始串与结止串之间的子串
 	 */
 	public static String subString(String parentStr, String startStr, String endStr) {
@@ -363,13 +333,9 @@ public class StringHelper {
 
 	/**
 	 * 得到在字符串中从开始字符串到结止字符串中间的子串的集合
-	 * 
-	 * @param parentStr
-	 *            父串
-	 * @param startStr
-	 *            开始串
-	 * @param endStr
-	 *            结止串
+	 * @param parentStr  父串
+	 * @param startStr 开始串
+	 * @param endStr 结止串
 	 * @return 返回开始串与结止串之间的子串的集合
 	 */
 	public static List<String> subStringList(String parentStr, String startStr, String endStr) {
@@ -391,8 +357,7 @@ public class StringHelper {
 	 * 提供八进制也是为了和C语言兼容. b,t,n,f,r 则是为控制字符.书上的意思为:描述数据流的发送者希望那些信息如何被格式化或者被表示. 它可以写在代码的任意位置，只要转义后是合法的. 例如: int c=0\u003b
 	 * 上面的代码可以编译通过，等同于int c=0; \u003b也就是';'的Unicode代码
 	 * 
-	 * @param str
-	 *            待转换为Unicode的等价字符串
+	 * @param str 待转换为Unicode的等价字符串
 	 * @return Unicode的字符串
 	 */
 	public static String getUnicodeStr(String inStr) {
@@ -426,9 +391,7 @@ public class StringHelper {
 
 	/**
 	 * 判断一个字符串是否是合法的Java标识符
-	 * 
-	 * @param s
-	 *            待判断的字符串
+	 * @param s 待判断的字符串
 	 * @return 如果参数s是一个合法的Java标识符返回真，否则返回假
 	 */
 	public static boolean isJavaIdentifier(String s) {
@@ -444,13 +407,9 @@ public class StringHelper {
 
 	/**
 	 * 替换字符串中满足条件的字符 例如: replaceAll("\com\hi\platform\base\\util",'\\','/'); 返回的结果为: /com/hi/platform/base/util
-     * 
-     * @param str
-     *            待替换的字符串
-     * @param oldchar
-     *            待替换的字符
-     * @param newchar
-     *            替换为的字符
+     * @param str 待替换的字符串
+     * @param oldchar   待替换的字符
+     * @param newchar 替换为的字符
      * @return 将str中的所有oldchar字符全部替换为newchar,并返回这个替换后的字符串
      */
 	public static String replaceAll(String str, char oldchar, char newchar) {
