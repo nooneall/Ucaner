@@ -116,7 +116,6 @@ public class GzipFilter implements Filter {
 
 	/**
 	 * 过滤控制函数,对指定后缀的请求进行gzip压缩.
-	 * 
 	 * @param request
 	 * @return
 	 * @throws ServletException

@@ -34,6 +34,7 @@ import javax.servlet.http.HttpServletResponseWrapper;
 * @version    V1.0
  */
 public class DatasWrapper extends HttpServletResponseWrapper {
+	
 	public static final int OUT_NONE = 0;
 	public static final int OUT_WRITER = 1;
 	public static final int OUT_STREAM = 2;

@@ -45,12 +45,17 @@ import com.github.pagehelper.PageInfo;
 * @version    V1.0
  */
 public class BaseDaoImpl<T extends BaseEntity, PK extends Serializable> implements BaseDao<T, PK> {
+	
 	private static Logger logger = LoggerFactory.getLogger(BaseDaoImpl.class);
+	
 	@Resource
 	protected SqlSessionTemplate sqlSession;
 
 	private final String SQLNAME_SEPARATOR = ".";
 
+	/**
+	 * 获取泛型类型的实体对象类全名    mapper.xml 的命名空间就用这个   by Jason
+	 */
 	private String sqlMapperNamespace = getDefaultSqlMapperNamespace();
 
 	private final static String SQLNAME_FIND = "find";
@@ -111,7 +116,6 @@ public class BaseDaoImpl<T extends BaseEntity, PK extends Serializable> implemen
 
 	/**
 	 * 获取泛型类型的实体对象类全名
-	 * 
 	 * @return
 	 */
 	private String getDefaultSqlMapperNamespace() {
@@ -373,9 +377,6 @@ public class BaseDaoImpl<T extends BaseEntity, PK extends Serializable> implemen
 			Assert.notNull(paramsMap);
 			List<T> entitys = (List<T>) paramsMap.get("entitys");
 			for (T entity : entitys) {
-				/**
-				 * 增加判断，如果添加数据已经存在ID则不需要设置 2015年7月7日 18:00:14 周鉴斌
-				 */
 				if (StringUtils.isBlank(entity.getId())) {
 					entity.setId(PKGenerator.generateId());
 				}

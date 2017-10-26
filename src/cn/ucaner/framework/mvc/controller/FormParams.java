@@ -28,33 +28,22 @@ import java.util.Map;
 public class FormParams implements Serializable {
 
 	private static final long serialVersionUID = -5819554419875365914L;
-	/**
-	 * 参数
-	 */
+
 	private Map<String, Object> params = new HashMap<String, Object>();
 
 	public FormParams() {
 		super();
 	}
 
-	/**
-	 * @param params
-	 */
 	public FormParams(Map<String, Object> params) {
 		super();
 		this.params = params;
 	}
 
-	/**
-	 * @return the params
-	 */
 	public Map<String, Object> getParams() {
 		return params;
 	}
 
-	/**
-	 * @param params the params to set
-	 */
 	public void setParams(Map<String, Object> params) {
 		this.params = params;
 	}

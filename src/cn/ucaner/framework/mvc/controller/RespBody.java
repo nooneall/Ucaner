@@ -43,10 +43,6 @@ public class RespBody implements Serializable {
 		super();
 	}
 
-	/**
-	 * @param status
-	 */
-
 	public RespBody(Status status) {
 		super();
 		this.status = status;

@@ -25,7 +25,7 @@ import org.springframework.web.servlet.ModelAndView;
 /**
 * @Package：cn.ucaner.framework.mvc.exception   
 * @ClassName：GlobalExceptionHanlder   
-* @Description：   <p> 全局的handler异常处理器。前后端系统合一，SimpleMappingExceptionResolver不能满足需求，需自定义异常处理器</p>
+* @Description：   <p> 全局的handler异常处理器。前后端系统合一,SimpleMappingExceptionResolver不能满足需求，需自定义异常处理器</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年10月20日 下午4:01:09   
 * @Modify By：   
@@ -35,12 +35,17 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Component
 public class GlobalExceptionHanlder implements HandlerExceptionResolver {
+	
 	private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHanlder.class);
 
 	public GlobalExceptionHanlder() {
 		logger.info("启用全局异常处理器.........");
 	}
 	
+	/**
+	* 描述: 配置于SpringMvc配置里面     全局异常路由到500页面
+	* @return
+	 */
 	@Override
 	public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
 		if (handler != null && handler instanceof HandlerMethod) {
@@ -60,6 +65,5 @@ public class GlobalExceptionHanlder implements HandlerExceptionResolver {
 		// 阻止 spring mvc 继续寻找视图
 		return new ModelAndView();
 	}
-
 
 }

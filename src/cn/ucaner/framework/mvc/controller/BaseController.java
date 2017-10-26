@@ -62,7 +62,6 @@ public abstract class BaseController<T extends BaseEntity, PK extends Serializab
 
 	/**
 	 * 得到应用的访问头地址 http://ip(域名):端口/应用名
-	 * 
 	 * @param request
 	 * @return
 	 */

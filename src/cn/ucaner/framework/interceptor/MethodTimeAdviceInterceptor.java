@@ -20,7 +20,7 @@ import org.springframework.aop.MethodBeforeAdvice;
 /**
 * @Package：cn.ucaner.framework.interceptor   
 * @ClassName：MethodTimeAdviceInterceptor   
-* @Description：   <p> 时长统计</p>
+* @Description：   <p> 时长统计   方便系统性能统计</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年8月30日 下午1:51:48   
 * @Modify By：   
@@ -29,7 +29,9 @@ import org.springframework.aop.MethodBeforeAdvice;
 * @version    V1.0
  */
 public class MethodTimeAdviceInterceptor implements MethodBeforeAdvice, AfterReturningAdvice {
+	
 	private static final Logger logger = LoggerFactory.getLogger(MethodTimeAdviceInterceptor.class);
+	
 	long tt = 0;
 
 	public void before(Method arg0, Object[] arg1, Object arg2) throws Throwable {

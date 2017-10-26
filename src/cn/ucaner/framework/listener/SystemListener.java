@@ -30,23 +30,25 @@ import cn.ucaner.framework.config.SystemConfig;
 * @version    V1.0
  */
 public class SystemListener implements ServletContextListener {
+	
 	private static Logger logger = LoggerFactory.getLogger(SystemListener.class);
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see javax.servlet.ServletContextListener#contextInitialized(javax.servlet .ServletContextEvent)
+	
+	/**
+	* 描述:监听器   web.xml  初始化容器   by Jason
+	* web.xml  顺序  Listen  -- >  -- >fliter   --> servlet   ? (不太记得)
+	* @param arg0
 	 */
 	@Override
 	public void contextInitialized(ServletContextEvent arg0) {
 		logger.info("System Configuration load start......");
+		//加载系统先关配置文件  
 		SystemConfig.loadSystemConfig();
 		loadBusinessesXml();
 		logger.info("System Configuration load end......");
 	}
 
 	/**
-	 * 加载业务配置文件
+	 * 加载系统业务配置文件
 	 */
 	public void loadBusinessesXml() {
 		// List<File> files = FileUtils.searchFiles(this.getClass().getClassLoader().getResource("/rules").getPath(),
@@ -57,15 +59,12 @@ public class SystemListener implements ServletContextListener {
 		// }
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see javax.servlet.ServletContextListener#contextDestroyed(javax.servlet.ServletContextEvent)
-	 */
 
+	/** 
+	* 描述:  销毁容器  
+	 */
 	@Override
 	public void contextDestroyed(ServletContextEvent arg0) {
-		// TODO Auto-generated method stub
-
+		//关闭等处理
 	}
 }

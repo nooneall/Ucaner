@@ -41,15 +41,13 @@ public class ReqInfoLogInterceptor implements HandlerInterceptor, Serializable {
 
 	private static Logger logger = LoggerFactory.getLogger(ReqInfoLogInterceptor.class);
 
-	/** 
-	 * 描述: TODO
-	 * @author Caiwq
-	 * @date 2015年6月4日 
-	 * @param paramHttpServletRequest
-	 * @param paramHttpServletResponse
-	 * @param paramObject
-	 * @return
-	 * @throws Exception 
+	/**
+	* 描述: 前置处理  by Jason  登录过滤 免登等
+	* @param paramHttpServletRequest
+	* @param paramHttpServletResponse
+	* @param paramObject
+	* @return
+	* @throws Exception
 	 */
 	@Override
 	public boolean preHandle(HttpServletRequest paramHttpServletRequest, HttpServletResponse paramHttpServletResponse, Object paramObject)
@@ -74,20 +72,17 @@ public class ReqInfoLogInterceptor implements HandlerInterceptor, Serializable {
 		return true;
 	}
 
-	/** 
-	 * 描述: TODO
-	 * @author Caiwq
-	 * @date 2015年6月4日 
-	 * @param paramHttpServletRequest
-	 * @param paramHttpServletResponse
-	 * @param paramObject
-	 * @param paramModelAndView
-	 * @throws Exception 
+	/**
+	* 描述:  postHandle
+	* @param paramHttpServletRequest
+	* @param paramHttpServletResponse
+	* @param paramObject
+	* @param paramModelAndView
+	* @throws Exception
 	 */
 	@Override
 	public void postHandle(HttpServletRequest paramHttpServletRequest, HttpServletResponse paramHttpServletResponse, Object paramObject,
 	        ModelAndView paramModelAndView) throws Exception {
-		// TODO Auto-generated method stub
 		if (logger.isDebugEnabled()) {
 			long begin = (Long) paramHttpServletRequest.getAttribute("begin");
 			paramHttpServletRequest.removeAttribute("startTime");
@@ -96,20 +91,17 @@ public class ReqInfoLogInterceptor implements HandlerInterceptor, Serializable {
 		}
 	}
 
-	/** 
-	 * 描述: TODO
-	 * @author Caiwq
-	 * @date 2015年6月4日 
-	 * @param paramHttpServletRequest
-	 * @param paramHttpServletResponse
-	 * @param paramObject
-	 * @param paramException
-	 * @throws Exception 
+	/**
+	* 描述: afterCompletion
+	* @param paramHttpServletRequest
+	* @param paramHttpServletResponse
+	* @param paramObject
+	* @param paramException
+	* @throws Exception
 	 */
 	@Override
 	public void afterCompletion(HttpServletRequest paramHttpServletRequest, HttpServletResponse paramHttpServletResponse, Object paramObject,
 	        Exception paramException) throws Exception {
-		// TODO Auto-generated method stub
 	}
 
 }

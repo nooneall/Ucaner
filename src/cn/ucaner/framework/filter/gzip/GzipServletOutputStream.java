@@ -29,6 +29,7 @@ import javax.servlet.ServletOutputStream;
 * @version    V1.0
  */
 public class GzipServletOutputStream extends ServletOutputStream {
+	
 	private ByteArrayOutputStream buffer;
 
 	public GzipServletOutputStream(ByteArrayOutputStream buffer) {

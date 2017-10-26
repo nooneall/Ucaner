@@ -28,8 +28,11 @@ import cn.ucaner.framework.exception.SystemException;
 * @version    V1.0
  */
 public class ChineseNumber {
+	
 	private static final String[] BEFORE_SCALE = { "万", "仟", "佰", "拾", "亿", "仟", "佰", "拾", "万", "仟", "佰", "拾", "" };
+	
 	private static final String[] AFTER_SCALE = { "角", "分" };
+	
 	private static final String DEFAULT_PATH_SEPARATOR = ".";
 
 	private static final Map<String, String> NUMBER_MAPPING = new HashMap<String, String>();
@@ -202,9 +205,9 @@ public class ChineseNumber {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(getChineseNumber(205008));
-		System.out.println(getChineseNumber(1020090090.99));
-		// System.out.println(getChineseNumber(208));
+		System.out.println(getChineseNumber(1994));
+		System.out.println(getChineseNumber(1994.1115));
+		System.out.println(getChineseNumber(19941115));
 	}
 
 }

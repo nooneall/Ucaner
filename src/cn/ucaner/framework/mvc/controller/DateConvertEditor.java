@@ -27,9 +27,11 @@ import org.springframework.util.StringUtils;
 * @version    V1.0
  */
 public class DateConvertEditor extends PropertyEditorSupport {
-	private SimpleDateFormat datetimeFormat = new SimpleDateFormat(
-			"yyyy-MM-dd HH:mm:ss");
-	private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");	
+	
+	private SimpleDateFormat datetimeFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	
+	private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	
 	public void setAsText(String text) throws IllegalArgumentException {
 		if (StringUtils.hasText(text)) {
 			try {
