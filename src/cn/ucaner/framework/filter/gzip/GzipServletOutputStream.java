@@ -40,7 +40,7 @@ public class GzipServletOutputStream extends ServletOutputStream {
 		buffer.write(b);
 	}
 
-	//jdk7有错误，增加未实现方法 青蒿 20160927
+	//issue Jdk7 存在问题
 	public byte[] toByteArray() {
 		return buffer.toByteArray();
 	}

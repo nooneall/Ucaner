@@ -43,6 +43,7 @@ public class GzipFilter implements Filter {
 	 * 需要被Gzip压缩的最小文件大小.
 	 */
 	// private static final int GZIP_MINI_LENGTH = 512;
+	
 	private static final String INCLUDE_SUFFIXS_NAME = "includeSuffixs";
 	/**
 	 * 默认需要压缩的文件类型

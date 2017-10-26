@@ -7,10 +7,12 @@
     <version>1.0-SNAPSHOT</version>
     <name>UcanerX</name>
 
+	<!--  全局版本号定义 -->
     <properties>
         <spring.version>4.2.6.RELEASE</spring.version>
         <mysql-connector-java.version>5.1.38</mysql-connector-java.version>
     </properties>
+    
     <dependencies>
     	<!-- 树莓派引入  -->
 		<dependency>
@@ -23,18 +25,21 @@
 		    <artifactId>pi4j-device</artifactId>
 		    <version>1.1</version>
 		</dependency>
+		
     	<!-- google 二维码工具 引入  -->
 	    <dependency>
 		    <groupId>com.google.zxing</groupId>
 		    <artifactId>core</artifactId>
 		    <version>3.3.0</version>
 		</dependency>
+		
     	<!-- poi excel 引入 -->
     	<dependency>
 			<groupId>commons-collections</groupId>
 			<artifactId>commons-collections</artifactId>
 			<version>3.2.1</version>
 		</dependency>
+		
     	<!-- dubbo 引入 -->
     	<dependency>
             <groupId>com.alibaba</groupId>
@@ -48,6 +53,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        
         <!-- shiro begin -->
 		<dependency>
 			<artifactId>quartz</artifactId>
@@ -75,6 +81,7 @@
 			<version>1.2.2</version>
 		</dependency>
 		<!-- shiro end -->
+		
 		<!-- ehcache start -->
 		<dependency>
 			<artifactId>ehcache-core</artifactId>
@@ -87,19 +94,21 @@
 			<version>1.2.2</version>
 		</dependency> 
 		<!--  ehcache end  -->
+		
 		<!--  redis jedis -->
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
 			<version>2.1.0</version>
 		</dependency>
+		
 		<!-- jackson  -->
 		<dependency>
            <groupId>org.codehaus.jackson</groupId>
            <artifactId>jackson-mapper-asl</artifactId>
            <version>1.9.4</version>
-     	</dependency>    
-    
+     	</dependency>  
+ 
 	    <!-- mysql -->
 	    <dependency>
 	        <groupId>mysql</groupId>
@@ -132,12 +141,14 @@
 		    <artifactId>spring-jdbc</artifactId>
 		    <version>4.3.9.RELEASE</version>
 		</dependency>
+		
 	    <!-- log4j  -->
 		<dependency>
 		    <groupId>log4j</groupId>
 		    <artifactId>log4j</artifactId>
 		    <version>1.2.17</version>
 		</dependency>
+		
 	    <!--  druid  -->
 	    <dependency>
 		    <groupId>com.alibaba</groupId>
@@ -168,7 +179,6 @@
 		    <artifactId>commons-lang3</artifactId>
 		    <version>3.4</version>
 		</dependency>
-		
 		<dependency>
 		    <groupId>commons-beanutils</groupId>
 		    <artifactId>commons-beanutils</artifactId>
@@ -189,6 +199,7 @@
 	        <version>4.3</version>
 	    </dependency>
 		
+		<!-- 编码工具 -->
 		<dependency>
 		    <groupId>commons-codec</groupId>
 		    <artifactId>commons-codec</artifactId>
@@ -295,14 +306,13 @@
 		    <version>2.3.23</version>
 		</dependency>
 		
-		<!--junit  -->
+		<!--junit  作用域名 test -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
-        
         <dependency>
 		    <groupId>junit</groupId>
 		    <artifactId>junit</artifactId>
@@ -310,7 +320,6 @@
 		    <scope>test</scope>
 		</dependency>
 
-        
         <!--  plugIn pageHelper -->
 		<dependency>
 		    <groupId>com.github.pagehelper</groupId>
@@ -318,6 +327,8 @@
 		    <version>5.0.0</version>
 		</dependency>
     </dependencies>
+    
+    <!-- build 构建    配合jenkins实现无缝构建 -->
     <build>
 		<finalName>Ucaner</finalName>
 		<sourceDirectory>src</sourceDirectory>
@@ -333,6 +344,7 @@
 				</excludes>
 			</resource>
 		</resources>
+		<!-- maven 打包编译 -->
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -356,6 +368,7 @@
 					</filesets>
 				</configuration>
 			</plugin>
+			<!-- 项目打War包插件 -->
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
@@ -364,14 +377,9 @@
 					<version>3.0</version>
 				</configuration>
 			</plugin>
-			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-resources-plugin</artifactId> 
-				<version>2.6</version> <executions> <execution> <id>copy-resources</id> <phase>pre-clean</phase> 
-				<goals> <goal>copy-resources</goal> </goals> <configuration> <outputDirectory>/d:/report/backup/${maven.build.timestamp}</outputDirectory> 
-				<resources> <resource> <directory>/d:/report/deploy</directory> <filtering>false</filtering> 
-				</resource> </resources> </configuration> <inherited></inherited> </execution> 
-				</executions> </plugin> -->
 		</plugins>
 	</build>
+	<!-- 引入阿里云maven仓库 -->
 	<repositories>
 		<repository>
 			<id>aliyun repository</id>
