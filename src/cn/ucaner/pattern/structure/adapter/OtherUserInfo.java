@@ -14,14 +14,19 @@ import java.util.HashMap;
 
 import cn.ucaner.pattern.structure.adapter.adapterAbs.IOtherInfo;
 
-/***
- *作者：MirsFang    
- *模式：适配器模式
- *时间：2017/03/10/下午12:57  
- *备注  其他用户类的实现类
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.structure.adapter   
+* @ClassName：OtherUserInfo   
+* @Description：   <p> 适配器模式  --- 其他用户类的实现类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午6:02:17   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class OtherUserInfo implements IOtherInfo {
+	
     @Override
     public HashMap<String, String> getUserInfo() {
         HashMap<String,String> hashMap=new HashMap<>();

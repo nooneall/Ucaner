@@ -12,13 +12,17 @@ package cn.ucaner.pattern.structure.adapter;
 
 import cn.ucaner.pattern.structure.adapter.adapterAbs.IUserInfo;
 
-/***
- *作者：MirsFang    
- *模式：适配器模式
- *时间：2017/03/10/下午12:48  
- *备注  我们自己的用户类
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.structure.adapter   
+* @ClassName：MeUserInfo   
+* @Description：   <p> 适配器模式  --- 我们自己的用户类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午6:02:39   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class MeUserInfo implements IUserInfo {
 
     @Override
