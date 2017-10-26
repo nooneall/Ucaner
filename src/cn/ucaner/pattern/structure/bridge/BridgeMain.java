@@ -12,14 +12,18 @@ package cn.ucaner.pattern.structure.bridge;
 
 import cn.ucaner.pattern.structure.bridge.abs.Implementor;
 
-
-/***
- *作者：MirsFang    
- *模式：桥接模式
- *时间：2017/04/05/下午12:29  
- *备注  执行类
- ***/
-
+/**
+*    
+* @Package：cn.ucaner.pattern.structure.bridge   
+* @ClassName：BridgeMain   
+* @Description：   <p> 桥接模式  -- 执行类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:59:16   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class BridgeMain {
 
 

@@ -10,14 +10,20 @@
  */
 package cn.ucaner.pattern.structure.bridge.abs;
 
-
-/***
- *作者：MirsFang
- *模式：桥接模式
- *时间：2017/03/01/下午12:34
- *备注  实现化角色
- ***/
+/**
+* @Package：cn.ucaner.pattern.structure.bridge.abs   
+* @ClassName：Implementor   
+* @Description：   <p> 桥接模式 --- 实现化角色 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:58:48   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public interface Implementor {
+	
     public void doSomethingA();
+    
     public void doSomethingB();
 }

@@ -16,6 +16,7 @@ package cn.ucaner.pattern.create.builder;
  */
 
 public class WolverineBuilder implements XManBuilder {
+	
     XMan mXMan;
     WolverineBuilder() {
         mXMan = new XMan();
@@ -35,7 +36,6 @@ public class WolverineBuilder implements XManBuilder {
 
     public XMan buildXman() {
         System.out.println("Wolverine is successfully built");
-
         return mXMan;
     }
 }

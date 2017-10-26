@@ -12,15 +12,19 @@ package cn.ucaner.pattern.structure.bridge;
 
 import cn.ucaner.pattern.structure.bridge.abs.Implementor;
 
-
-/***
- *作者：MirsFang    
- *模式：桥接模式
- *时间：2017/04/05/下午12:24  
- *备注  具体实现类
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.structure.bridge   
+* @ClassName：ConcreteImplementor   
+* @Description：   <p> 桥接模式  --  具体实现类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午5:59:37   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class ConcreteImplementor implements Implementor {
+	
     @Override
     public void doSomethingA() {
         System.out.println("bridge do something A");
