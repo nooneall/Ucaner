@@ -24,6 +24,7 @@ import java.io.Serializable;
 * @version    V1.0
  */
 public class AttachmentInfo implements Serializable {
+	
 	private static final long serialVersionUID = -638346101635261172L;
 	/**
 	 * 附件名称

@@ -28,6 +28,7 @@ import java.util.Map;
 * @version    V1.0
  */
 public class EmailInfo implements Serializable {
+	
 	private static final long serialVersionUID = -4161632580579770239L;
 	/***
 	 * stmp服务器地址

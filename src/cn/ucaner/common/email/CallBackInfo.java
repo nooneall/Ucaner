@@ -25,6 +25,7 @@ import java.util.Date;
 * @version    V1.0
  */
 public class CallBackInfo implements Serializable {
+	
 	private static final long serialVersionUID = 5401971939678483405L;
 	/**
 	 * 发送状态

@@ -1,10 +1,10 @@
 /**
  * <html>
  * <body>
- *  <P> Copyright 2017 阳光康众</p>
+ *  <P> Copyright 1994 JsonInternational</p>
  *  <p> All rights reserved.</p>
- *  <p> Created on 2017年7月10日</p>
- *  <p> Created by 于策/yu.ce@foxmail.com</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
  *  </body>
  * </html>
  */
@@ -26,19 +26,16 @@ import cn.ucaner.common.dao.CommonDao;
 import cn.ucaner.common.vo.TreeNodeVo;
 import cn.ucaner.framework.exception.SystemException;
 
-
 /**
- * @Project ChuFangLiuZhuan_PlatForm
- * @Package com.sunshine.common.dao
- * @ClassName CommonDaoImpl.java
- * @Description
- * @JDK version used 1.8
- * @Author 于策/yu.ce@foxmail.com
- * @Create Date 2017年7月10日
- * @modify By
- * @modify Date
- * @Why&What is modify
- * @Version 1.0
+* @Package：cn.ucaner.common.dao.impl   
+* @ClassName：CommonDaoImpl   
+* @Description：   <p> COMMON基类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 上午9:27:36   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 @Repository
 public class CommonDaoImpl implements CommonDao {
