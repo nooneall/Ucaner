@@ -10,17 +10,20 @@
  */
 package cn.ucaner.pattern.action.state;
 
-
 import cn.ucaner.pattern.action.state.absState.Context;
 import cn.ucaner.pattern.action.state.allState.Run;
 
-/***
- *作者：MirsFang    
- *模式：状态模式
- *时间：2017/03/16/下午12:36  
- *备注  执行类
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.action.state   
+* @ClassName：StateMain   
+* @Description：   <p> 状态模式  - 执行类 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午4:58:00   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class StateMain {
     public static void main(String[] args) {
         Context context=new Context();

@@ -13,14 +13,17 @@ package cn.ucaner.pattern.action.state.allState;
 import cn.ucaner.pattern.action.state.absState.Context;
 import cn.ucaner.pattern.action.state.absState.State;
 
-
-/***
- *作者：MirsFang    
- *模式：状态模式
- *时间：2017/03/16/下午12:23  
- *备注  打开状态
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.action.state.allState   
+* @ClassName：Open   
+* @Description：   <p> 状态模式  - 打开</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午4:56:20   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class Open extends State {
 
 

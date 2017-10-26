@@ -8,17 +8,19 @@
  *  </body>
  * </html>
  */
-package cn.ucaner.pattern.action.state.absState;/**
- * Created by MirsFang on 2017/3/16.
+package cn.ucaner.pattern.action.state.absState;
+
+/**
+* @Package：cn.ucaner.pattern.action.state.absState   
+* @ClassName：State   
+* @Description：   <p> 状态模式 -  抽象状态角色</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午4:55:13   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
-
-/***
- *作者：MirsFang    
- *模式：状态模式
- *时间：2017/03/16/下午12:13  
- *备注  抽象状态角色
- ***/
-
 public abstract class State {
 	
     protected Context context;
@@ -30,10 +32,13 @@ public abstract class State {
 
     //电梯门开启的动作
     public abstract void open();
+    
     //电梯门关闭的动作
     public abstract void close();
+    
     //电梯运行起来
     public abstract void run();
+    
     //电梯停下来
     public abstract void stop();
 }

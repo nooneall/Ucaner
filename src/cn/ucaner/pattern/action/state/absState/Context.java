@@ -15,13 +15,17 @@ import cn.ucaner.pattern.action.state.allState.Open;
 import cn.ucaner.pattern.action.state.allState.Run;
 import cn.ucaner.pattern.action.state.allState.Stop;
 
-/***
- *作者：MirsFang    
- *模式：状态模式
- *时间：2017/03/16/下午12:14  
- *备注  上下文环境
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.action.state.absState   
+* @ClassName：Context   
+* @Description：   <p> 状态模式   -  上下文 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午4:54:51   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class Context {
 
     //定义出所有的电梯状态  用在setState();

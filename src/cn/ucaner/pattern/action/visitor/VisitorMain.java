@@ -14,14 +14,19 @@ import cn.ucaner.pattern.action.visitor.visitorAbs.Element;
 import cn.ucaner.pattern.action.visitor.visitorIml.ObjectStruture;
 import cn.ucaner.pattern.action.visitor.visitorIml.Visitor;
 
-/***
- *作者：MirsFang    
- *模式：访问者模式
- *时间：2017/03/02/下午12:38  
- *备注  访问者模式主类
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.action.visitor   
+* @ClassName：VisitorMain   
+* @Description：   <p> 访问者模式 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午4:49:10   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class VisitorMain {
+	
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             Element el= ObjectStruture.createElement();

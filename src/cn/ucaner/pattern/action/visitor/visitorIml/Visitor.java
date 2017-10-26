@@ -12,13 +12,17 @@ package cn.ucaner.pattern.action.visitor.visitorIml;
 
 import cn.ucaner.pattern.action.visitor.visitorAbs.IVisitor;
 
-/***
- *作者：MirsFang    
- *模式： 访问者模式
- *时间：2017/03/02/下午12:33  
- *备注  具体的访问者
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.action.visitor.visitorIml   
+* @ClassName：Visitor   
+* @Description：   <p> 访问者模式  具体的访问者</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午4:49:26   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class Visitor implements IVisitor {
 
     @Override

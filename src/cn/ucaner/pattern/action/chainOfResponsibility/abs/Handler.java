@@ -22,6 +22,7 @@ package cn.ucaner.pattern.action.chainOfResponsibility.abs;
 * @version    V1.0
  */
 public abstract class Handler {
+	
     //下一个执行者
     private Handler nextHandler;
 

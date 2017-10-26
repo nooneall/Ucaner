@@ -13,14 +13,17 @@ package cn.ucaner.pattern.action.state.allState;
 import cn.ucaner.pattern.action.state.absState.Context;
 import cn.ucaner.pattern.action.state.absState.State;
 
-
-/***
- *作者：MirsFang
- *模式：状态模式
- *时间：2017/03/16/下午12:23
- *备注  停止状态
- ***/
-
+/**
+* @Package：cn.ucaner.pattern.action.state.allState   
+* @ClassName：Stop   
+* @Description：   <p> 状态模式   - 停止状态 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 下午4:57:27   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class Stop extends State {
 
 //停下来要开电梯门
