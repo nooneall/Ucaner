@@ -18,6 +18,8 @@ import java.util.Map;
 
 import org.apache.commons.beanutils.BeanMap;
 
+import cn.ucaner.common.utils.beanConvert.DemoBean;
+
 /**
 * @Package：cn.ucaner.framework.utils   
 * @ClassName：BeanUtils   
@@ -30,11 +32,11 @@ import org.apache.commons.beanutils.BeanMap;
 * @version    V1.0
  */
 public class BeanUtils {
+	
+	
 	/**
 	 * 将Bean对象转换成Map对象，将忽略掉值为null或size=0的属性
-	 * 
-	 * @param obj
-	 *            对象
+	 * @param obj 对象
 	 * @return 若给定对象为null则返回size=0的map对象
 	 */
 	public static Map<String, Object> toMap(Object obj) {
@@ -57,9 +59,7 @@ public class BeanUtils {
 
 	/**
 	 * 该方法将给定的所有对象参数列表转换合并生成一个Map，对于同名属性，依次由后面替换前面的对象属性
-	 * 
-	 * @param objs
-	 *            对象列表
+	 * @param objs 对象列表
 	 * @return 对于值为null的对象将忽略掉
 	 */
 	public static Map<String, Object> toMap(Object... objs) {
@@ -74,7 +74,6 @@ public class BeanUtils {
 
 	/**
 	 * 获取接口的泛型类型，如果不存在则返回null
-	 * 
 	 * @param clazz
 	 * @return
 	 */
@@ -85,5 +84,20 @@ public class BeanUtils {
 			return ( (Class<?>) p[0] );
 		}
 		return null;
+	}
+	
+	/**
+	 * Test for Jason
+	 */
+	public static void main(String[] args) {
+		DemoBean  db = new DemoBean();
+		db.setName("Jason");
+		db.setAge(22);
+		//System.out.println(toMap(db));
+		DemoBean  db2 = new DemoBean();
+		db.setName("Jason2");
+		db.setAge(23);
+		System.out.println(toMap(db,db2));
+		
 	}
 }
