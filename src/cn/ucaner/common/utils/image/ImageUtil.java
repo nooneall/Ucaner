@@ -25,33 +25,28 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 /**
- * 图像处理<br>
- * 对图片进行压缩、水印、伸缩变换、透明处理、格式转换操作
- * 
- * @Author:chenssy
- * @date:2015年3月19日
+* @Package：cn.ucaner.common.utils.image   
+* @ClassName：ImageUtil   
+* @Description：   <p> 对图片进行压缩,水印,伸缩变换,透明处理,格式转换操作 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 上午10:52:22   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ImageUtil {
 
     public static final float DEFAULT_QUALITY = 0.2125f ;
     
-    
     /**
-     * 
      * 添加图片水印操作(物理存盘,使用默认格式)
-     * 
-     * @param imgPath
-     *            待处理图片
-     * @param markPath
-     *            水印图片
-     * @param x
-     *            水印位于图片左上角的 x 坐标值
-     * @param y
-     *            水印位于图片左上角的 y 坐标值
-     * @param alpha
-     *            水印透明度 0.1f ~ 1.0f
-     * @param destPath
-     *                 文件存放路径  
+     * @param imgPath  待处理图片
+     * @param markPath 水印图片
+     * @param x 水印位于图片左上角的 x 坐标值
+     * @param y 水印位于图片左上角的 y 坐标值
+     * @param alpha  水印透明度 0.1f ~ 1.0f
+     * @param destPath  文件存放路径  
      * @throws Exception          
      * 
      */
@@ -66,23 +61,14 @@ public class ImageUtil {
     
         
     /**
-     * 
      * 添加图片水印操作(物理存盘,自定义格式)
-     * 
-     * @param imgPath
-     *            待处理图片
-     * @param markPath
-     *            水印图片
-     * @param x
-     *            水印位于图片左上角的 x 坐标值
-     * @param y
-     *            水印位于图片左上角的 y 坐标值
-     * @param alpha
-     *            水印透明度 0.1f ~ 1.0f
-     * @param format
-     *                 添加水印后存储的格式
-     * @param destPath
-     *                 文件存放路径  
+     * @param imgPath 待处理图片
+     * @param markPath 水印图片
+     * @param x 水印位于图片左上角的 x 坐标值
+     * @param y 水印位于图片左上角的 y 坐标值
+     * @param alpha 水印透明度 0.1f ~ 1.0f
+     * @param format  添加水印后存储的格式
+     * @param destPath  文件存放路径  
      * @throws Exception          
      * 
      */
@@ -97,21 +83,13 @@ public class ImageUtil {
     
      
     /**
-     * 
      * 添加图片水印操作,返回BufferedImage对象
-     * 
-     * @param imgPath
-     *            待处理图片
-     * @param markPath
-     *            水印图片
-     * @param x
-     *            水印位于图片左上角的 x 坐标值
-     * @param y
-     *            水印位于图片左上角的 y 坐标值
-     * @param alpha
-     *            水印透明度 0.1f ~ 1.0f
-     * @return
-     *                 处理后的图片对象
+     * @param imgPath 待处理图片
+     * @param markPath 水印图片
+     * @param x 水印位于图片左上角的 x 坐标值
+     * @param y 水印位于图片左上角的 y 坐标值
+     * @param alpha 水印透明度 0.1f ~ 1.0f
+     * @return 处理后的图片对象
      * @throws Exception          
      * 
      */
@@ -139,27 +117,16 @@ public class ImageUtil {
     }
 
     /**
-     * 
      * 添加文字水印操作(物理存盘,使用默认格式)
-     * 
-     * @param imgPath
-     *            待处理图片
-     * @param text
-     *            水印文字    
-     * @param font
-     *            水印字体信息    不写默认值为宋体
-     * @param color
-     *            水印字体颜色
-     * @param x
-     *            水印位于图片左上角的 x 坐标值
-     * @param y
-     *            水印位于图片左上角的 y 坐标值
-     * @param alpha
-     *            水印透明度 0.1f ~ 1.0f
-     * @param format
-     *                 添加水印后存储的格式
-     * @param destPath
-     *                 文件存放路径     
+     * @param imgPath 待处理图片
+     * @param text 水印文字    
+     * @param font 水印字体信息    不写默认值为宋体
+     * @param color 水印字体颜色
+     * @param x 水印位于图片左上角的 x 坐标值
+     * @param y 水印位于图片左上角的 y 坐标值
+     * @param alpha 水印透明度 0.1f ~ 1.0f
+     * @param format 添加水印后存储的格式
+     * @param destPath  文件存放路径     
      * @throws Exception          
      */
     public static void addTextMark(String imgPath, String text, Font font, Color color, float x, float y, float alpha,String destPath) throws Exception{
@@ -172,27 +139,16 @@ public class ImageUtil {
     }
     
     /**
-     * 
      * 添加文字水印操作(物理存盘,自定义格式)
-     * 
-     * @param imgPath
-     *            待处理图片
-     * @param text
-     *            水印文字    
-     * @param font
-     *            水印字体信息    不写默认值为宋体
-     * @param color
-     *            水印字体颜色
-     * @param x
-     *            水印位于图片左上角的 x 坐标值
-     * @param y
-     *            水印位于图片左上角的 y 坐标值
-     * @param alpha
-     *            水印透明度 0.1f ~ 1.0f
-     * @param format
-     *                 添加水印后存储的格式
-     * @param destPath
-     *                 文件存放路径     
+     * @param imgPath  待处理图片
+     * @param text 水印文字    
+     * @param font 水印字体信息    不写默认值为宋体
+     * @param color 水印字体颜色
+     * @param x 水印位于图片左上角的 x 坐标值
+     * @param y  水印位于图片左上角的 y 坐标值
+     * @param alpha 水印透明度 0.1f ~ 1.0f
+     * @param format 添加水印后存储的格式
+     * @param destPath 文件存放路径     
      * @throws Exception          
      */
     public static void addTextMark(String imgPath, String text, Font font, Color color, float x, float y, float alpha,String format,String destPath) throws Exception{
@@ -205,25 +161,15 @@ public class ImageUtil {
     }
     
     /**
-     * 
      * 添加文字水印操作,返回BufferedImage对象
-     * 
-     * @param imgPath
-     *            待处理图片
-     * @param text
-     *            水印文字    
-     * @param font
-     *            水印字体信息    不写默认值为宋体
-     * @param color
-     *            水印字体颜色
-     * @param x
-     *            水印位于图片左上角的 x 坐标值
-     * @param y
-     *            水印位于图片左上角的 y 坐标值
-     * @param alpha
-     *            水印透明度 0.1f ~ 1.0f
-     * @return
-     *                 处理后的图片对象
+     * @param imgPath  待处理图片
+     * @param text 水印文字    
+     * @param font 水印字体信息    不写默认值为宋体
+     * @param color 水印字体颜色
+     * @param x  水印位于图片左上角的 x 坐标值
+     * @param y 水印位于图片左上角的 y 坐标值
+     * @param alpha 水印透明度 0.1f ~ 1.0f
+     * @return  处理后的图片对象
      * @throws Exception          
      */
 
@@ -247,28 +193,15 @@ public class ImageUtil {
         return targetImage;
     }
     
-    
-    
     /**
-     * 
-     * 
-     * 
      * 压缩图片操作(文件物理存盘,使用默认格式)
-     * 
-     * @param imgPath
-     *                 待处理图片
-     * @param quality
-     *                 图片质量(0-1之間的float值)
-     * @param width
-     *                 输出图片的宽度    输入负数参数表示用原来图片宽
-     * @param height
-     *                 输出图片的高度    输入负数参数表示用原来图片高
-     * @param autoSize
-     *                 是否等比缩放 true表示进行等比缩放 false表示不进行等比缩放
-     * @param format
-     *                 压缩后存储的格式
-     * @param destPath
-     *                 文件存放路径
+     * @param imgPath  待处理图片
+     * @param quality  图片质量(0-1之間的float值)
+     * @param width  输出图片的宽度    输入负数参数表示用原来图片宽
+     * @param height  输出图片的高度    输入负数参数表示用原来图片高
+     * @param autoSize  是否等比缩放 true表示进行等比缩放 false表示不进行等比缩放
+     * @param format 压缩后存储的格式
+     * @param destPath 文件存放路径
      * 
      * @throws Exception
      */
@@ -282,25 +215,15 @@ public class ImageUtil {
         
     }
     
-    
     /**
-     * 
      * 压缩图片操作(文件物理存盘,可自定义格式)
-     * 
-     * @param imgPath
-     *                 待处理图片
-     * @param quality
-     *                 图片质量(0-1之間的float值)
-     * @param width
-     *                 输出图片的宽度    输入负数参数表示用原来图片宽
-     * @param height
-     *                 输出图片的高度    输入负数参数表示用原来图片高
-     * @param autoSize
-     *                 是否等比缩放 true表示进行等比缩放 false表示不进行等比缩放
-     * @param format
-     *                 压缩后存储的格式
-     * @param destPath
-     *                 文件存放路径
+     * @param imgPath 待处理图片
+     * @param quality  图片质量(0-1之間的float值)
+     * @param width 输出图片的宽度    输入负数参数表示用原来图片宽
+     * @param height   输出图片的高度    输入负数参数表示用原来图片高
+     * @param autoSize  是否等比缩放 true表示进行等比缩放 false表示不进行等比缩放
+     * @param format   压缩后存储的格式
+     * @param destPath  文件存放路径
      * 
      * @throws Exception
      */
@@ -315,21 +238,13 @@ public class ImageUtil {
     
     
     /**
-     * 
      * 压缩图片操作,返回BufferedImage对象
-     * 
-     * @param imgPath
-     *                 待处理图片
-     * @param quality
-     *                 图片质量(0-1之間的float值)
-     * @param width
-     *                 输出图片的宽度    输入负数参数表示用原来图片宽
-     * @param height
-     *                 输出图片的高度    输入负数参数表示用原来图片高
-     * @param autoSize
-     *                 是否等比缩放 true表示进行等比缩放 false表示不进行等比缩放
-     * @return
-     *                 处理后的图片对象
+     * @param imgPath 待处理图片
+     * @param quality 图片质量(0-1之間的float值)
+     * @param width  输出图片的宽度    输入负数参数表示用原来图片宽
+     * @param height 输出图片的高度    输入负数参数表示用原来图片高
+     * @param autoSize  是否等比缩放 true表示进行等比缩放 false表示不进行等比缩放
+     * @return 处理后的图片对象
      * @throws Exception
      */
     public static BufferedImage compressImage(String imgPath,float quality,int width, int height, boolean autoSize)throws Exception{
@@ -365,15 +280,10 @@ public class ImageUtil {
         return targetImage;
     }
     
-    
-  
     /**
      * 图片黑白化操作(文件物理存盘,使用默认格式)
-     * 
-     * @param bufferedImage
-     *                 处理的图片对象
-     * @param destPath
-     *                 目标文件地址
+     * @param bufferedImage 处理的图片对象
+     * @param destPath 目标文件地址
      * @throws Exception  
      *
      */
@@ -384,13 +294,9 @@ public class ImageUtil {
     
     /**
      * 图片黑白化操作(文件物理存盘,可自定义格式)
-     * 
-     * @param bufferedImage
-     *                 处理的图片对象
-     * @param format
-     *                 图片格式
-     * @param destPath
-     *                 目标文件地址
+     * @param bufferedImage 处理的图片对象
+     * @param format  图片格式
+     * @param destPath  目标文件地址
      * @throws Exception 
      * 
      */
@@ -410,11 +316,8 @@ public class ImageUtil {
     
     /**
      * 图片透明化操作(文件物理存盘,使用默认格式)
-     * 
-     * @param imgPath
-     *                 图片路径
-     * @param destPath
-     *                 图片存放路径
+     * @param imgPath  图片路径
+     * @param destPath  图片存放路径
      * @throws Exception
      */
     public static void imageLucency(String imgPath,String destPath)throws Exception{
@@ -429,13 +332,9 @@ public class ImageUtil {
     
     /**
      * 图片透明化操作(文件物理存盘,可自定义格式)
-     * 
-     * @param imgPath
-     *                 图片路径
-     * @param format
-     *                 图片格式
-     * @param destPath
-     *                 图片存放路径
+     * @param imgPath  图片路径
+     * @param format 图片格式
+     * @param destPath  图片存放路径
      * @throws Exception
      */
     public static void imageLucency(String imgPath,String format,String destPath)throws Exception{
@@ -449,11 +348,8 @@ public class ImageUtil {
     
     /**
      * 图片透明化操作返回BufferedImage对象
-     * 
-     * @param imgPath
-     *                 图片路径
-     * @return
-     *                 透明化后的图片对象
+     * @param imgPath  图片路径
+     * @return 透明化后的图片对象
      * @throws Exception 
      */
     public static BufferedImage imageLucency(String imgPath)throws Exception{
@@ -477,11 +373,8 @@ public class ImageUtil {
     
     /**
      * 执行透明化的核心算法
-     * 
-     * @param img
-     *                 图片对象
-     * @param alpha
-     *                 透明度
+     * @param img 图片对象
+     * @param alpha   透明度
      * @throws Exception 
      */
     public static  void executeRGB(BufferedImage img, int alpha) throws Exception{
@@ -505,13 +398,9 @@ public class ImageUtil {
     
     /**
      * 图片格式转化操作(文件物理存盘)
-     * 
-     * @param imgPath    
-     *                     原始图片存放地址
-     * @param format
-     *                     待转换的格式 jpeg,gif,png,bmp等
-     * @param destPath
-     *                     目标文件地址
+     * @param imgPath    原始图片存放地址
+     * @param format 待转换的格式 jpeg,gif,png,bmp等
+     * @param destPath  目标文件地址
      * @throws Exception
      */
     public static void formatConvert(String imgPath, String format, String destPath)throws Exception{
@@ -523,17 +412,11 @@ public class ImageUtil {
         }
     }
     
-    
-    
     /**
      * 图片格式转化操作返回BufferedImage对象
-     * 
-     * @param bufferedImage    
-     *                     BufferedImage图片转换对象
-     * @param format
-     *                     待转换的格式 jpeg,gif,png,bmp等
-     * @param destPath
-     *                     目标文件地址
+     * @param bufferedImage  BufferedImage图片转换对象
+     * @param format  待转换的格式 jpeg,gif,png,bmp等
+     * @param destPath   目标文件地址
      * @throws Exception
      */
     public static void formatConvert(BufferedImage bufferedImag, String format, String destPath)throws Exception{
@@ -547,11 +430,8 @@ public class ImageUtil {
     
     /**
      * 获取图片文件的真实格式信息
-     * 
-     * @param imgPath
-     *                     图片原文件存放地址
-     * @return
-     *                     图片格式
+     * @param imgPath   图片原文件存放地址
+     * @return 图片格式
      * @throws Exception
      */
     public static String imageFormat(String imgPath)throws Exception{
@@ -559,5 +439,12 @@ public class ImageUtil {
         String[] formats = filess[filess.length - 1].split("\\.");
         return formats[formats.length - 1];
      }
+    
+    /**
+     * For Test By Jason
+     */
+    public static void main(String[] args) {
+		
+	}
 
 }

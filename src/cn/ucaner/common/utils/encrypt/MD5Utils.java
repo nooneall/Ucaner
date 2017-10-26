@@ -21,7 +21,6 @@ class MD5Utils {
 	protected final static String SHA_KEY = "SHA1";
 	
 	/**
-	 * 
 	 * @param value
 	 * @param key
 	 * @return
@@ -62,5 +61,13 @@ class MD5Utils {
 		}
 		// 字符数组组合成字符串返回
 		return new String(resultCharArray);
+	}
+	
+	 /**
+     *For Test By Jason 
+     */
+    public static void main(String[] args) {
+    	String value = encrypt("JASON", "JASON");
+    	System.out.println("结果为:"+value);
 	}
 }

@@ -26,6 +26,17 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
+/**
+* @Package：cn.ucaner.common.utils.QRCode   
+* @ClassName：MatrixToImageWriterEx   
+* @Description：   <p> MatrixToImageWriterEx 生成二维码数据</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 上午10:47:20   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class MatrixToImageWriterEx {
 
 

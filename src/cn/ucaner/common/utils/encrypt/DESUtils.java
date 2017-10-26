@@ -86,5 +86,14 @@ class DESUtils {
         }  
         return decryptedData;  
     }  
+    
+    /**
+     * For Test By Jason
+     * @param args
+     */
+    public static void main(String[] args) {
+    	String encrypt = encrypt("Jason", "jason");
+    	System.out.println(encrypt);
+	}
 	     
 }

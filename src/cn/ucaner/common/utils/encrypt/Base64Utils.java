@@ -127,4 +127,11 @@ class Base64Utils {
 		}
 		return sb.toString().getBytes("iso8859-1");
 	}
+	
+	 /**
+     *For Test By Jason 
+     */
+    public static void main(String[] args) {
+		
+	}
 }

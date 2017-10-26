@@ -13,10 +13,15 @@ package cn.ucaner.common.utils.math;
 import java.util.Random;
 
 /**
- * 随机数工具类
- * 
- * @Author:chenssy
- * @date:2014年8月11日
+* @Package：cn.ucaner.common.utils.math   
+* @ClassName：RandomUtils   
+* @Description：   <p> 随机数工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 上午10:50:29   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class RandomUtils {
 	private static final String ALL_CHAR = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
@@ -25,11 +30,7 @@ public class RandomUtils {
     
     /**
      * 获取定长的随机数，包含大小写、数字
-     * @autor:chenssy
-     * @date:2014年8月11日
-     *
-     * @param length
-     * 				随机数长度
+     * @param length 随机数长度
      * @return
      */
     public static String generateString(int length) { 
@@ -42,12 +43,8 @@ public class RandomUtils {
     } 
     
     /**
-     * 获取定长的随机数，包含大小写字母
-     * @autor:chenssy
-     * @date:2014年8月11日
-     *
-     * @param length
-     * 				随机数长度
+     * 获取定长的随机数,包含大小写字母
+     * @param length 随机数长度
      * @return
      */
     public static String generateMixString(int length) { 
@@ -61,11 +58,7 @@ public class RandomUtils {
     
     /**
      * 获取定长的随机数，只包含小写字母
-     * @autor:chenssy
-     * @date:2014年8月11日
-     *
-     * @param length	
-     * 				随机数长度
+     * @param length 随机数长度
      * @return
      */
     public static String generateLowerString(int length) { 
@@ -73,12 +66,8 @@ public class RandomUtils {
     } 
     
     /**
-     * 获取定长的随机数，只包含大写字母
-     * @autor:chenssy
-     * @date:2014年8月11日
-     *
-     * @param length
-     * 				随机数长度
+     * 获取定长的随机数,只包含大写字母
+     * @param length 随机数长度
      * @return
      */
     public static String generateUpperString(int length) { 
@@ -86,12 +75,8 @@ public class RandomUtils {
     } 
     
     /**
-     * 获取定长的随机数，只包含数字
-     * @autor:chenssy
-     * @date:2014年8月11日
-     *
-     * @param length
-     * 				随机数长度
+     * 获取定长的随机数,只包含数字
+     * @param length 随机数长度
      * @return
      */
     public static String generateNumberString(int length){
@@ -102,5 +87,18 @@ public class RandomUtils {
         } 
         return sb.toString(); 
     }
+    
+    /**
+     * For Test by Jason
+     */
+    public static void main(String[] args) {
+		System.out.println("***********Test******************");
+		System.out.println("大小写数字:"+generateString(10));
+		System.out.println("大小写字母:"+generateMixString(10));
+		System.out.println("小写字母:"+generateLowerString(10));
+		System.out.println("大写字母:"+generateUpperString(10));
+		System.out.println("纯数字:"+generateNumberString(10));
+		System.out.println("***********Test******************");
+	}
     
 }

@@ -12,6 +12,17 @@ package cn.ucaner.common.utils.QRCode;
 
 import java.awt.Color;
 
+/**
+* @Package：cn.ucaner.common.utils.QRCode   
+* @ClassName：MatrixToLogoImageConfig   
+* @Description：   <p> 矩阵 to logo图片配置</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 上午10:46:30   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class MatrixToLogoImageConfig {
 	//logo默认边框颜色
 	public static final Color DEFAULT_BORDERCOLOR = Color.RED;

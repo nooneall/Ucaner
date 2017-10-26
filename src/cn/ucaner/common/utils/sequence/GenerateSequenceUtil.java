@@ -18,11 +18,16 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**
- * 根据时间生成唯一序列ID<br>
- * 时间精确到秒，ID最大值为99999且循环使用
- * 
- * @Author:chenssy
- * @date:2016年4月17日
+* @Package：cn.ucaner.common.utils.sequence   
+* @ClassName：GenerateSequenceUtil   
+* @Description：   <p> 根据时间生成唯一序列ID<br>
+*                 时间精确到秒,ID最大值为99999且循环使用</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 上午10:44:23   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class GenerateSequenceUtil {
 	private static final FieldPosition HELPER_POSITION = new FieldPosition(0);

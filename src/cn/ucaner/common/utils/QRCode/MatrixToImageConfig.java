@@ -13,7 +13,15 @@ package cn.ucaner.common.utils.QRCode;
 import java.awt.image.BufferedImage;
 
 /**
- *
+* @Package：cn.ucaner.common.utils.QRCode   
+* @ClassName：MatrixToImageConfig   
+* @Description：   <p> MatrixToImageConfig</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 上午10:48:20   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public final class MatrixToImageConfig {
 

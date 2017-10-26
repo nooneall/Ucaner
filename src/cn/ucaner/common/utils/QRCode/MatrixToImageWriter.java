@@ -19,11 +19,15 @@ import java.io.IOException;
 import java.awt.image.BufferedImage;
 
 /**
- * Writes a {@link com.google.zxing.common.BitMatrix} to {@link java.awt.image.BufferedImage},
- * file or stream. Provided here instead of core since it depends on
- * Java SE libraries.
- *
- * @author Sean Owen
+* @Package：cn.ucaner.common.utils.QRCode   
+* @ClassName：MatrixToImageWriter   
+* @Description：   <p> 矩阵to 图片写</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 上午10:47:47   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public final class MatrixToImageWriter {
 

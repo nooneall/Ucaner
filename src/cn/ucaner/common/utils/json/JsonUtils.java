@@ -66,7 +66,6 @@ public class JsonUtils {
 
 	/**
 	 * 将Json对象转换成Map
-	 *
 	 * @param jsonString json对象
 	 * @return Map对象
 	 * @throws JSONException
@@ -152,5 +151,12 @@ public class JsonUtils {
 		JSONObject jsonObject = JSONObject.parseObject(jsonString);
 		Map<?, ?> map = toMap(jsonObject.toString());
 		toJavaBean(javabean, map);
+	}
+	
+	/**
+	 * For Test By Jason
+	 */
+	public static void main(String[] args) {
+		
 	}
 }

@@ -16,10 +16,15 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * 铭感词过滤工具类
- * 
- * @Author:chenssy
- * @date:2014年8月5日
+* @Package：cn.ucaner.common.utils.sensitiveword   
+* @ClassName：SensitivewordFilterUtil   
+* @Description：   <p> 敏感词过滤</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 上午10:44:47   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class SensitivewordFilterUtil{
 	@SuppressWarnings("rawtypes")

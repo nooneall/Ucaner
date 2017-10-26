@@ -20,25 +20,25 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
- * 文件压缩、解压工具类。文件压缩格式为zip
- *
- * @Author:chenssy
- * @date:2016年5月24日 下午9:16:01
+* @Package：cn.ucaner.common.utils.file   
+* @ClassName：ZipUitls   
+* @Description：   <p> 文件压缩,解压工具类,文件压缩格式为zip</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 上午11:07:23   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ZipUitls {
+	
 	/** 文件后缀名 */
 	private static final String ZIP_FILE_SUFFIX = ".zip";
 	
 	/**
 	 * 压缩文件
-	 *
-	 * @author:chenssy
-	 * @date : 2016年5月24日 下午9:56:36
-	 *
-	 * @param resourcePath
-	 * 						源文件
-	 * @param targetPath
-	 * 						目的文件,保存文件路径
+	 * @param resourcePath 源文件
+	 * @param targetPath 目的文件,保存文件路径
 	 */
 	public static void zipFile(String resourcePath,String targetPath){
 		File resourcesFile = new File(resourcePath); 
@@ -71,10 +71,6 @@ public class ZipUitls {
 	}
 
 	/**
-	 *
-	 * @author:chenssy
-	 * @date : 2016年5月24日 下午10:00:22
-	 *
 	 * @param out
 	 * @param resourcesFile
 	 * @param dir

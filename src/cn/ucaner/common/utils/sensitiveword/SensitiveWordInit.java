@@ -21,10 +21,16 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- *  初始化敏感词库，将敏感词加入到HashMap中，构建DFA算法模型
- *  
- * @Author : chenssy
- * @Date ： 2014年4月20日 下午2:27:06
+* @Package：cn.ucaner.common.utils.sensitiveword   
+* @ClassName：SensitiveWordInit   
+* @Description：   <p> 初始化敏感词库，将敏感词加入到HashMap中，构建DFA算法模型
+* 				 Deterministic Finite Automaton, DFA 即确定有穷自动机 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月26日 上午10:45:10   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class SensitiveWordInit {
 	private String ENCODING = "GBK";    //字符编码
