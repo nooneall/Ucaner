@@ -34,11 +34,16 @@ import cn.ucaner.weibo.org.json.JSONArray;
 import cn.ucaner.weibo.org.json.JSONException;
 import cn.ucaner.weibo.org.json.JSONObject;
 
-
 /**
- * A data class representing HTTP Response
- *
- * @author Yusuke Yamamoto - yusuke at mac.com
+* @Package：cn.ucaner.weibo.http   
+* @ClassName：Response   
+* @Description：   <p> http </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年10月27日 上午11:46:12   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class Response {
     private final static boolean DEBUG = Configuration.getDebug();
