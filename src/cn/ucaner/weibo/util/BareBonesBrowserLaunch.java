@@ -1,20 +1,15 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.weibo.util;
 
-/////////////////////////////////////////////////////////
-//Bare Bones Browser Launch                            //
-//Version 1.5 (December 10, 2005)                      //
-//By Dem Pilafian                                      //
-//Supports: Mac OS X, GNU/Linux, Unix, Windows XP      //
-//Example Usage:                                       //
-// String url = "http://www.centerkey.com/";           //
-// BareBonesBrowserLaunch.openURL(url);                //
-//Public Domain Software -- Free to Use as You Like    //
-/////////////////////////////////////////////////////////
-
-/**
- * @author Dem Pilafian
- * @author John Kristian
- */
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

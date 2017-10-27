@@ -1,7 +1,16 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.weibo.org.json;
 
 /*
-Copyright (c) 2002 JSON.org
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -26,11 +35,6 @@ SOFTWARE.
 
 import java.util.Iterator;
 
-/**
- * Convert a web browser cookie list string to a JSONObject and back.
- * @author JSON.org
- * @version 2008-09-18
- */
 public class CookieList {
 
     /**

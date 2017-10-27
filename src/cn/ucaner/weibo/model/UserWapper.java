@@ -1,7 +1,13 @@
-/*
- * UserObjectWapper.java created on 2010-7-28 上午08:48:35 by bwl (Liu Daoru)
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
  */
-
 package cn.ucaner.weibo.model;
 
 import java.io.Serializable;
