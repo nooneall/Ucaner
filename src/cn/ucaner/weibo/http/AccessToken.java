@@ -1,3 +1,13 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.weibo.http;
 
 import java.io.Serializable;
@@ -6,7 +16,6 @@ import cn.ucaner.weibo.model.WeiboException;
 import cn.ucaner.weibo.model.WeiboResponse;
 import cn.ucaner.weibo.org.json.JSONException;
 import cn.ucaner.weibo.org.json.JSONObject;
-
 
 public class AccessToken extends WeiboResponse implements Serializable {
 
