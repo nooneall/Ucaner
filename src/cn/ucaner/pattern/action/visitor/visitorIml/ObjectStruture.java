@@ -10,7 +10,6 @@
  */
 package cn.ucaner.pattern.action.visitor.visitorIml;
 
-
 import java.util.Random;
 
 import cn.ucaner.pattern.action.visitor.visitorAbs.Element;

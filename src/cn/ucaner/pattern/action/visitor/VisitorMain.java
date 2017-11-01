@@ -27,6 +27,7 @@ import cn.ucaner.pattern.action.visitor.visitorIml.Visitor;
  */
 public class VisitorMain {
 	
+	
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             Element el= ObjectStruture.createElement();
