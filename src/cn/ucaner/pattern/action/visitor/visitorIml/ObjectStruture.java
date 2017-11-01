@@ -34,8 +34,10 @@ public class ObjectStruture {
     public static Element createElement(){
         Random random=new Random();
         if(random.nextInt(100)>50){
+        	//普通用户
             return new ConcreateElementUser();
         }else {
+        	//管理员用户
             return new ConcreateElementAdmin();
         }
     }

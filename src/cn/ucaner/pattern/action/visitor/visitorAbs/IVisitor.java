@@ -27,6 +27,9 @@ import cn.ucaner.pattern.action.visitor.visitorIml.ConcreateElementUser;
 public interface IVisitor {
 	
     //可以访问哪些对象
+	
+	//普通用户
     public void visit(ConcreateElementUser user);
+    //管理员
     public void visit(ConcreateElementAdmin admin);
 }
