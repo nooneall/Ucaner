@@ -43,13 +43,14 @@ public class Open extends State {
     //开着门不能跑
     @Override
     public void run() {
-
+    	// by Jason
+    	System.out.println("开着门不能跑！");
     }
 
     //开着门就是停止的
     @Override
     public void stop() {
-
-
+    	//by Jason
+    	System.out.println("开着门就是停止的!");
     }
 }

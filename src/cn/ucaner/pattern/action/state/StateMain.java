@@ -11,7 +11,7 @@
 package cn.ucaner.pattern.action.state;
 
 import cn.ucaner.pattern.action.state.absState.Context;
-import cn.ucaner.pattern.action.state.allState.Run;
+import cn.ucaner.pattern.action.state.allState.Open;
 
 /**
 * @Package：cn.ucaner.pattern.action.state   
@@ -27,7 +27,8 @@ import cn.ucaner.pattern.action.state.allState.Run;
 public class StateMain {
     public static void main(String[] args) {
         Context context=new Context();
-        context.setNowState(new Run());
+       // context.setNowState(new Run());// 运行
+        context.setNowState(new Open());//Open 开启状态
         context.open();
         context.close();
         context.run();

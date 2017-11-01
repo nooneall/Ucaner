@@ -27,16 +27,18 @@ import cn.ucaner.pattern.action.state.absState.State;
 public class Run extends State {
 
 
-    //运行状态不糊开门
+    //运行状态不能开门
     @Override
     public void open() {
-        //状态修改
+        //状态修改 by Json
+    	System.out.println("运行状态不能开门!");
     }
 
-    //运行状态门就是观者的
+    //运行状态门就是关着的
     @Override
     public void close() {
-
+    	//by Jason
+    	System.out.println("运行状态门就是关着的!");
     }
 
     @Override
