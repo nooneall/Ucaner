@@ -1,3 +1,13 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */s
 package com.yz.common.core.security;
 
 import org.apache.logging.log4j.LogManager;
