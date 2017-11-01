@@ -31,8 +31,7 @@ public class ConcreateElementUser extends Element {
 	@Override
 	public void doVisite() {
 		Random random = new Random();
-		System.out.println("我是用户,在线时长 " + random.nextInt(100)
-				+ " 分钟 ***********");
+		System.out.println("我是用户,在线时长 " + random.nextInt(100)+ " 分钟 ***********");
 	}
 
 	@Override

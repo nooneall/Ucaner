@@ -32,6 +32,10 @@ public class ConcreateElementAdmin extends Element {
         System.out.println("我是管理员 活动了20分种,系统操作:删除了好多文件  ***********");
     }
 
+    /**
+    * 描述: 
+    * @param iVisitor
+     */
     @Override
     public void accept(IVisitor iVisitor) {
         iVisitor.visit(this);

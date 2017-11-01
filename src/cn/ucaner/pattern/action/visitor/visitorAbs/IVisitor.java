@@ -30,6 +30,7 @@ public interface IVisitor {
 	
 	//普通用户
     public void visit(ConcreateElementUser user);
+    
     //管理员
     public void visit(ConcreateElementAdmin admin);
 }
