@@ -14,10 +14,42 @@
         <poi.version>3.17</poi.version>
     </properties>
     
+    
     <dependencies>
+    	<!-- https://mvnrepository.com/artifact/org.tinylog/tinylog -->
+		<dependency>
+		    <groupId>org.tinylog</groupId>
+		    <artifactId>tinylog</artifactId>
+		    <version>1.1</version>
+		</dependency>
+    	
+    	<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+		<dependency>
+		    <groupId>commons-logging</groupId>
+		    <artifactId>commons-logging</artifactId>
+		    <version>1.1.1</version>
+		</dependency>
+    	<!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity -->
+		<dependency>
+		    <groupId>org.apache.velocity</groupId>
+		    <artifactId>velocity</artifactId>
+		    <version>1.7</version>
+		</dependency>
+    	<!-- https://mvnrepository.com/artifact/org.rythmengine/rythm-engine -->
+		<dependency>
+		    <groupId>org.rythmengine</groupId>
+		    <artifactId>rythm-engine</artifactId>
+		    <version>1.2.0</version>
+		</dependency>
+  		<!-- https://mvnrepository.com/artifact/com.ibeetl/beetl -->
+		<dependency>
+		    <groupId>com.ibeetl</groupId>
+		    <artifactId>beetl</artifactId>
+		    <version>2.7.22</version>
+		</dependency>
     
 		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <groupId> com.fasterxml.jackson.core</groupId>
 		    <artifactId>jackson-databind</artifactId>
 		    <version>2.9.0</version>
 		</dependency>
