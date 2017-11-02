@@ -9,11 +9,9 @@ public class AntGame
 		Ant ant = new Ant(antMap);
 		Position curPos = new Position();
 		int count = 1;
-		while(count<=m*m)
-		{
+		while(count<=m*m){
 			ant.action(curPos, count++);
 		}
-		
 		antMap.print();
 	}
 }
