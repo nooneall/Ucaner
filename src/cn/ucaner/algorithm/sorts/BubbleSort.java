@@ -1,4 +1,4 @@
-package cn.ucaner.algorithm.sort;
+package cn.ucaner.algorithm.sorts;
 /** 
  * 冒泡排序算法 
  */

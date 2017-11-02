@@ -1,4 +1,4 @@
-package cn.ucaner.algorithm.sort;
+package cn.ucaner.algorithm.sorts;
 
 import java.util.Arrays;
 import java.util.Collections;
