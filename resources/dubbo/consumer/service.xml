@@ -14,15 +14,8 @@
 						http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
 	default-lazy-init="false">
 
-    <!-- 退费服务调用 
-    <dubbo:reference id="refundService" interface="com.ucaner.trade.service.RefundService" cluster="failsafe" timeout="3000000" version="dev"/>
-    -->
-     <!-- 支付服务调用 
-    <dubbo:reference id="payService" interface="com.ucaner.trade.service.PayService" cluster="failsafe" 
-           timeout="3000000" version="dev"/>
-           -->
-     <!-- 搜索服务调用 
-    <dubbo:reference id="searchService" interface="com.ucaner.dataplatform.search.SearchService" cluster="failsafe" 
-           timeout="3000000" url="dubbo://172.16.30.78:40005"  version="dev"/>
-           -->
+     <!-- 调用相关服务
+    <dubbo:reference id="xxxService" interface="cn.ucaner.xxxService" cluster="failsafe" 
+           timeout="3000000" version="dev"/>-->
+           
 </beans>

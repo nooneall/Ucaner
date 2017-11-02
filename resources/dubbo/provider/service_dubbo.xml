@@ -13,7 +13,6 @@
 	<!-- 标准平台内部系统调用接口 -->
 	<bean id="insideInvokeService" class="com.ucaner.mobileapp.invoke.impl.InsideInvokeServiceImpl" />
 
-	
     <!-- 声明需要暴露的服务接口 
 	<dubbo:service interface="com.ucaner.mobileapp.invoke.InsideInvokeService" ref="insideInvokeService" protocol="dubbo" 
 		timeout="60000" dynamic="false" version="dev" />

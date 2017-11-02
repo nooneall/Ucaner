@@ -15,7 +15,7 @@
 	default-lazy-init="false">
 	
 	<!-- 应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->    
-	<dubbo:application name="www.sun309.com" owner="www.sun309.com" organization="www.sun309.com"/>  
+	<dubbo:application name="www.ucaner.cn" owner="www.ucaner.cn" organization="www.ucaner.cn"/>  
 	
 	<!-- 使用redis暴露服务地址 -->
     <dubbo:registry address="redis://${redis.connection.host}:${redis.connection.port}?password=${redis.connection.password}" 
@@ -36,7 +36,8 @@
 	
 	<!-- rest 协议、tomcat 传输 -->
 	<dubbo:protocol name="rest" port="9091" contextpath="services" server="tomcat" accepts="500" 
-		extension="com.ucaner.framework.filter.auth.AuthRequestFilter,com.alibaba.dubbo.rpc.protocol.rest.support.LoggingFilter" />
+		<!-- 接口鉴权处理 -->
+		extension="com.alibaba.dubbo.rpc.protocol.rest.support.LoggingFilter" />
 	<dubbo:annotation package="com.ucaner" />
     
     <!--引入供外部调用 service   webService服务必须放在rest服务的后面 -->
