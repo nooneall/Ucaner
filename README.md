@@ -1,20 +1,18 @@
----
-#Ucaner
--------------
-
-> About me welcome
-  Blog   ：[My Blog](http://www.ucaner.cn)
-  E-Mail ：[Contact](603043194)
-  QQ     ：[Contact](603043194)  
-
-You are what you want to be .  - w.b
 
 # Ucaner
 * 名称：Ucaner
 * 官网：http://www.ucaner.cn
 
+---
+#Ucaner
+-------------
 
-####Introduce: 
+> You are what you want to be. - w.b
+## Blog   ：[My Blog](http://www.ucaner.cn)
+## E-Mail ：[Contact](603043194)
+## QQ     ：[Contact](603043194)  
+
+#### Introduce: 
  
 Ucaner  
 JavaWeb SSM 相关学习Demo 
@@ -23,7 +21,7 @@ http://www.ucaner.cn
 http://jenkins.ucaner.cn
 http://sk.ucaner.cn 
 
-###Ucaner
+### Ucaner
 - web基本工具
 
 - 常见工具收集
