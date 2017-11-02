@@ -1,18 +1,15 @@
 
-# Ucaner
+# UcanerX
 * 名称：Ucaner
 * 官网：http://www.ucaner.cn
-
+* 描述：平时学习使用的demo，收集一些学习资料，目前以工具类为主
 ---
 #Ucaner
 -------------
 
 > You are what you want to be. - w.b
-## Blog   ：[My Blog](http://www.ucaner.cn)
-## E-Mail ：[Contact](603043194)
-## QQ     ：[Contact](603043194)  
 
-#### Introduce: 
+### Introduce: 
  
 Ucaner  
 JavaWeb SSM 相关学习Demo 
@@ -28,7 +25,12 @@ http://sk.ucaner.cn
 
 
 ### Considerations
-Maven很多依赖估计有问题
+- Maven很多依赖估计有问题
+
+## About 
+Name:Jason
+QQ:603043194
+E-Mail: jasonandy@hotmail.com
 
 ## License
 开源协议 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
