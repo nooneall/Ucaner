@@ -18,9 +18,15 @@ import cn.ucaner.tools.core.exceptions.UtilException;
 import cn.ucaner.tools.core.util.ReflectUtil;
 
 /**
- * 切面抽象
- * @author Looly
- *
+* @Package：cn.ucaner.tools.aop   
+* @ClassName：Aspect   
+* @Description：   <p> 切面抽象</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午9:40:16   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public abstract class Aspect implements InvocationHandler{
 	

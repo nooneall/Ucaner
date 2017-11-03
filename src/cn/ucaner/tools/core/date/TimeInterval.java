@@ -1,15 +1,32 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.tools.core.date;
 
 /**
- * 计时器<br>
- * 计算某个过程花费的时间，精确到毫秒
- * 
- * @author Looly
- *
+* @Package：cn.ucaner.tools.core.date   
+* @ClassName：TimeInterval   
+* @Description：   <p> 计时器<br>
+*                 计算某个过程花费的时间，精确到毫秒</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午9:46:17   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class TimeInterval {
+	
 	private long time;
-	private boolean isNano;
+	
+	private boolean isNano;//isNano 是否为高精度时间
 
 	public TimeInterval() {
 		this(false);
@@ -24,7 +41,7 @@ public class TimeInterval {
 	 * @return 开始计时并返回当前时间
 	 */
 	public long start() {
-		time = DateUtil.current(isNano);
+		time = DateUtil.current(isNano);//开始的时候赋值到time
 		return time;
 	}
 
@@ -55,7 +72,8 @@ public class TimeInterval {
 	 * @return 从开始到当前的间隔时间（毫秒数）
 	 */
 	public long interval() {
-		return DateUtil.current(isNano) - time;
+		//System.nanoTime() : System.currentTimeMillis()
+		return DateUtil.current(isNano) - time; //当前时间  - 开始时间
 	}
 	
 	/**

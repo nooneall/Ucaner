@@ -18,15 +18,20 @@ import cn.ucaner.tools.core.util.ClassUtil;
 import cn.ucaner.tools.core.util.ReflectUtil;
 
 /**
- * 代理工具类
- * @author Looly
- *
+* @Package：cn.ucaner.tools.aop   
+* @ClassName：ProxyUtil   
+* @Description：   <p> 代理工具类 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午9:53:12   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public final class ProxyUtil {
 	
 	/**
 	 * 使用切面代理对象
-	 * 
 	 * @param <T> 切面对象类型
 	 * @param target 目标对象
 	 * @param aspectClass 切面对象类
@@ -40,7 +45,6 @@ public final class ProxyUtil {
 	
 	/**
 	 * 使用切面代理对象
-	 * 
 	 * @param <T> 被代理对象类型
 	 * @param aspect 切面对象
 	 * @return 代理对象

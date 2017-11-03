@@ -24,10 +24,15 @@ import cn.ucaner.tools.core.lang.Filter;
 import cn.ucaner.tools.core.lang.SimpleCache;
 
 /**
- * 反射工具类
- * 
- * @author Looly
- * @since 3.0.9
+* @Package：cn.ucaner.tools.core.util   
+* @ClassName：ReflectUtil   
+* @Description：   <p> 反射工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午9:41:25   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ReflectUtil {
 

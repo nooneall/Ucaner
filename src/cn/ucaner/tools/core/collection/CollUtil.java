@@ -850,7 +850,6 @@ public class CollUtil {
 					final Object value = map.get(fieldName);
 					return ObjectUtil.equal(value, fieldValue);
 				}
-
 				// 普通Bean
 				final Object value = ReflectUtil.getFieldValue(t, fieldName);
 				return ObjectUtil.equal(value, fieldValue);

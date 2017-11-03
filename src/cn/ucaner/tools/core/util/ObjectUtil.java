@@ -25,10 +25,15 @@ import cn.ucaner.tools.core.io.FastByteArrayOutputStream;
 import cn.ucaner.tools.core.io.IoUtil;
 
 /**
- * 一些通用的函数
- * 
- * @author Looly
- *
+* @Package：cn.ucaner.tools.core.util   
+* @ClassName：ObjectUtil   
+* @Description：   <p> Obj一些通用的函数 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午9:43:22   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ObjectUtil {
 

@@ -22,6 +22,7 @@ import cn.ucaner.tools.log.LogFactory;
  *
  */
 public class TimeIntervalAspect extends SimpleAspect{
+	
 	private static final Log log = LogFactory.get();
 
 	public TimeIntervalAspect(Object target) {
@@ -32,7 +33,7 @@ public class TimeIntervalAspect extends SimpleAspect{
 
 	@Override
 	public boolean before(Object target, Method method, Object[] args) {
-		interval.start();
+		interval.start();//开始计时
 		return true;
 	}
 	

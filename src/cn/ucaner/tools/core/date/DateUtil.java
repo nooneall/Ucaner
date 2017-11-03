@@ -1,3 +1,13 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.tools.core.date;
 
 import java.text.DateFormat;
@@ -14,9 +24,15 @@ import cn.ucaner.tools.core.date.format.FastDateFormat;
 import cn.ucaner.tools.core.util.StrUtil;
 
 /**
- * 时间工具类
- * 
- * @author xiaoleilu
+* @Package：cn.ucaner.tools.core.date   
+* @ClassName：DateUtil   
+* @Description：   <p>  时间工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午9:49:23   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class DateUtil {
 
