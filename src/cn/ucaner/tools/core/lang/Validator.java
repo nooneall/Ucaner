@@ -17,14 +17,20 @@ import java.util.regex.Pattern;
 import cn.ucaner.tools.core.convert.Convert;
 import cn.ucaner.tools.core.date.DateUtil;
 import cn.ucaner.tools.core.exceptions.ValidateException;
+import cn.ucaner.tools.core.util.ObjectUtil;
 import cn.ucaner.tools.core.util.ReUtil;
 import cn.ucaner.tools.core.util.StrUtil;
 
-/**
- * 字段验证器
- * 
- * @author Looly
- *
+/***
+* @Package：cn.ucaner.tools.core.lang   
+* @ClassName：Validator   
+* @Description：   <p> 字段验证器 手机 身份证 生日 车牌号等等 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:25:32   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public final class Validator {
 	

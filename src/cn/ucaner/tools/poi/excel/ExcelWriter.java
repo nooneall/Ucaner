@@ -11,9 +11,15 @@
 package cn.ucaner.tools.poi.excel;
 
 /**
- * TODO Excel 写入器
- * @author Looly
- *
+* @Package：cn.ucaner.tools.poi.excel   
+* @ClassName：ExcelWriter   
+* @Description：   <p> Excel 写入器</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:54:09   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ExcelWriter {
 

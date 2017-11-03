@@ -261,7 +261,8 @@ public class HashUtil {
 
 	/**
 	 * ELF算法
-	 * 
+	 * 1.把字符窜的每个字符依次相加，每次将加的结果向左移动4位。
+	 * 2.如果加的结果大于28位，对结果向右移动24位与原值取异或。 
 	 * @param str 字符串
 	 * @return hash值
 	 */
@@ -270,19 +271,19 @@ public class HashUtil {
 		int x = 0;
 
 		for (int i = 0; i < str.length(); i++) {
-			hash = (hash << 4) + str.charAt(i);
+			hash = (hash << 4) + str.charAt(i);////hash左移4位，把当前字符ASCII存入hash低四位
 			if ((x = (int) (hash & 0xF0000000L)) != 0) {
 				hash ^= (x >> 24);
 				hash &= ~x;
+				//上面这行代码并不会对X有影响,本身X和hash的高4位相同,下面这行代码&~即对28-31(高4位)位清零
 			}
 		}
-
+		//返回一个符号位为0的数，即丢弃最高位，以免函数外产生影响。(我们可以考虑,如果只有字符,符号位不可能为负)
 		return hash & 0x7FFFFFFF;
 	}
 
 	/**
 	 * BKDR算法
-	 * 
 	 * @param str 字符串
 	 * @return hash值
 	 */
@@ -305,17 +306,15 @@ public class HashUtil {
 	 */
 	public static int sdbmHash(String str) {
 		int hash = 0;
-
 		for (int i = 0; i < str.length(); i++) {
 			hash = str.charAt(i) + (hash << 6) + (hash << 16) - hash;
 		}
-
 		return hash & 0x7FFFFFFF;
 	}
 
 	/**
 	 * DJB算法
-	 * 
+	 * DJBHash是一种非常流行的算法，俗称"Times33"算法。Times33的算法很简单，就是不断的乘33
 	 * @param str 字符串
 	 * @return hash值
 	 */
@@ -347,7 +346,6 @@ public class HashUtil {
 
 	/**
 	 * AP算法
-	 * 
 	 * @param str 字符串
 	 * @return hash值
 	 */
@@ -410,7 +408,6 @@ public class HashUtil {
 
 	/**
 	 * JAVA自己带的算法
-	 * 
 	 * @param str 字符串
 	 * @return hash值
 	 */
@@ -426,7 +423,6 @@ public class HashUtil {
 
 	/**
 	 * 混合hash算法，输出64位的值
-	 * 
 	 * @param str 字符串
 	 * @return hash值
 	 */

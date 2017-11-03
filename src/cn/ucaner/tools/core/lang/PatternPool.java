@@ -15,10 +15,15 @@ import java.util.regex.Pattern;
 import cn.ucaner.tools.core.util.ReUtil;
 
 /**
- * 常用正则表达式集合
- * 
- * @author Looly
- *
+* @Package：cn.ucaner.tools.core.lang   
+* @ClassName：PatternPool   
+* @Description：   <p> 常用正则表达式集合</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:29:48   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class PatternPool {
 

@@ -25,10 +25,15 @@ import cn.ucaner.tools.core.io.resource.ResourceUtil;
 import cn.ucaner.tools.core.lang.Assert;
 
 /**
- * 统一资源定位符相关工具类
- * 
- * @author xiaoleilu
- * 
+* @Package：cn.ucaner.tools.core.util   
+* @ClassName：URLUtil   
+* @Description：   <p> 统一资源定位符相关工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:33:09   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class URLUtil {
 

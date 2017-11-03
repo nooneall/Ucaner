@@ -30,6 +30,7 @@ import cn.ucaner.tools.core.util.CollectionUtil;
  *
  */
 public class Dict extends HashMap<String, Object> implements BasicTypeGetter<String>{
+	
 	private static final long serialVersionUID = 6135423866861206530L;
 
 	//--------------------------------------------------------------- Static method start

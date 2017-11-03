@@ -51,10 +51,15 @@ import cn.ucaner.tools.core.util.ReflectUtil;
 import cn.ucaner.tools.core.util.StrUtil;
 
 /**
- * 集合相关工具类，包括数组
- * 
- * @author xiaoleilu
- * @since 3.1.1
+* @Package：cn.ucaner.tools.core.collection   
+* @ClassName：CollUtil   
+* @Description：   <p> 集合相关工具类，包括数组</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:49:23   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class CollUtil {
 

@@ -20,10 +20,15 @@ import java.util.concurrent.TimeUnit;
 import cn.ucaner.tools.core.exceptions.UtilException;
 
 /**
- * 全局公共线程池
- * 
- * @author Looly
- *
+* @Package：cn.ucaner.tools.core.thread   
+* @ClassName：GlobalThreadPool   
+* @Description：   <p> 全局公共线程池 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:22:44   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class GlobalThreadPool {
 	
@@ -49,7 +54,6 @@ public class GlobalThreadPool {
 
 	/**
 	 * 关闭公共线程池
-	 * 
 	 * @param isNow 是否立即关闭而不等待正在执行的线程
 	 */
 	synchronized public static void shutdown(boolean isNow) {

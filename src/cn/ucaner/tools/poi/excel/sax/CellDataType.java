@@ -11,10 +11,15 @@
 package cn.ucaner.tools.poi.excel.sax;
 
 /**
- * 单元格数据类型枚举
- * 
- * @author Looly
- *
+* @Package：cn.ucaner.tools.poi.excel.sax   
+* @ClassName：CellDataType   
+* @Description：   <p> 单元格数据类型枚举</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:55:21   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public enum CellDataType {
 	/** Boolean类型 */

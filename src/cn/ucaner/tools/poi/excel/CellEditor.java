@@ -13,9 +13,15 @@ package cn.ucaner.tools.poi.excel;
 import org.apache.poi.ss.usermodel.Cell;
 
 /**
- * 单元格编辑器接口
- * @author Looly
- *
+* @Package：cn.ucaner.tools.poi.excel   
+* @ClassName：CellEditor   
+* @Description：   <p> 单元格编辑器接口</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:55:06   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public interface CellEditor {
 	/**

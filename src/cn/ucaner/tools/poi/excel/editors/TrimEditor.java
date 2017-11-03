@@ -16,9 +16,15 @@ import cn.ucaner.tools.core.util.StrUtil;
 import cn.ucaner.tools.poi.excel.CellEditor;
 
 /**
- * 去除String类型的单元格值两边的空格
- * @author Looly
- *
+* @Package：cn.ucaner.tools.poi.excel.editors   
+* @ClassName：TrimEditor   
+* @Description：   <p> 去除String类型的单元格值两边的空格</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:55:48   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class TrimEditor implements CellEditor{
 

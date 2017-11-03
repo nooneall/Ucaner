@@ -24,17 +24,22 @@ import cn.ucaner.tools.core.util.ReflectUtil;
 import cn.ucaner.tools.core.util.StrUtil;
 import cn.ucaner.tools.core.util.TypeUtil;
 
-
-/**
- * Bean信息描述做为BeanInfo替代方案，此对象持有JavaBean中的setters和getters等相关信息描述
- * 
- * @author looly
- * @since 3.1.2
+/*    
+* @Package：cn.ucaner.tools.core.bean   
+* @ClassName：BeanDesc   
+* @Description：   <p> Bean信息描述做为BeanInfo替代方案，此对象持有JavaBean中的setters和getters等相关信息描述</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:02:10   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class BeanDesc {
 	
 	/** Bean类 */
 	private Class<?> beanClass;
+	
 	/** 属性Map */
 	private Map<String, PropDesc> propMap = new HashMap<>();
 	

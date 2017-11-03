@@ -15,9 +15,15 @@ import cn.ucaner.tools.core.util.StrUtil;
 import cn.ucaner.tools.log.level.Level;
 
 /**
- * 静态日志类，用于在不引入日志对象的情况下打印日志
- * @author Looly
- *
+* @Package：cn.ucaner.tools.log   
+* @ClassName：StaticLog   
+* @Description：   <p> 静态日志类，用于在不引入日志对象的情况下打印日志</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:56:17   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public final class StaticLog {
 	private static final String FQCN = StaticLog.class.getName();

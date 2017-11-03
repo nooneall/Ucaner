@@ -20,11 +20,11 @@ import cn.ucaner.tools.core.collection.ArrayIterator;
 /**
  * 不可变数组类型，用于多值返回<br>
  * 多值可以支持每个元素值类型不同
- * 
  * @author Looly
  *
  */
 public class Tuple extends CloneSupport<Tuple> implements Iterable<Object>, Serializable{
+	
 	private static final long serialVersionUID = -7689304393482182157L;
 	
 	private Object[] members;

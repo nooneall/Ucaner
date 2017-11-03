@@ -31,16 +31,20 @@ import cn.ucaner.tools.core.io.FileUtil;
 import cn.ucaner.tools.core.io.IoUtil;
 
 /**
- * 压缩工具类
- * 
- * @author Looly
- *
+* @Package：cn.ucaner.tools.core.util   
+* @ClassName：ZipUtil   
+* @Description：   <p> 压缩工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:31:23   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ZipUtil {
 
 	/**
 	 * 打包到当前目录
-	 * 
 	 * @param srcPath 源文件路径
 	 * @return 打包好的压缩文件
 	 * @throws UtilException IO异常
@@ -51,7 +55,6 @@ public class ZipUtil {
 
 	/**
 	 * 打包到当前目录
-	 * 
 	 * @param srcFile 源文件或目录
 	 * @return 打包好的压缩文件
 	 * @throws UtilException IO异常

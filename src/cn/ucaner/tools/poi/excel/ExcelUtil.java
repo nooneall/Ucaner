@@ -53,10 +53,15 @@ import cn.ucaner.tools.poi.excel.editors.TrimEditor;
 import cn.ucaner.tools.poi.exceptions.POIException;
 
 /**
- * Excel工具类
- * 
- * @author Looly
- *
+* @Package：cn.ucaner.tools.poi.excel   
+* @ClassName：ExcelUtil   
+* @Description：   <p>  Excel工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:54:23   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ExcelUtil {
 	

@@ -1,6 +1,16 @@
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JsonInternational</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 package cn.ucaner.tools.core.bean;
 
-import com.xiaoleilu.hutool.lang.SimpleCache;
+import cn.ucaner.tools.core.lang.SimpleCache;
 
 /**
  * Bean属性缓存<br>
@@ -9,6 +19,7 @@ import com.xiaoleilu.hutool.lang.SimpleCache;
  *
  */
 public enum BeanDescCache {
+	
 	INSTANCE;
 	
 	private SimpleCache<Class<?>, BeanDesc> bdCache = new SimpleCache<>();

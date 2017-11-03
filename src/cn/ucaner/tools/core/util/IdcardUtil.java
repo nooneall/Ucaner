@@ -19,11 +19,16 @@ import cn.ucaner.tools.core.date.DateUtil;
 import cn.ucaner.tools.core.lang.Validator;
 
 /**
- * 身份证相关工具类<br>
- * see https://www.oschina.net/code/snippet_1611_2881
- * 
- * @author Looly
- * @since 3.0.4
+* @Package：cn.ucaner.tools.core.util   
+* @ClassName：IdcardUtil   
+* @Description：   <p> 身份证相关工具类
+* Details https://www.oschina.net/code/snippet_1611_2881</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:44:16   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class IdcardUtil {
 

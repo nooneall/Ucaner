@@ -17,10 +17,15 @@ import org.apache.poi.xssf.usermodel.XSSFRichTextString;
 import cn.ucaner.tools.core.util.StrUtil;
 
 /**
- * Sax方式读取Excel相关工具类
- * 
- * @author looly
- *
+* @Package：cn.ucaner.tools.poi.excel.sax   
+* @ClassName：ExcelSaxUtil   
+* @Description：   <p> Sax方式读取Excel相关工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:55:33   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ExcelSaxUtil {
 

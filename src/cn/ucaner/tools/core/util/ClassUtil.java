@@ -36,12 +36,17 @@ import cn.ucaner.tools.core.lang.Filter;
 import cn.ucaner.tools.core.lang.Singleton;
 
 /**
- * 类工具类 <br>
- * 1、扫描指定包下的所有类<br>
- * 参考 http://www.oschina.net/code/snippet_234657_22722
- * 
- * @author seaside_hi, xiaoleilu
- *
+* @Package：cn.ucaner.tools.core.util   
+* @ClassName：ClassUtil   
+* @Description：   <p> 类工具类 <br>
+* 1、扫描指定包下的所有类<br>
+* 参考 http://www.oschina.net/code/snippet_234657_22722</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:51:26   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ClassUtil {
 

@@ -15,9 +15,15 @@ import java.io.Serializable;
 import cn.ucaner.tools.core.util.StrUtil;
 
 /**
- * 表示一个坐标位置
- * @author Looly
- *
+* @Package：cn.ucaner.tools.geo   
+* @ClassName：Location   
+* @Description：   <p> 坐标位置</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:56:51   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class Location implements Serializable {
 	private static final long serialVersionUID = 7457963026513014856L;

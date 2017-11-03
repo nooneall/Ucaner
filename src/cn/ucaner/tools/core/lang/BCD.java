@@ -127,4 +127,15 @@ public final class BCD {
 		return bcd;
 	}
 	//----------------------------------------------------------------- Private method end
+	
+	/**
+	 * Test for Jason
+	 */
+	public static void main(String[] args) {
+		//System.out.println("Str2BCD"+strToBcd("HelloWorld"));
+		byte[] strToBcd = strToBcd("Hello");
+		for (byte b : strToBcd) {
+			System.out.println(b);
+		}
+	}
 }

@@ -40,8 +40,10 @@ public class ExcelReader {
 
 	/** 是否忽略空行 */
 	private boolean ignoreEmptyRow;
+	
 	/** 单元格值处理接口 */
 	private CellEditor cellEditor;
+	
 	/** 标题别名 */
 	private Map<String, String> headerAlias = new HashMap<>();
 

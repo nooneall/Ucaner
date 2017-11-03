@@ -24,6 +24,7 @@ import cn.ucaner.tools.core.exceptions.NotInitedException;
  *
  */
 public class SyncFinisher{
+	
 	private CountDownLatch countDownLatch;
 	
 	private Set<Worker> workers = new LinkedHashSet<Worker>();

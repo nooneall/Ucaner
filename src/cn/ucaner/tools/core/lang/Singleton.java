@@ -17,12 +17,19 @@ import cn.ucaner.tools.core.util.ClassUtil;
 import cn.ucaner.tools.core.util.ReflectUtil;
 
 /**
- * 单例类<br>
- * 提供单例对象的统一管理，当调用get方法时，如果对象池中存在此对象，返回此对象，否则创建新对象返回
- * @author loolly
- *
+* @Package：cn.ucaner.tools.core.lang   
+* @ClassName：Singleton   
+* @Description：   <p> 单例类<br>
+ * 提供单例对象的统一管理，当调用get方法时，如果对象池中存在此对象，返回此对象，否则创建新对象返回</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:05:53   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public final class Singleton {
+	
 	private static Map<Class<?>, Object> pool = new ConcurrentHashMap<Class<?>, Object>();
 	
 	private Singleton() {}

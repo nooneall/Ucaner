@@ -23,10 +23,15 @@ import java.util.concurrent.ThreadLocalRandom;
 import cn.ucaner.tools.core.exceptions.UtilException;
 
 /**
- * 随机工具类
- * 
- * @author xiaoleilu
- *
+* @Package：cn.ucaner.tools.core.util   
+* @ClassName：RandomUtil   
+* @Description：   <p> 随机工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午11:34:06   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class RandomUtil {
 	
