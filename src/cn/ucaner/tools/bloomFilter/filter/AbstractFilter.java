@@ -16,10 +16,15 @@ import cn.ucaner.tools.bloomFilter.bitMap.IntMap;
 import cn.ucaner.tools.bloomFilter.bitMap.LongMap;
 
 /**
- * 抽象Bloom过滤器
- * 
- * @author loolly
- *
+* @Package：cn.ucaner.tools.bloomFilter.filter   
+* @ClassName：AbstractFilter   
+* @Description：   <p> 抽象Bloom过滤器</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午10:22:21   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public abstract class AbstractFilter implements BloomFilter {
 

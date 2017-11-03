@@ -11,9 +11,16 @@
 package cn.ucaner.tools.bloomFilter.bitMap;
 
 /**
- * 过滤器BitMap在32位机器上.这个类能发生更好的效果.一般情况下建议使用此类
- * @author loolly
- *
+*    
+* @Package：cn.ucaner.tools.bloomFilter.bitMap   
+* @ClassName：IntMap   
+* @Description：   <p> 过滤器BitMap在32位机器上.这个类能发生更好的效果.一般情况下建议使用此类 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午10:57:50   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class IntMap implements BitMap {
 

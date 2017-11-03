@@ -12,11 +12,16 @@ package cn.ucaner.tools.bloomFilter.filter;
 
 import cn.ucaner.tools.core.util.HashUtil;
 
-
 /**
- * 默认Bloom过滤器，使用Java自带的Hash算法
- * @author loolly
- *
+* @Package：cn.ucaner.tools.bloomFilter.filter   
+* @ClassName：DefaultFilter   
+* @Description：   <p> 默认Bloom过滤器，使用Java自带的Hash算法</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午10:22:35   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class DefaultFilter extends AbstractFilter {
 
@@ -30,6 +35,7 @@ public class DefaultFilter extends AbstractFilter {
 	
 	@Override
 	public long hash(String str) {
+		//JAVA自己带的算法
 		return HashUtil.javaDefaultHash(str) % size;
 	}
 }

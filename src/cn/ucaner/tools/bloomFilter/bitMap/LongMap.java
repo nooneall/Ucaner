@@ -11,9 +11,15 @@
 package cn.ucaner.tools.bloomFilter.bitMap;
 
 /**
- * 过滤器BitMap在64位机器上.这个类能发生更好的效果.一般机器不建议使用
- * @author loolly
- *
+* @Package：cn.ucaner.tools.bloomFilter.bitMap   
+* @ClassName：LongMap   
+* @Description：   <p> 过滤器BitMap在64位机器上.这个类能发生更好的效果.一般机器不建议使用</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午10:58:18   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class LongMap implements BitMap {
 

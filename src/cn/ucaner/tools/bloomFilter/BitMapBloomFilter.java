@@ -17,13 +17,19 @@ import cn.ucaner.tools.bloomFilter.filter.PJWFilter;
 import cn.ucaner.tools.bloomFilter.filter.SDBMFilter;
 
 /**
- * BlommFilter 实现 <br>
- * 1.构建hash算法 <br>
- * 2.散列hash映射到数组的bit位置 <br>
- * 3.验证<br>
- * 此实现方式可以指定Hash算法
- * 
- * @author Ansj
+* @Package：cn.ucaner.tools.bloomFilter   
+* @ClassName：BitMapBloomFilter   
+* @Description：   <p>  BlommFilter 实现 <br>
+* 1.构建hash算法 <br>
+* 2.散列hash映射到数组的bit位置 <br>
+* 3.验证<br>
+* 此实现方式可以指定Hash算法</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午10:03:30   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class BitMapBloomFilter implements BloomFilter{
 
@@ -38,7 +44,7 @@ public class BitMapBloomFilter implements BloomFilter{
 		long size = (long) (1L * mNum * 1024 * 1024 * 8);
 		
 		filters = new BloomFilter[]{
-			new DefaultFilter(size),
+			new DefaultFilter(size),//java自带算法
 			new ELFFilter(size),
 			new JSFilter(size),
 			new PJWFilter(size),

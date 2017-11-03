@@ -19,12 +19,19 @@ import cn.ucaner.tools.core.io.IoUtil;
 import cn.ucaner.tools.core.util.HashUtil;
 
 /**
- * BloomFilter实现方式2，此方式使用BitSet存储。<br>
- * Hash算法的使用使用固定顺序，只需指定个数既可
- * @author loolly
- *
+* @Package：cn.ucaner.tools.bloomFilter   
+* @ClassName：BitSetBloomFilter   
+* @Description：   <p>BloomFilter实现方式2，此方式使用BitSet存储。<br>
+*                      Hash算法的使用使用固定顺序，只需指定个数既可</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 上午10:02:51   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class BitSetBloomFilter implements BloomFilter{
+	
 	private BitSet bitSet;
 	private int bitSetSize;
 	private int addedElements;
