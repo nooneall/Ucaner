@@ -27,9 +27,15 @@ import cn.ucaner.tools.core.util.StrUtil;
 import cn.ucaner.tools.core.util.URLUtil;
 
 /**
- * 类扫描器
- * @author Looly
- *
+* @Package：cn.ucaner.tools.core.lang   
+* @ClassName：ClassScaner   
+* @Description：   <p> 类扫描器</p>
+* @Author： - DaoDou 
+* @CreatTime：2017-11-3 下午12:01:54   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public final class ClassScaner {
 //	private static Log log = LogFactory.get();

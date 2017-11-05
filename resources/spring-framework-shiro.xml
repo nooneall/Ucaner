@@ -17,9 +17,8 @@
         <property name="securityManager" ref="securityManager"/>   
         <!-- 配置登录请求地址 -->   
         <property name="loginUrl" value="/pf_toLogin"/>    
-        <!-- 登录成功后要跳转的连接(此属性用不到,因为登录成功后的处理逻辑在LoginController里  
         <property name="successUrl" value="/platform/index"/> 
-        -->   
+       
         <!-- 如果您请求的资源不再您的权限范围，则跳转到/403请求地址 -->  
         <property name="unauthorizedUrl" value="/403"/>   
         
