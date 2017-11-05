@@ -28,6 +28,7 @@ import org.springframework.context.ApplicationContextAware;
 * @version    V1.0
  */
 public class SpringContextHolder implements ApplicationContextAware {
+	
 	private static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(SpringContextHolder.class);
 
 	/**
