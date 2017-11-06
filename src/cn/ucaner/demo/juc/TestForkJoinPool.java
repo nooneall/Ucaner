@@ -7,7 +7,6 @@ import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveTask;
 import java.util.stream.LongStream;
 
-import org.junit.Test;
 
 public class TestForkJoinPool {
 	
@@ -27,7 +26,7 @@ public class TestForkJoinPool {
 		System.out.println("耗费时间为：" + Duration.between(start, end).toMillis());//166-1996-10590
 	}
 	
-	@Test
+	//@Test
 	public void test1(){
 		Instant start = Instant.now();
 		
@@ -45,8 +44,8 @@ public class TestForkJoinPool {
 	}
 	
 	//java8 新特性
-	@Test
-	public void test2(){
+	//@Test
+	/*public void test2(){
 		Instant start = Instant.now();
 		
 		Long sum = LongStream.rangeClosed(0L, 50000000000L)
@@ -61,7 +60,7 @@ public class TestForkJoinPool {
 	}
 
 }
-
+*/
 class ForkJoinSumCalculate extends RecursiveTask<Long>{
 
 	/**
