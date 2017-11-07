@@ -33,8 +33,8 @@ import cn.ucaner.framework.exception.SystemException;
 * @Author： - DaoDou 
 * @CreatTime：2017年10月26日 上午9:27:36   
 * @Modify By：   
-* @ModifyTime：  
-* @Modify marker：   
+* @ModifyTime：
+* @Modify marker：
 * @version    V1.0
  */
 @Repository

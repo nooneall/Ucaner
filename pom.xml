@@ -16,7 +16,13 @@
     
     
     <dependencies>
-    	<!-- https://mvnrepository.com/artifact/org.tinylog/tinylog -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.tinylog/tinylog -->
 		<dependency>
 		    <groupId>org.tinylog</groupId>
 		    <artifactId>tinylog</artifactId>
