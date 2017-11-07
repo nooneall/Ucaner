@@ -22,6 +22,9 @@ http://jenkins.ucaner.cn
 
 http://sk.ucaner.cn 
 
+Intellji Idea 中文使用教程
+教程地址：http://idea.ucaner.cn/
+
 ### Ucaner
 - web基本工具
 
