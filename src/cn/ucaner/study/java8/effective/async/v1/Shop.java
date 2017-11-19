@@ -1,6 +1,4 @@
-package com.brianway.learning.java8.effective.async.v1;
-
-import static com.brianway.learning.java8.effective.async.Util.delay;
+package cn.ucaner.study.java8.effective.async.v1;
 
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;

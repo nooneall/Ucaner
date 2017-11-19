@@ -1,7 +1,5 @@
 package cn.ucaner.study.java8.streamapi.collect;
 
-import com.brianway.learning.java8.streamapi.Dish;
-import static com.brianway.learning.java8.streamapi.Dish.menu;
 import static java.util.stream.Collectors.collectingAndThen;
 import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
@@ -15,6 +13,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+
+import cn.ucaner.study.java8.streamapi.Dish;
 
 /**
  * 分组

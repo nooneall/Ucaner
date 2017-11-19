@@ -45,7 +45,7 @@ public class TestForkJoinPool {
 	
 	//java8 新特性
 	//@Test
-	/*public void test2(){
+	public void test2(){
 		Instant start = Instant.now();
 		
 		Long sum = LongStream.rangeClosed(0L, 50000000000L)
@@ -60,7 +60,7 @@ public class TestForkJoinPool {
 	}
 
 }
-*/
+
 class ForkJoinSumCalculate extends RecursiveTask<Long>{
 
 	/**

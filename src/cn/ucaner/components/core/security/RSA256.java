@@ -8,7 +8,7 @@
  *  </body>
  * </html>
  */
-package com.yz.common.core.security;
+package cn.ucaner.components.core.security;
 
 
 import java.security.KeyFactory;

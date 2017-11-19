@@ -2,6 +2,7 @@ package cn.ucaner.study.java8.streamapi.usage;
 
 import static java.util.stream.Collectors.toList;
 
+import java.util.Arrays;
 import java.util.List;
 
 import cn.ucaner.study.java8.streamapi.Dish;

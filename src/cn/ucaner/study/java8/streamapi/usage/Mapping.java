@@ -1,11 +1,11 @@
-package com.brianway.learning.java8.streamapi.usage;
+package cn.ucaner.study.java8.streamapi.usage;
 
-import com.brianway.learning.java8.streamapi.Dish;
-import static com.brianway.learning.java8.streamapi.Dish.menu;
 import static java.util.stream.Collectors.toList;
 
 import java.util.Arrays;
 import java.util.List;
+
+import cn.ucaner.study.java8.streamapi.Dish;
 
 /**
  * 使用流-映射

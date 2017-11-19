@@ -7,6 +7,8 @@ import java.util.stream.Stream;
 
 import org.junit.Test;
 
+import cn.ucaner.demo.java802.java8.Employee.Status;
+
 
 /*
  * 一、 Stream 的操作步骤

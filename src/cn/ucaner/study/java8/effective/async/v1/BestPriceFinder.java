@@ -1,7 +1,5 @@
-package com.brianway.learning.java8.effective.async.v1;
+package cn.ucaner.study.java8.effective.async.v1;
 
-import com.brianway.learning.java8.effective.async.ExchangeService;
-import com.brianway.learning.java8.effective.async.ExchangeService.Money;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,6 +13,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import cn.ucaner.study.java8.effective.async.ExchangeService;
+import cn.ucaner.study.java8.effective.async.ExchangeService.Money;
 
 /**
  * 通过不同的方案实现价格查询:顺序流,并行流,CompletableFuture

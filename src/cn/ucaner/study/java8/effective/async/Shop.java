@@ -1,7 +1,5 @@
 package cn.ucaner.study.java8.effective.async;
 
-import static com.brianway.learning.java8.effective.async.Util.delay;
-import static com.brianway.learning.java8.effective.async.Util.format;
 
 import java.util.Random;
 

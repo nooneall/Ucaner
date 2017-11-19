@@ -7,21 +7,18 @@
  *  <p> Created by Jason</p>
  *  </body>
  * </html>
- */s
-package com.yz.common.core.security;
+ */
+package cn.ucaner.components.core.security;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.security.Key;
+import java.util.Base64;
 import javax.crypto.Cipher;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESedeKeySpec;
 import javax.crypto.spec.IvParameterSpec;
-import java.security.Key;
-import java.util.Base64;
 
 public class DES implements ISecurity{
 	
-	private static final Logger logger=LogManager.getLogger(DES.class);
 	
 	// 密钥  
 	private final static String secretKey = "";
