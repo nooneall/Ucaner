@@ -42,15 +42,9 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.HSSFColor;
 
 /**
-* @Package：cn.ucaner.common.utils.excel   
-* @ClassName：ExcelExportHelper   
-* @Description：   <p> Excel 生成通用类，为了兼容，所有 Excel 统一生成 Excel2003 即：xx.xls</p>
-* @Author： - DaoDou 
-* @CreatTime：2017年10月25日 下午5:41:16   
-* @Modify By：   
-* @ModifyTime：  
-* @Modify marker：   
-* @version    V1.0
+ * Excel 生成通用类，为了兼容，所有 Excel 统一生成 Excel2003 即：xx.xls
+ * @Author : chenssy
+ * @Date ： 2014年6月15日 下午9:09:38
  */
 public class ExcelExportHelper {
 	
@@ -92,8 +86,10 @@ public class ExcelExportHelper {
 	}
 	
 	/**
-	 * @param imageWidth  指定图片的宽度
-	 * @param imageHeight  指定图片的高度
+	 * @param imageWidth 
+	 * 					指定图片的宽度
+	 * @param imageHeight
+	 * 				           指定图片的高度
 	 */
 	public ExcelExportHelper(int imageWidth,int imageHeight){
 		this.IMAGE_HEIGHT = imageHeight;
@@ -101,9 +97,12 @@ public class ExcelExportHelper {
 	}
 	
 	/**
-	 * @param datePatter 指定时间格式
-	 * @param imageWidth 指定图片的宽度
-	 * @param imageHeight 指定图片的高度
+	 * @param datePatter 
+	 * 					指定时间格式
+	 * @param imageWidth 
+	 * 					指定图片的宽度
+	 * @param imageHeight 
+	 * 					指定图片的高度
 	 */
 	public ExcelExportHelper(String datePatter,int imageWidht,int imageHeight){
 		this.DATE_PATTERN = datePatter;
@@ -117,8 +116,12 @@ public class ExcelExportHelper {
 	 * header、excelList中的Bean必须对应（javaBean的属性顺序）：如下<br>
 	 * header：姓名、年龄、性别、班级<br>
 	 * Bean：name、age、sex、class<br>
+	 * 
 	 * @author chenssy 
-	 * @param header 表格属性列名数组
+	 * @date 2014年6月15日 下午9:18:37
+	 * 
+	 * @param header  
+	 * 				表格属性列名数组
 	 * @param excelList 
 	 * 			需要显示的数据集合,集合中一定要放置符合javabean风格的类的对象。此方法支持的 javabean
 	 *          属性的数据类型有基本数据类型及String,Date,byte[](图片数据)
@@ -133,8 +136,10 @@ public class ExcelExportHelper {
 		//生成一个表格
 		sheetTitle = getSheetTitle(sheetTitle);   //判断、设置sheetTitle
 		HSSFSheet sheet = book.createSheet(sheetTitle);
+		
 		//设置Excel里面数据
 		setExcelContentData(book,sheet,header,excelList);
+		
 		System.out.println("——————————————————ExcelExportHelper:Excel生成成功...");
 		
 		return book;
@@ -146,6 +151,10 @@ public class ExcelExportHelper {
 	 * header、properties需要一一对应：<Br>
 	 * header = ["学号","年龄","性别","班级"]
 	 * properties = ["id","age","sex","class"],其对应的excelList中javaBean的属性值
+	 * 
+	 * @author chenssy 
+	 * @date 2014年6月19日 下午6:02:02
+	 * 
 	 * @param header  
 	 * 				Excel表头
 	 * @param properties  
@@ -604,7 +613,7 @@ public class ExcelExportHelper {
 	 * @param excelList Excel数据列
 	 * @version 1.0
 	 */
-	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@SuppressWarnings({ "rawtypes", "unchecked", "deprecation" })
 	private void setExcelContentData(HSSFWorkbook book,HSSFSheet sheet,String[] header,List<Object> excelList) {
 		//设置列头样式(居中、变粗、蓝色)
 		HSSFCellStyle headerStyle = book.createCellStyle();
@@ -677,11 +686,14 @@ public class ExcelExportHelper {
 	
 	/**
 	 * 填充Excel内容
+	 * @author chenssy 
+	 * @date 2014年6月19日 下午6:00:35
 	 * @param book
 	 * @param sheet
 	 * @param header
 	 * @param properties
 	 * @param excelList
+	 * @version 1.0
 	 */
 	@SuppressWarnings("rawtypes")
 	private void setExcelContentData(HSSFWorkbook book, HSSFSheet sheet, String[] header, String[] properties,
@@ -749,8 +761,11 @@ public class ExcelExportHelper {
 	
 	/**
 	 * 设置sheet的title，若为空则为yyyyMMddHH24mmss
-	 * @param sheetTitle
+	 * @author chenssy 
+	 * @date 2014年6月16日 下午1:46:06
+	 * @param sheetTitle 
 	 * @return
+	 * @version 1.0
 	 */
 	private  String getSheetTitle(String sheetTitle) {
 		String title = null;
@@ -767,40 +782,56 @@ public class ExcelExportHelper {
 	
 	/**
 	 * 设置Excel图片的格式：字体居中、变粗、蓝色、12号
+	 * @author chenssy 
+	 * @date 2014年6月16日 下午8:46:49
 	 * @param headerStyle
+	 * 				头部样式
 	 * @param book
+	 * 		  		生产的excel book 	 HSSFWorkbook对象	
+	 * @version 1.0
 	 */
-	@SuppressWarnings("deprecation")
 	private void setHeaderStyle(HSSFCellStyle headerStyle,HSSFWorkbook book) {
-		headerStyle.setAlignment(HSSFCellStyle.ALIGN_CENTER);   //水平居中
-		headerStyle.setVerticalAlignment(HSSFCellStyle.VERTICAL_CENTER);//垂直居中 
+		//headerStyle.setAlignment(HSSFCellStyle.ALIGN_CENTER);   //水平居中
+		//headerStyle.setVerticalAlignment(HSSFCellStyle.VERTICAL_CENTER);//垂直居中 
 		//设置字体
 		HSSFFont font = book.createFont();
 		font.setFontHeightInPoints((short) 12);     //字号：12号
-		font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);   //变粗
+		//font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);   //变粗
 		font.setColor(HSSFColor.BLUE.index);   //蓝色
+		
 		headerStyle.setFont(font);
 	}
 	
-
 	/**
 	 * 设置单元格样式
+	 * @author chenssy 
+	 * @date 2014年6月17日 上午11:00:53
 	 * @param cellStyle
+	 * 			单元格样式
 	 * @param book
+	 * 			book HSSFWorkbook对象
+	 * @version 1.0
 	 */
 	private void setCellStyle(HSSFCellStyle cellStyle, HSSFWorkbook book) {
-		cellStyle.setAlignment(HSSFCellStyle.ALIGN_CENTER);   //水平居中
-		cellStyle.setVerticalAlignment(HSSFCellStyle.VERTICAL_CENTER);//垂直居中 
+		//cellStyle.setAlignment(HSSFCellStyle.ALIGN_CENTER);   //水平居中
+		//cellStyle.setVerticalAlignment(HSSFCellStyle.VERTICAL_CENTER);//垂直居中 
+		
 		HSSFFont font = book.createFont();
 		font.setFontHeightInPoints((short)12);
+		
 		cellStyle.setFont(font);
 	}
 	
 	/**
-	 * 根据头部样式,头部数据创建Excel头部
-	 * @param sheet  sheet
-	 * @param headerStyle 头部样式
-	 * @param header 头部数据
+	 * 根据头部样式、头部数据创建Excel头部
+	 * @author chenssy 
+	 * @date 2014年6月17日 上午11:37:28
+	 * @param sheet 
+	 * 				sheet
+	 * @param headerStyle 
+	 * 				头部样式
+	 * @param header 
+	 * 				头部数据
 	 * @return 设置完成的头部Row
 	 * @version 1.0
 	 */
@@ -816,6 +847,7 @@ public class ExcelExportHelper {
 			HSSFRichTextString text = new HSSFRichTextString(header[i]);
 			cell.setCellValue(text);
 		}
+		
 		return headRow;
 	}
 	
@@ -823,14 +855,22 @@ public class ExcelExportHelper {
 	 * 设置单元格数据
 	 * @author chenssy 
 	 * @date 2014年6月17日 上午11:48:14
-	 * @param row   指定行
+	 * @param row  
+	 * 				指定行
 	 * @param index 
-	 * @param i  行数
-	 * @param value 单元格值 cellValue
-	 * @param cell 单元格 HSSFCell对象
-	 * @param sheet sheet HSSFSheet对象
-	 * @param patriarch 顶级画板 用于实现突破
-	 * @param book  Excel HSSFWorkbook对象
+	 * @param i 
+	 * 				行数
+	 * @param value 
+	 * 				单元格值 cellValue
+	 * @param cell 
+	 * 				单元格 HSSFCell对象
+	 * @param sheet 
+	 * 				sheet HSSFSheet对象
+	 * @param patriarch  
+	 * 				顶级画板 用于实现突破
+	 * @param book 
+	 * 			Excel HSSFWorkbook对象
+	 * @version 1.0
 	 */
 	private void setCellData(HSSFRow row, int index ,int i ,Object value,HSSFCell cell,HSSFSheet sheet,HSSFPatriarch patriarch,HSSFWorkbook book) {
 		String textValue = null; 
@@ -844,7 +884,7 @@ public class ExcelExportHelper {
 			row.setHeightInPoints((short)(IMAGE_HEIGHT * 10));
 			sheet.setColumnWidth(i, IMAGE_WIDTH * 256);
 		    HSSFClientAnchor anchor = new HSSFClientAnchor(0, 0, 1023, 255,(short) i, index, (short) i, index);   
-	        anchor.setAnchorType(3);   
+	       // anchor.setAnchorType(3);   
 	        //插入图片  
 	        byte[] bsValue = (byte[]) value;
 	        patriarch.createPicture(anchor, book.addPicture(bsValue, HSSFWorkbook.PICTURE_TYPE_JPEG)); 
@@ -879,7 +919,9 @@ public class ExcelExportHelper {
 	 * 获取文件名，若为空，则规则为：yyyyMMddHH24mmss+6位随机数
 	 * @author chenssy 
 	 * @date 2014年6月17日 下午5:44:27
-	 * @param fileName 文件名
+	 * @param fileName
+	 * 				文件名
+	 * @return
 	 * @version 1.0
 	 */
 	private String getFileName(String fileName) {
@@ -896,8 +938,11 @@ public class ExcelExportHelper {
 	
 	/**
 	 * 根据字数来获取单元格大小,并更新当前列的最大宽度
+	 * @author chenssy 
+	 * @date 2014年6月17日 下午7:35:52
 	 * @param textValue 
 	 * @param 指定列
+	 * @return
 	 * @version 1.0
 	 */
 	private void setCellMaxWidth(String textValue,int i ) {
@@ -910,9 +955,14 @@ public class ExcelExportHelper {
 	
 	/**
 	 * 将生成的Excel保存到指定路径下
-	 * @param book  生成的Excel HSSFWorkbook对象
-	 * @param filePath  需要保存的路径
-	 * @param fileName  Excel文件名
+	 * @author chenssy 
+	 * @date 2014年6月19日 下午6:10:17
+	 * @param book 
+	 * 			生成的Excel HSSFWorkbook对象
+	 * @param filePath 
+	 * 			需要保存的路劲
+	 * @param fileName 
+	 * 			Excel文件名
 	 * @version 1.0
 	 */
 	private void saveExcel(HSSFWorkbook book, String filePath, String fileName) {
@@ -941,17 +991,25 @@ public class ExcelExportHelper {
 
 	/**
 	 * 将生成的Excel打包并保存到指定路径下
-	 * @param book  生成的Excel HSSFWorkbook list集合
-	 * @param filePath 保存路劲
-	 * @param zipName zip 文件名
-	 * @param excelName Excel文件名
+	 * @author chenssy 
+	 * @date 2014年6月19日 下午6:18:09
+	 * @param book 
+	 * 			生成的Excel HSSFWorkbook list集合
+	 * @param filePath 
+	 * 			保存路劲
+	 * @param zipName 
+	 * 			zip 文件名
+	 * @param excelName 
+	 * 			Excel文件名
 	 * @version 1.0
 	 */
 	private void zipExcelAndSave(List<HSSFWorkbook> books,String filePath,String zipName,String excelName){
 		//检测保存路径是否存在，若不存在则新建
 		checkFilePathIsExist(filePath);
+		
 		zipName = getFileName(zipName);
 		excelName = getFileName(excelName);
+		
 		//将Excel打包并保存至指定目录下
 		FileOutputStream out = null;
 		ZipOutputStream zip = null;
@@ -983,6 +1041,7 @@ public class ExcelExportHelper {
 					e.printStackTrace();
 				}
 			}
+
 			if (out != null) {
 				try {
 					out.flush();
@@ -996,10 +1055,15 @@ public class ExcelExportHelper {
 	
 	/**
 	 * 检测保存路径是否存在，不存在则新建
-	 * @param filePath
+	 * @author chenssy 
+	 * @date 2014年6月18日 下午1:05:17
+	 * @param filePath  
+	 * 				文件路径
+	 * @version 1.0
 	 */
 	private void checkFilePathIsExist(String filePath) {
 		File file = new File(filePath);
+		
 		if(!file.exists()){
 			file.mkdirs();
 		}
