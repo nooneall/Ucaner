@@ -9,7 +9,6 @@
  * </html>
  */
 package cn.ucaner.tools.core.util;
-
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.BufferedWriter;
@@ -22,6 +21,7 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.namespace.QName;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.OutputKeys;
@@ -29,6 +29,9 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -159,12 +162,40 @@ public class XmlUtil {
 	 * @return 对象
 	 * @throws IOException IO异常
 	 */
-	@SuppressWarnings("unchecked")
 	public static <T> T readObjectFromXml(File source) throws IOException {
+		return readObjectFromXml(new InputSource(FileUtil.getInputStream(source)));
+	}
+	
+	/**
+	 * 从XML中读取对象
+	 * Reads serialized object from the XML file.
+	 * 
+	 * @param <T> 对象类型
+	 * @param xmlStr XML内容
+	 * @return 对象
+	 * @throws IOException IO异常
+	 * @since 3.2.0
+	 */
+	public static <T> T readObjectFromXml(String xmlStr) throws IOException {
+		return readObjectFromXml(new InputSource(StrUtil.getReader(xmlStr)));
+	}
+	
+	/**
+	 * 从XML中读取对象
+	 * Reads serialized object from the XML file.
+	 * 
+	 * @param <T> 对象类型
+	 * @param source {@link InputSource}
+	 * @return 对象
+	 * @throws IOException IO异常
+	 * @since 3.2.0
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> T readObjectFromXml(InputSource source) throws IOException {
 		Object result = null;
 		XMLDecoder xmldec = null;
 		try {
-			xmldec = new XMLDecoder(FileUtil.getInputStream(source));
+			xmldec = new XMLDecoder(source);
 			result = xmldec.readObject();
 		} finally {
 			IoUtil.close(xmldec);
@@ -236,7 +267,7 @@ public class XmlUtil {
 	 */
 	public static void toFile(Document doc, String path, String charset) {
 		if (StrUtil.isBlank(charset)) {
-			charset = doc.getXmlEncoding();
+			//charset = doc.getXmlEncoding();
 		}
 		if (StrUtil.isBlank(charset)) {
 			charset = CharsetUtil.UTF_8;
@@ -349,7 +380,7 @@ public class XmlUtil {
 		}
 		return null;
 	}
-
+	
 	/**
 	 * 根据节点名获得第一个子节点
 	 * 
@@ -359,7 +390,8 @@ public class XmlUtil {
 	 */
 	public static String elementText(Element element, String tagName) {
 		Element child = getElement(element, tagName);
-		return child == null ? null : child.getTextContent();
+		//return child == null ? null : child.getTextContent();
+		return "";
 	}
 
 	/**
@@ -372,7 +404,8 @@ public class XmlUtil {
 	 */
 	public static String elementText(Element element, String tagName, String defaultValue) {
 		Element child = getElement(element, tagName);
-		return child == null ? defaultValue : child.getTextContent();
+		//return child == null ? defaultValue : child.getTextContent();
+		return "";
 	}
 
 	/**
@@ -421,6 +454,40 @@ public class XmlUtil {
 		} finally {
 			//关闭XMLEncoder会相应关闭OutputStream
 			IoUtil.close(xmlenc);
+		}
+	}
+	
+	/**
+	 * 创建XPath<br>
+	 * Xpath相关文章：https://www.ibm.com/developerworks/cn/xml/x-javaxpathapi.html
+	 * 
+	 * @return {@link XPath}
+	 * @since 3.2.0
+	 */
+	public static XPath createXPath() {
+		return XPathFactory.newInstance().newXPath();
+	}
+	
+	/**
+	 * 通过XPath方式读取XML节点等信息<br>
+	 * Xpath相关文章：https://www.ibm.com/developerworks/cn/xml/x-javaxpathapi.html
+	 * 
+	 * @param expression XPath表达式
+	 * @param source 资源，可以是Docunent、Node节点等
+	 * @param returnType 返回类型，{@link javax.xml.xpath.XPathConstants}
+	 * @return 匹配返回类型的值
+	 * @since 3.2.0
+	 */
+	public static Object getByXPath(String expression, Object source, QName returnType) {
+		final XPath xPath = createXPath();
+		try {
+			if(source instanceof InputSource) {
+				return xPath.evaluate(expression, (InputSource)source, returnType);
+			}else {
+				return xPath.evaluate(expression, source, returnType);
+			}
+		} catch (XPathExpressionException e) {
+			throw new UtilException(e);
 		}
 	}
 	// ---------------------------------------------------------------------------------------- Private method start
