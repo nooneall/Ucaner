@@ -1,28 +1,37 @@
 /**
  * <html>
  * <body>
- *  <P>  Copyright 2014 广东天泽阳光康众医疗投资管理有限公司. 粤ICP备09007530号-15</p>
- *  <p>  All rights reserved.</p>
- *  <p> Created on 2015年4月28日</p>
- *  <p> Created by 周鉴斌</p>
+ *  <P> Copyright 2014 JasonInternational Ucanx</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 20170828</p>
+ *  <p> Created by Jason</p>
  *  </body>
  * </html>
  */
 package cn.ucaner.common.vo;
 
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JasonInternational Ucanx</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 import java.io.Serializable;
 
 /**
- * @Package: com.sunshine.mobileapp.invoke.dto
- * @ClassName: Response
- * @Statement: <p>对外接口出参</p>
- * @JDK version used: 
- * @Author:	周鉴斌
- * @Create Date: 2015年8月26日
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 1.0
+* @Package：cn.ucaner.common.vo   
+* @ClassName：Response   
+* @Description：   <p> 对外接口出参</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月19日 下午7:31:35   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class Response implements Serializable {
 	/**

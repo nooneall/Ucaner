@@ -1,10 +1,10 @@
 /**
  * <html>
  * <body>
- *  <P>  Copyright 2014 广东天泽阳光康众医疗投资管理有限公司. 粤ICP备09007530号-15</p>
- *  <p>  All rights reserved.</p>
- *  <p> Created on 2015-6-20</p>
- *  <p> Created by Yuce</p>
+ *  <P> Copyright 2014 JasonInternational Ucanx</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 20170828</p>
+ *  <p> Created by Jason</p>
  *  </body>
  * </html>
  */
@@ -13,19 +13,15 @@ package cn.ucaner.common.vo;
 import java.io.Serializable;
 
 /**
- * @Package: com.sunshine.mobileapp.common.vo
- * @ClassName: CommonParamsVo
- * @Statement:
- * 			<p>
- *             页面与后台的传值vo
- *             </p>
- * @JDK version used: 1.6
- * @Author:
- * @Create Date: 2016-10-20
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 1.0
+* @Package：cn.ucaner.common.vo   
+* @ClassName：HttpParamsVo   
+* @Description：   <p> 页面与后台的传值vo</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月19日 下午7:30:40   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class HttpParamsVo implements Serializable {
 	/**

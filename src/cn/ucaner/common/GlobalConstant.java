@@ -1,9 +1,9 @@
 /**
  * <html>
  * <body>
- *  <P> Copyright 2014 JasonInternational Ucanx</p>
+ *  <P> Copyright 1994 JasonInternational Ucanx</p>
  *  <p> All rights reserved.</p>
- *  <p> Created on 20170828</p>
+ *  <p> Created on 19941115</p>
  *  <p> Created by Jason</p>
  *  </body>
  * </html>
@@ -21,7 +21,7 @@ import cn.ucaner.framework.config.SystemConfig;
 * @ClassName：GlobalConstant   
 * @Description：   <p> 全局变量</p>
 * @Author： - DaoDou 
-* @CreatTime：2017年8月30日 下午2:33:12   
+* @CreatTime：2017年11月19日 下午7:32:23   
 * @Modify By：   
 * @ModifyTime：  
 * @Modify marker：   

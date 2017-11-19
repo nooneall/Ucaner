@@ -1,29 +1,37 @@
 /**
  * <html>
  * <body>
- *  <P> Copyright 2017 阳光康众</p>
+ *  <P> Copyright 2014 JasonInternational Ucanx</p>
  *  <p> All rights reserved.</p>
- *  <p> Created on 2017年7月5日</p>
- *  <p> Created by 于策/yu.ce@foxmail.com</p>
+ *  <p> Created on 20170828</p>
+ *  <p> Created by Jason</p>
  *  </body>
  * </html>
  */
 package cn.ucaner.common.vo;
 
+/**
+ * <html>
+ * <body>
+ *  <P> Copyright 1994 JasonInternational Ucanx</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 19941115</p>
+ *  <p> Created by Jason</p>
+ *  </body>
+ * </html>
+ */
 import java.io.Serializable;
 
 /**
- * @Project ChuFangLiuZhuan_PlatForm
- * @Package com.sunshine.platform.security.vo
- * @ClassName TreeVo.java
- * @Description
- * @JDK version used 1.8
- * @Author 于策/yu.ce@foxmail.com
- * @Create Date 2017年7月5日
- * @modify By
- * @modify Date
- * @Why&What is modify
- * @Version 1.0
+* @Package：cn.ucaner.common.vo   
+* @ClassName：TreeNodeVo   
+* @Description：   <p> 树节点数据</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月19日 下午7:32:02   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class TreeNodeVo implements Serializable {
 

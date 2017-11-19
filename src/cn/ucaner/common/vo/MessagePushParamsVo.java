@@ -1,10 +1,10 @@
 /**
  * <html>
  * <body>
- *  <P>  Copyright 2014 广东天泽阳光康众医疗投资管理有限公司. 粤ICP备09007530号-15</p>
- *  <p>  All rights reserved.</p>
- *  <p> Created on 2015-7-13</p>
- *  <p> Created by Yuce</p>
+ *  <P> Copyright 2014 JasonInternational Ucanx</p>
+ *  <p> All rights reserved.</p>
+ *  <p> Created on 20170828</p>
+ *  <p> Created by Jason</p>
  *  </body>
  * </html>
  */
@@ -14,16 +14,15 @@ import java.io.Serializable;
 import java.util.Map;
 
 /**
- * @Package: com.sunshine.mobileapp.common.vo
- * @ClassName: MessagePushParamsVo
- * @Statement: <p>消息推送VO</p>
- * @JDK version used: 1.6
- * @Author: Yuce
- * @Create Date: 2015-7-13
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 1.0
+* @Package：cn.ucaner.common.vo   
+* @ClassName：MessagePushParamsVo   
+* @Description：   <p> 消息推送VO</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月19日 下午7:31:02   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class MessagePushParamsVo implements Serializable {
 

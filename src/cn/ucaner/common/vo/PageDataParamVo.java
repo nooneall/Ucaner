@@ -1,10 +1,10 @@
 /**
  * <html>
  * <body>
- *  <P> Copyright 2014 广东天泽阳光康众医疗投资管理有限公司. 粤ICP备09007530号-15</p>
+ *  <P> Copyright 2014 JasonInternational Ucanx</p>
  *  <p> All rights reserved.</p>
- *  <p> Created on 2017年9月13日</p>
- *  <p> Created by x-lan</p>
+ *  <p> Created on 20170828</p>
+ *  <p> Created by Jason</p>
  *  </body>
  * </html>
  */
@@ -13,17 +13,15 @@ package cn.ucaner.common.vo;
 import java.util.List;
 
 /**
- * @Project: easy_health_client 
- * @Package: com.sunshine.common.vo
- * @ClassName: PageDataVo
- * @Description: <p>分页返回数据通用VO</p>
- * @JDK version used: 
- * @Author: x-lan
- * @Create Date: 2017年9月13日
- * @modify By:
- * @modify Date:
- * @Why&What is modify:
- * @Version: 1.0
+* @Package：cn.ucaner.common.vo   
+* @ClassName：PageDataParamVo   
+* @Description：   <p> 分页返回数据通用VO</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月19日 下午7:31:19   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class PageDataParamVo {
 
