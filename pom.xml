@@ -18,6 +18,7 @@
   
     
     <dependencies>
+    
     	 <dependency>
 	        <groupId>javax.media.jai</groupId>
 	        <artifactId>com.springsource.javax.media.jai.core</artifactId>
