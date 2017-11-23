@@ -14,7 +14,7 @@
 Ucaner  
 JavaWeb SSM 相关学习Demo 
 
-树莓派  爬虫 shrio 定时任务  java工具包  设计模式demo 
+树莓派  爬虫 shrio 定时任务  java工具包  设计模式demo  Java8新特性学习
 
 http://www.ucaner.cn   
   
