@@ -16,7 +16,7 @@ import java.util.Map;
 /**
 * @Package：cn.ucaner.common.vo   
 * @ClassName：DictonaryBean   
-* @Description：   <p> TODO</p>
+* @Description：   <p> 字典</p>
 * @Author： - DaoDou 
 * @CreatTime：2017年11月19日 下午7:30:22   
 * @Modify By：   

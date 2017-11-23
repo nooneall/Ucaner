@@ -66,14 +66,7 @@ public class HttpParamsVo implements Serializable {
 	
 	public HttpParamsVo() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-
-	/**
-	 * 获取userId 当医院微信和医院支付宝时使用openId作为userId
-	 * 
-	 * @return
-	 */
 	public String getUserId() {
 		return userId;
 	}

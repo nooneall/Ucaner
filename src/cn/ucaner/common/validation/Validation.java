@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
 
 /**
 * @Package：cn.ucaner.common.validation   
@@ -29,7 +29,7 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class Validation {
 	
-	// wi =2(n-1)(mod 11);加权因子
+	// wi =2(n-1)(mod 11);加权因子  用于身份证的校验
 	private final int[] wi = { 7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2, 1 };
 	
 	// 校验码

@@ -59,7 +59,7 @@ public class OrderNoGenerator {
 	 * = NetworkInterface.getByInetAddress(address); byte[] mac = ni.getHardwareAddress(); String sMAC = null; Formatter formatter = new Formatter();
 	 * for (int i = 0; i < mac.length; i++) { sMAC = formatter.format(Locale.getDefault(), "%02X%s", mac[i], ( i < mac.length - 1 ) ? "-" :
 	 * "").toString(); } if (StringUtils.isBlank(sMAC)) { sMAC = address.getHostAddress(); } serverNo = ( Math.abs(sMAC.hashCode()) % 9 + 1 ); } catch
-	 * (Exception e) { // TODO Auto-generated catch block serverNo = 1; } }
+	 * (Exception e) { // serverNo = 1; } }
 	 * @param orderType
 	 *            订单类型
 	 * @param tradeType
