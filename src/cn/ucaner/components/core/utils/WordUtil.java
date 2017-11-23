@@ -25,11 +25,17 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.util.List;
 
+
 /**
- * word工具类
- *
- * @auther yangzhao
- * create by 17/10/10
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：WordUtil   
+* @Description：   <p> word工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:34:04   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class WordUtil {
 

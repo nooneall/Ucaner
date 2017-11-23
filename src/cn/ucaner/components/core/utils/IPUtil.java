@@ -18,8 +18,15 @@ import java.util.Set;
 import cn.ucaner.components.core.json.JSON;
 
 /**
- * IP工具类
- * Created by yangzhao on 16/11/16.
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：IPUtil   
+* @Description：   <p> IP工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:28:47   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class IPUtil {
 

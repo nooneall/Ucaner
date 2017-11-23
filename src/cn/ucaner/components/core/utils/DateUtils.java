@@ -20,9 +20,15 @@ import java.util.Locale;
 import java.util.Map;
 
 /**
- * 日期工具类
- * 
- * @author huangchangan
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：DateUtils   
+* @Description：   <p> 日期工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:22:43   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class DateUtils {
 

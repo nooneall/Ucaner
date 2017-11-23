@@ -30,6 +30,7 @@ import java.util.Calendar;
 * @version    V1.0
  */
 public class GenerateSequenceUtil {
+	
 	private static final FieldPosition HELPER_POSITION = new FieldPosition(0);
 	
 	/** 时间：精确到秒 */

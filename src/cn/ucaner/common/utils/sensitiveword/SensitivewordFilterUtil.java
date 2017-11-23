@@ -27,13 +27,14 @@ import java.util.Set;
 * @version    V1.0
  */
 public class SensitivewordFilterUtil{
+	
 	@SuppressWarnings("rawtypes")
 	private Map sensitiveWordMap = null;
 	public static int minMatchTYpe = 1;      //最小匹配规则
 	public static int maxMatchType = 2;      //最大匹配规则
 	
 	/**
-	 * 构造函数，初始化敏感词库
+	 * 构造函数，初始化敏感词库，HashMap
 	 */
 	public SensitivewordFilterUtil(){
 		sensitiveWordMap = new SensitiveWordInit().initKeyWord();

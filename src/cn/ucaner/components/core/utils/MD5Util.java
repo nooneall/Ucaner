@@ -15,7 +15,15 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * Created by yangzhao on 17/8/8.
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：MD5Util   
+* @Description：   <p> MD5 工具</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:30:49   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class MD5Util {
 

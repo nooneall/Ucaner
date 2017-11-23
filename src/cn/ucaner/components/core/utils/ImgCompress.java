@@ -22,10 +22,15 @@ import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
 /**
- * 图片压缩
- * 
- * @author yangzhao at 2015年11月30日
- *
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：ImgCompress   
+* @Description：   <p> 图片压缩</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:28:22   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ImgCompress {
 

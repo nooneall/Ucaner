@@ -14,6 +14,17 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：StringUtils   
+* @Description：   <p> StringUtils   </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:32:08   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class StringUtils extends org.springframework.util.StringUtils {
 	public static int isAcronym(String word)
 	 {

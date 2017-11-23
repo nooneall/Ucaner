@@ -23,7 +23,15 @@ import java.lang.reflect.Method;
 import java.util.Date;
 
 /**
- * Created by yangzhao on 17/8/2.
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：ClassUtil   
+* @Description：   <p> ClassUtil</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:21:49   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ClassUtil extends ClassUtils {
 

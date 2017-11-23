@@ -54,7 +54,6 @@ public class TreeNodeVo implements Serializable {
 
 	public TreeNodeVo() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public TreeNodeVo(String id, String pId, String name, String isParent, String checked, String open) {

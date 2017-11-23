@@ -24,8 +24,15 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 /**
- * 身份证工具类
- * Created by yangzhao on 17/5/7.
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：IDCardUtil   
+* @Description：   <p>  身份证工具类 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:27:51   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class IDCardUtil {
 

@@ -15,8 +15,15 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * @auther yangzhao
- * create by 17/10/10
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：ListUtils   
+* @Description：   <p> ListUtils </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:30:33   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class ListUtils extends org.apache.commons.collections.ListUtils {
 

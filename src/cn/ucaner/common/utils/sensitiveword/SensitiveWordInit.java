@@ -33,6 +33,7 @@ import java.util.Set;
 * @version    V1.0
  */
 public class SensitiveWordInit {
+	
 	private String ENCODING = "GBK";    //字符编码
 	@SuppressWarnings("rawtypes")
 	public HashMap sensitiveWordMap;
@@ -41,10 +42,10 @@ public class SensitiveWordInit {
 		super();
 	}
 	
+
 	/**
-	 * @author chenssy 
-	 * @date 2014年4月20日 下午2:28:32
-	 * @version 1.0
+	 * 初始化敏感词汇
+	 * @return
 	 */
 	@SuppressWarnings("rawtypes")
 	Map initKeyWord(){
@@ -127,11 +128,8 @@ public class SensitiveWordInit {
 
 	/**
 	 * 读取敏感词库中的内容，将内容添加到set集合中
-	 * @author chenssy 
-	 * @date 2014年4月20日 下午2:31:18
 	 * @return
-	 * @version 1.0
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	@SuppressWarnings("resource")
 	private Set<String> readSensitiveWordFile() throws Exception{

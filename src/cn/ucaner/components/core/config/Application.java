@@ -11,10 +11,15 @@
 package cn.ucaner.components.core.config;
 
 /**
- * 应用
- *
- * @auther yangzhao
- * create by 17/9/19
+* @Package：cn.ucaner.components.core.config   
+* @ClassName：Application   
+* @Description：   <p> 应用application</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:29:44   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class Application {
 

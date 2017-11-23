@@ -11,7 +11,15 @@
 package cn.ucaner.components.core.utils;
 
 /**
- * Created by yangzhao on 17/8/8.
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：Base64   
+* @Description：   <p> Base 64 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:21:17   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class Base64 {
 

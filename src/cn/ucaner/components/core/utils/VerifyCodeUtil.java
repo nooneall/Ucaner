@@ -22,10 +22,18 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * 验证码生成工具类
- * Created by yangzhao on 17/4/7.
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：VerifyCodeUtil   
+* @Description：   <p> 验证码生成工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:32:38   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class VerifyCodeUtil {
+	
     //使用到Algerian字体，系统里没有的话需要安装字体，字体只显示大写，去掉了1,0,i,o几个容易混淆的字符
     public static final String VERIFY_CODES = "23456789ABCDEFGHJKMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz";
     private static Random random = new Random();

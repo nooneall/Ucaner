@@ -13,9 +13,15 @@ package cn.ucaner.components.core.utils;
 import cn.ucaner.components.core.config.Application;
 
 /**
- * 推特 雪花ID生成器
- * @auther yangzhao
- * create by 17/9/19
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：SnowflakeID   
+* @Description：   <p>  推特 雪花ID生成器</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:31:39   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class SnowflakeID {
 

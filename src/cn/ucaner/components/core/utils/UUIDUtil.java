@@ -12,6 +12,17 @@ package cn.ucaner.components.core.utils;
 
 import java.util.UUID;
 
+/**
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：UUIDUtil   
+* @Description：   <p> UUIDUtil  </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:32:21   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class UUIDUtil {
 	/**
 	 * 获取字符串UUID（除掉"-"）

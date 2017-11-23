@@ -17,8 +17,18 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESedeKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
+/***
+* @Package：cn.ucaner.components.core.security   
+* @ClassName：DES   
+* @Description：   <p> DES</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:18:50   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class DES implements ISecurity{
-	
 	
 	// 密钥  
 	private final static String secretKey = "";

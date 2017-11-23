@@ -29,8 +29,15 @@ import org.apache.solr.common.SolrDocumentList;
 import cn.ucaner.components.core.config.Application;
 
 /**
- * SolrAPI工具类
- * Created by yangzhao on 17/7/27.
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：SolrAPI   
+* @Description：   <p> SolrAPI工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:31:56   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class SolrAPI {
 

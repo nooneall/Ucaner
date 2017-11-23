@@ -14,12 +14,18 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 /**
- * 图片处理
- * 服务器需要安装GraphicsMagick
- * @author yangzhao 2016年2月29日
- * 
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：GraphicsMagick   
+* @Description：   <p> 服务器需要安装GraphicsMagick</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:26:45   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class GraphicsMagick {
+	
 	private static final Logger logger=LogManager.getLogger(GraphicsMagick.class);
 
 	/**

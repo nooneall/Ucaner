@@ -11,9 +11,15 @@
 package cn.ucaner.components.core.security;
 
 /**
- * Base64编码工具
- * @author yangzhao
- * CREATE BY 2017-07-20
+* @Package：cn.ucaner.components.core.security   
+* @ClassName：Base64   
+* @Description：   <p> Base64编码工具</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:18:29   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public final class Base64 implements ISecurity {
 

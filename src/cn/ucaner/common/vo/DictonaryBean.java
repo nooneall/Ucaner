@@ -28,7 +28,6 @@ public class DictonaryBean {
     private  static Map<String,String> platformCodeDic = new LinkedHashMap<String,String>();
     private  static Map<Integer,String> orderStatusDic = new LinkedHashMap<Integer,String>();
     
-  
     
     private static Map<Integer,String> orderChangeRecordDic = new LinkedHashMap<Integer,String>();
     static{

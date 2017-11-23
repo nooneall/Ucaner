@@ -13,7 +13,15 @@ package cn.ucaner.components.core.security;
 import java.util.*;
 
 /**
- * Created by yangzhao on 17/7/20.
+* @Package：cn.ucaner.components.core.security   
+* @ClassName：ISecurity   
+* @Description：   <p> Security 接口</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:19:01   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public interface ISecurity {
 

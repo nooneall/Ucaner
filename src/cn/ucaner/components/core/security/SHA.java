@@ -13,7 +13,15 @@ package cn.ucaner.components.core.security;
 import java.security.MessageDigest;
 
 /**
- * Created by yangzhao on 17/7/20.
+* @Package：cn.ucaner.components.core.security   
+* @ClassName：SHA   
+* @Description：   <p> SHA</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:20:37   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class SHA implements ISecurity {
 

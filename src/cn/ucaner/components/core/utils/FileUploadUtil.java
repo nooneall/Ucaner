@@ -18,8 +18,19 @@ import java.util.Arrays;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-
+/**
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：FileUploadUtil   
+* @Description：   <p> 文件上传工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:25:21   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class FileUploadUtil {
+	
 	private static final Logger logger=LogManager.getLogger(FileUploadUtil.class);
 
 	private static final String[] FILE_EXTS = { "JPG", "PNG", "GIF" };

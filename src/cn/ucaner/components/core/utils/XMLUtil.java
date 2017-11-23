@@ -20,8 +20,17 @@ import org.dom4j.io.SAXReader;
 import java.io.InputStream;
 import java.util.*;
 
+
 /**
- * Created by yangzhao on 17/8/8.
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：XMLUtil   
+* @Description：   <p> XMLUtil</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:34:19   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class XMLUtil {
     @SuppressWarnings("unchecked")

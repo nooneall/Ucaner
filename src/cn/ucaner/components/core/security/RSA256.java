@@ -17,7 +17,15 @@ import java.security.Signature;
 import java.security.spec.PKCS8EncodedKeySpec;
 
 /**
- * Created by yangzhao on 17/7/20.
+* @Package：cn.ucaner.components.core.security   
+* @ClassName：RSA256   
+* @Description：   <p> rsa256 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:20:00   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public final class RSA256 implements ISecurity {
 

@@ -46,14 +46,18 @@ import org.apache.http.ssl.SSLContexts;
 import org.apache.http.util.EntityUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.springframework.util.CollectionUtils;
-
 import cn.ucaner.components.core.config.Application;
 
 /**
- * http常用处理工具类
- * @author yangzhao at 2015年12月8日
- *
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：HttpUtil   
+* @Description：   <p> http常用处理工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:27:24   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class HttpUtil {
 

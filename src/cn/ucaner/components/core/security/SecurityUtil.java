@@ -11,7 +11,15 @@
 package cn.ucaner.components.core.security;
 
 /**
- * Created by yangzhao on 17/7/20.
+* @Package：cn.ucaner.components.core.security   
+* @ClassName：SecurityUtil   
+* @Description：   <p> SecurityUtil</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:20:15   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class SecurityUtil {
 

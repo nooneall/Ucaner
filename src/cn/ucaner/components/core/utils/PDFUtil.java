@@ -26,10 +26,15 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 /**
- * PDF工具类
- *
- * @auther yangzhao
- * create by 17/10/10
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：PDFUtil   
+* @Description：   <p> PDF工具类</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:31:20   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class PDFUtil {
 

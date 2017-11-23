@@ -15,6 +15,17 @@ import java.io.IOException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
 
+/**
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：DataCompressUtil   
+* @Description：   <p> 数据压缩工具 </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:22:12   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class DataCompressUtil {
 	/**
 	 * 压缩

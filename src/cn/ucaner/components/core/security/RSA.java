@@ -15,6 +15,17 @@ import java.security.PrivateKey;
 import java.security.Signature;
 import java.security.spec.PKCS8EncodedKeySpec;
 
+/**
+* @Package：cn.ucaner.components.core.security   
+* @ClassName：RSA   
+* @Description：   <p> RSA </p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:19:43   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class RSA implements ISecurity {
 
 

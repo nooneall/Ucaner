@@ -13,14 +13,23 @@ package cn.ucaner.components.core.utils;
 import java.nio.ByteBuffer;
 
 /**
- * 数据包的发送与接收都需要进行异或
- * @author yangzhao 2015年10月17日
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：EncryptUtil   
+* @Description：   <p> 数据包的发送与接收都需要进行异或</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:24:14   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
  */
 public class EncryptUtil {
+	
 	/**
 	 * 加密钥匙
 	 */
 	public static final int MAX_BUFFER = 1024;
+	
 	public static final byte BUFFER[] = new byte[MAX_BUFFER];
 
 	/**

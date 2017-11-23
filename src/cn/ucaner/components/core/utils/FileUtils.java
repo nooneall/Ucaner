@@ -23,6 +23,17 @@ import org.apache.log4j.Logger;
 
 import cn.ucaner.components.core.json.JSON;
 
+/**
+* @Package：cn.ucaner.components.core.utils   
+* @ClassName：FileUtils   
+* @Description：   <p> 文件工具</p>
+* @Author： - DaoDou 
+* @CreatTime：2017年11月23日 下午11:26:03   
+* @Modify By：   
+* @ModifyTime：  
+* @Modify marker：   
+* @version    V1.0
+ */
 public class FileUtils extends org.apache.commons.io.FileUtils {
 
 	private static final Logger logger=LogManager.getLogger(FileUtils.class);
