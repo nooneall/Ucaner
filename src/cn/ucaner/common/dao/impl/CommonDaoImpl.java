@@ -41,7 +41,7 @@ import cn.ucaner.framework.exception.SystemException;
 public class CommonDaoImpl implements CommonDao {
 	private static Logger logger = LoggerFactory.getLogger(CommonDaoImpl.class);
 
-	private static final String COMMON_MAPPER_NAME_SPACE = "com.sunshine.common.vo";
+	private static final String COMMON_MAPPER_NAME_SPACE = "com.ucaner.common.vo";
 
 	private final static String SQLNAME_FIND_RESOURCE_TREE_BY_ROLEID_AND_PARENTID = "findResourceTreeByRoleIdAndParentId";
 	private final static String SQLNAME_FIND_RESOURCE_TREE_BY_ROLEID = "findResourceTreeByRoleId";

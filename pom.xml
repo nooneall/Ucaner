@@ -58,7 +58,7 @@
   		<!-- https://mvnrepository.com/artifact/com.ibeetl/beetl -->
 		<dependency>
 		    <groupId>com.ibeetl</groupId>
-		    <artifactId>beetl</artifactId>
+		    <artifactId>3</artifactId>
 		    <version>2.7.22</version>
 		</dependency>
     

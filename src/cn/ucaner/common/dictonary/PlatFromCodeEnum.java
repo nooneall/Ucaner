@@ -23,7 +23,7 @@ package cn.ucaner.common.dictonary;
  */
 public enum PlatFromCodeEnum {
 	
-  YLAPP("医程通"),WEIXIN("微信");
+  YLAPP("Ucaner"),WEIXIN("PlatFrom");
   private String platFromCodeLabel;
 
   private PlatFromCodeEnum(String platFromCodeLabel) {
